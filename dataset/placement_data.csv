@@ -1,0 +1,1002 @@
+
+student_name,register_no,department,gender,tenth_percentage,twelfth_percentage,cgpa,backlogs,programming_skills,aptitude_score,communication_skills,technical_skills,projects,internship,certifications,hackathons,resume_uploaded,mock_interview_score,placed,salary
+Yash Das,REG2026000,Civil Engineering,Male,68.12,68.12,6.88,1,72,74,55,71,3,No,0,0,Yes,58,0,8.31
+Varun Mehta,REG2026001,Mechanical Engineering,Female,72.33,74.12,7.9,0,70,71,56,66,2,Yes,0,2,Yes,65,1,11.83
+Yash Reddy,REG2026002,Mechanical Engineering,Male,81.66,68.47,7.35,0,75,68,60,76,2,Yes,2,0,Yes,66,1,12.07
+Neha Bose,REG2026003,Civil Engineering,Female,60.79,61.74,6.74,1,44,45,42,41,0,No,0,0,Yes,40,0,6.62
+Pooja Reddy,REG2026004,Information Technology,Male,83.3,82.0,7.43,0,67,73,71,66,2,Yes,1,0,Yes,63,1,11.89
+Sanjay Sen,REG2026005,Information Technology,Female,58.79,54.03,6.61,1,50,52,42,51,0,No,0,1,Yes,43,0,7.15
+Kiran Choudhury,REG2026006,Mechanical Engineering,Female,95.9,85.84,8.42,0,98,85,89,95,2,Yes,2,1,Yes,91,1,14.16
+Sanjay Trivedi,REG2026007,Computer Science,Female,69.44,69.25,5.45,1,45,45,40,40,0,No,0,0,Yes,40,0,5.41
+Sneha Kumar,REG2026008,Electronics & Communication,Female,69.75,79.56,7.31,0,72,70,57,69,3,Yes,0,0,Yes,61,1,11.94
+Rohit Trivedi,REG2026009,Computer Science,Male,57.95,60.36,6.51,1,53,43,49,47,0,No,0,1,Yes,43,0,6.54
+Vikram Joshi,REG2026010,Computer Science,Male,92.61,95.24,9.74,0,97,97,96,100,4,Yes,2,1,Yes,95,1,14.62
+Sanjay Kumar,REG2026011,Computer Science,Female,69.74,71.51,7.85,0,76,73,69,74,1,No,0,0,Yes,71,1,10.03
+Anjali Sharma,REG2026012,Mechanical Engineering,Male,74.85,68.9,7.81,0,60,72,59,67,3,No,2,0,Yes,62,1,10.47
+Amit Sharma,REG2026013,Mechanical Engineering,Male,85.5,83.44,8.68,0,87,87,94,88,4,Yes,1,2,Yes,87,1,13.76
+Neha Sharma,REG2026014,Computer Science,Male,79.18,76.06,7.22,0,65,72,57,64,1,No,0,0,Yes,61,0,8.01
+Abhishek Saxena,REG2026015,Mechanical Engineering,Female,81.45,72.2,6.98,0,75,64,70,71,1,Yes,1,0,Yes,72,1,11.38
+Abhishek Singh,REG2026016,Information Technology,Male,81.46,87.71,9.44,0,98,88,80,95,2,Yes,3,2,Yes,86,1,15.14
+Divya Yadav,REG2026017,Civil Engineering,Female,50.29,52.32,5.08,0,55,52,48,52,0,No,0,0,Yes,51,0,6.16
+Abhishek Sharma,REG2026018,Civil Engineering,Male,53.26,51.41,6.16,0,50,56,50,51,0,No,0,0,Yes,47,0,6.84
+Aditya Choudhury,REG2026019,Artificial Intelligence & Machine Learning,Female,50.78,62.37,5.61,1,46,52,46,50,0,No,0,0,Yes,46,0,5.91
+Vikram Joshi,REG2026020,Electronics & Communication,Male,79.63,67.55,7.15,0,77,71,60,69,2,No,0,0,Yes,62,0,9.36
+Varun Kumar,REG2026021,Mechanical Engineering,Male,96.3,81.64,8.77,0,99,91,89,93,3,Yes,2,2,Yes,90,1,14.6
+Pooja Reddy,REG2026022,Artificial Intelligence & Machine Learning,Male,51.12,64.74,5.98,2,57,52,55,58,1,No,0,0,Yes,52,0,7.08
+Aditya Sharma,REG2026023,Artificial Intelligence & Machine Learning,Female,69.73,83.15,7.63,0,74,69,64,68,2,Yes,0,0,Yes,70,1,12.26
+Rohit Sharma,REG2026024,Electronics & Communication,Male,84.28,87.2,9.06,0,90,88,93,88,4,Yes,2,1,Yes,89,1,14.06
+Yash Joshi,REG2026025,Computer Science,Female,55.89,69.92,6.25,1,53,56,57,58,0,No,0,0,Yes,55,0,6.52
+Vikram Joshi,REG2026026,Mechanical Engineering,Female,74.06,65.65,7.19,0,72,65,58,72,1,No,1,0,Yes,61,0,8.64
+Rahul Roy,REG2026027,Computer Science,Male,76.88,72.62,8.16,1,76,69,65,72,1,Yes,2,1,Yes,68,1,12.39
+Pooja Mehta,REG2026028,Electronics & Communication,Male,84.34,83.69,8.65,0,84,97,92,89,2,Yes,1,2,Yes,90,1,13.72
+Kiran Singh,REG2026029,Artificial Intelligence & Machine Learning,Female,94.25,90.62,9.06,0,95,92,93,89,4,Yes,3,2,Yes,88,1,14.95
+Yash Mehta,REG2026030,Electronics & Communication,Male,83.99,67.94,8.1,0,65,69,79,63,2,Yes,1,0,Yes,74,1,11.4
+Divya Nair,REG2026031,Mechanical Engineering,Female,78.93,73.23,8.02,0,79,72,60,76,3,Yes,0,0,Yes,63,1,13.09
+Varun Rao,REG2026032,Information Technology,Male,85.79,81.66,9.07,0,90,83,83,85,2,No,1,2,Yes,86,1,11.78
+Anjali Mishra,REG2026033,Information Technology,Female,67.95,67.66,7.76,1,74,60,76,72,2,No,0,1,Yes,75,0,9.06
+Kiran Saxena,REG2026034,Civil Engineering,Female,74.48,72.1,7.71,0,71,74,68,70,2,No,0,0,Yes,73,0,9.39
+Sneha Singh,REG2026035,Computer Science,Male,65.15,69.51,7.31,0,77,61,75,69,1,No,0,0,Yes,70,1,9.77
+Varun Patel,REG2026036,Electronics & Communication,Female,68.59,61.14,6.03,0,53,43,45,53,0,No,0,0,Yes,49,0,6.59
+Arjun Gupta,REG2026037,Computer Science,Female,71.73,67.69,6.89,2,66,76,61,71,2,No,1,0,Yes,63,0,8.46
+Kiran Roy,REG2026038,Artificial Intelligence & Machine Learning,Male,93.16,96.89,8.53,0,94,91,94,91,2,Yes,1,1,Yes,91,1,14.06
+Priya Mishra,REG2026039,Information Technology,Male,78.66,74.04,7.8,1,72,70,65,70,2,No,0,0,Yes,69,0,8.63
+Amit Reddy,REG2026040,Electronics & Communication,Female,78.87,68.33,8.03,0,74,71,79,70,2,No,1,0,Yes,74,1,11.17
+Sneha Mishra,REG2026041,Mechanical Engineering,Male,82.29,87.15,9.64,0,84,94,91,87,3,Yes,2,1,Yes,87,1,14.87
+Riya Das,REG2026042,Mechanical Engineering,Female,76.72,75.12,7.66,0,77,78,69,81,2,No,1,0,Yes,78,1,10.37
+Arjun Sharma,REG2026043,Artificial Intelligence & Machine Learning,Male,97.73,95.1,8.42,0,97,90,88,93,3,Yes,2,3,Yes,94,1,13.41
+Arjun Patel,REG2026044,Information Technology,Male,71.94,79.75,7.43,0,69,62,59,66,2,No,2,0,Yes,66,1,9.39
+Neha Saxena,REG2026045,Computer Science,Female,51.34,65.0,5.38,2,43,43,40,40,0,No,0,0,Yes,40,0,6.6
+Abhishek Kumar,REG2026046,Computer Science,Female,82.24,83.92,7.32,0,72,68,55,71,1,No,1,0,Yes,60,1,9.16
+Yash Singh,REG2026047,Electronics & Communication,Male,63.05,54.76,5.18,0,53,55,54,49,0,No,0,0,Yes,52,0,6.18
+Divya Yadav,REG2026048,Mechanical Engineering,Male,87.59,96.07,9.67,0,85,87,88,81,3,Yes,2,2,Yes,83,1,14.14
+Varun Mehta,REG2026049,Artificial Intelligence & Machine Learning,Female,97.74,88.48,8.53,0,90,94,91,95,3,Yes,2,2,Yes,97,1,14.23
+Sneha Roy,REG2026050,Civil Engineering,Female,76.53,70.48,7.58,0,76,64,55,74,1,No,2,0,Yes,63,0,8.45
+Anjali Das,REG2026051,Computer Science,Male,66.81,80.42,6.9,1,68,78,73,72,2,No,0,2,Yes,71,0,8.58
+Abhishek Gupta,REG2026052,Mechanical Engineering,Male,81.93,84.1,7.02,0,69,66,63,64,2,No,1,0,Yes,60,0,8.27
+Varun Saxena,REG2026053,Information Technology,Male,88.03,83.33,9.18,0,94,96,90,98,3,Yes,1,2,Yes,97,1,14.64
+Rohit Rao,REG2026054,Civil Engineering,Male,55.95,68.49,6.75,3,48,55,55,47,0,No,0,0,Yes,47,0,7.02
+Kiran Reddy,REG2026055,Computer Science,Female,80.81,71.38,7.68,1,72,64,55,65,3,Yes,2,0,Yes,61,1,11.95
+Pooja Reddy,REG2026056,Mechanical Engineering,Male,64.65,50.07,5.84,0,55,52,50,56,0,No,0,0,Yes,55,0,6.82
+Rohit Rao,REG2026057,Electronics & Communication,Female,77.27,68.34,8.19,0,78,72,70,70,2,Yes,0,0,Yes,74,1,12.93
+Yash Saxena,REG2026058,Computer Science,Male,61.95,60.5,5.47,1,48,57,56,49,0,No,0,0,Yes,51,0,5.74
+Anjali Choudhury,REG2026059,Information Technology,Male,85.92,96.77,9.52,0,85,80,91,82,2,Yes,3,1,Yes,81,1,13.76
+Neha Verma,REG2026060,Electronics & Communication,Male,70.34,82.57,7.92,0,77,77,72,77,3,No,1,1,Yes,75,1,10.95
+Arjun Reddy,REG2026061,Information Technology,Female,61.12,65.13,5.47,0,41,45,50,42,0,No,0,0,Yes,43,0,6.15
+Yash Singh,REG2026062,Civil Engineering,Female,96.87,92.38,8.32,0,94,81,88,86,3,Yes,1,3,Yes,84,1,14.31
+Rahul Patel,REG2026063,Electronics & Communication,Male,63.67,58.92,5.49,3,47,48,42,45,1,No,0,0,Yes,43,0,6.24
+Deepika Patel,REG2026064,Electronics & Communication,Male,87.96,85.62,8.78,0,94,84,94,93,4,Yes,2,2,Yes,88,1,13.57
+Kiran Gupta,REG2026065,Mechanical Engineering,Female,59.24,50.02,6.08,1,44,50,44,48,0,No,0,0,Yes,41,0,5.15
+Arjun Mishra,REG2026066,Computer Science,Male,84.05,83.16,7.81,0,62,62,69,64,1,No,0,0,Yes,62,0,7.63
+Aditya Sharma,REG2026067,Civil Engineering,Female,57.16,56.44,6.76,0,52,54,40,55,0,No,0,0,Yes,47,0,7.55
+Kiran Nair,REG2026068,Information Technology,Female,66.03,56.79,6.47,0,56,49,54,49,0,No,0,0,Yes,51,0,7.17
+Abhishek Yadav,REG2026069,Artificial Intelligence & Machine Learning,Female,79.89,82.44,7.41,0,63,60,71,58,2,No,1,0,Yes,61,0,7.88
+Rohit Choudhury,REG2026070,Computer Science,Female,69.22,58.32,6.52,1,53,53,49,49,0,No,0,0,Yes,47,0,6.45
+Kiran Gupta,REG2026071,Civil Engineering,Female,77.63,79.66,6.98,0,78,63,60,72,3,Yes,2,0,Yes,68,1,12.49
+Varun Verma,REG2026072,Electronics & Communication,Male,50.18,61.77,6.08,1,44,44,55,47,0,No,0,0,Yes,46,0,5.59
+Deepika Das,REG2026073,Civil Engineering,Male,91.95,88.54,9.72,0,91,97,79,91,2,Yes,1,2,Yes,89,1,14.23
+Varun Yadav,REG2026074,Artificial Intelligence & Machine Learning,Female,67.97,84.73,8.15,0,79,72,76,74,2,No,1,1,Yes,76,1,11.01
+Tanvi Sharma,REG2026075,Civil Engineering,Female,69.69,84.27,7.16,0,79,67,55,76,1,No,2,1,Yes,68,1,10.32
+Divya Rao,REG2026076,Civil Engineering,Female,63.02,52.13,6.18,3,40,57,47,44,1,No,0,0,Yes,41,0,5.95
+Sneha Verma,REG2026077,Information Technology,Male,80.96,73.71,7.94,0,70,60,63,69,2,No,1,0,Yes,61,0,8.71
+Arjun Gupta,REG2026078,Artificial Intelligence & Machine Learning,Female,62.39,59.27,5.68,2,49,48,40,46,0,No,0,0,Yes,44,0,6.32
+Aditya Das,REG2026079,Civil Engineering,Female,97.18,91.78,8.88,0,89,83,78,83,3,Yes,2,3,Yes,82,1,13.24
+Varun Mishra,REG2026080,Mechanical Engineering,Female,82.19,83.26,9.43,0,90,94,77,92,3,Yes,3,2,Yes,84,1,14.47
+Aditya Joshi,REG2026081,Information Technology,Male,77.93,68.5,7.31,1,75,71,61,76,2,No,2,1,Yes,64,0,9.35
+Vikram Sen,REG2026082,Computer Science,Male,82.39,74.46,7.55,0,66,64,60,68,2,Yes,1,0,Yes,60,1,11.04
+Pooja Reddy,REG2026083,Computer Science,Male,65.32,71.82,7.95,0,66,78,74,65,1,No,1,0,Yes,69,1,9.59
+Anjali Singh,REG2026084,Mechanical Engineering,Male,77.8,70.42,7.63,0,64,69,59,67,1,No,0,2,Yes,61,0,8.19
+Aditya Sen,REG2026085,Computer Science,Male,89.64,81.74,9.01,0,86,93,93,87,4,Yes,2,1,Yes,88,1,14.63
+Deepika Patel,REG2026086,Artificial Intelligence & Machine Learning,Female,94.18,95.56,9.3,0,83,81,77,85,3,Yes,2,1,Yes,84,1,14.01
+Priya Roy,REG2026087,Artificial Intelligence & Machine Learning,Male,65.73,61.49,6.02,1,49,47,49,45,0,No,0,0,Yes,48,0,6.07
+Anjali Verma,REG2026088,Electronics & Communication,Female,84.15,76.46,8.11,0,69,66,70,64,1,No,2,0,Yes,70,1,10.23
+Anjali Kumar,REG2026089,Computer Science,Male,69.26,60.99,6.74,1,45,49,47,47,0,No,0,0,Yes,44,0,5.72
+Anjali Das,REG2026090,Information Technology,Male,62.39,55.95,5.77,0,41,54,44,48,0,No,0,0,Yes,41,0,5.56
+Priya Patel,REG2026091,Information Technology,Male,65.84,58.1,6.18,1,49,48,43,47,0,No,0,0,Yes,45,0,6.85
+Rohit Singh,REG2026092,Computer Science,Male,65.24,69.82,8.17,1,79,69,57,79,2,No,2,0,Yes,66,1,11.11
+Amit Joshi,REG2026093,Civil Engineering,Female,82.19,72.85,8.14,0,62,73,78,68,3,Yes,0,2,Yes,72,1,12.78
+Neha Saxena,REG2026094,Computer Science,Female,74.01,82.65,6.95,2,68,60,55,59,2,No,2,0,Yes,56,0,8.42
+Priya Das,REG2026095,Mechanical Engineering,Male,83.85,80.68,7.3,0,70,76,56,74,2,Yes,1,1,Yes,67,1,12.38
+Varun Kumar,REG2026096,Artificial Intelligence & Machine Learning,Female,65.49,62.88,5.95,0,57,54,45,51,1,No,0,0,Yes,52,0,6.78
+Neha Rao,REG2026097,Mechanical Engineering,Female,62.26,68.86,5.43,0,43,55,51,50,0,No,1,0,Yes,46,0,5.99
+Riya Nair,REG2026098,Artificial Intelligence & Machine Learning,Male,83.25,80.97,8.78,0,85,90,91,84,2,Yes,1,3,Yes,88,1,13.64
+Rahul Gupta,REG2026099,Artificial Intelligence & Machine Learning,Male,68.03,66.88,7.61,1,68,63,68,63,3,No,2,0,Yes,69,0,9.63
+Riya Reddy,REG2026100,Electronics & Communication,Male,92.38,86.75,9.17,0,96,96,94,93,2,Yes,2,2,Yes,94,1,12.79
+Yash Kumar,REG2026101,Mechanical Engineering,Female,67.72,61.86,5.7,1,52,40,51,45,0,No,0,0,Yes,45,0,5.78
+Priya Verma,REG2026102,Artificial Intelligence & Machine Learning,Female,77.04,65.46,7.25,0,62,73,73,64,3,Yes,2,0,Yes,69,1,11.94
+Varun Sen,REG2026103,Electronics & Communication,Male,83.66,77.85,7.39,0,75,62,65,72,3,No,1,0,Yes,66,0,9.02
+Varun Mishra,REG2026104,Artificial Intelligence & Machine Learning,Male,68.59,65.65,5.1,2,44,46,48,48,0,No,1,0,Yes,46,0,5.59
+Sanjay Rao,REG2026105,Mechanical Engineering,Female,52.71,65.03,6.18,3,41,41,45,41,0,No,1,0,Yes,47,0,6.21
+Priya Das,REG2026106,Mechanical Engineering,Female,68.13,52.78,5.96,1,46,56,40,54,0,No,0,1,Yes,51,0,6.04
+Tanvi Singh,REG2026107,Electronics & Communication,Male,83.57,90.18,9.04,1,92,86,77,90,2,Yes,1,3,Yes,78,1,13.89
+Arjun Joshi,REG2026108,Artificial Intelligence & Machine Learning,Male,89.78,81.47,9.02,0,83,98,94,89,3,Yes,2,2,Yes,93,1,14.01
+Amit Yadav,REG2026109,Computer Science,Female,71.8,82.44,7.56,0,75,60,58,71,2,Yes,0,2,Yes,68,1,12.65
+Amit Nair,REG2026110,Mechanical Engineering,Male,72.81,80.97,7.32,0,67,61,66,67,1,Yes,0,0,Yes,64,1,10.72
+Yash Bose,REG2026111,Artificial Intelligence & Machine Learning,Female,75.4,73.95,7.58,0,72,67,77,72,1,No,1,0,Yes,73,1,10.02
+Sneha Rao,REG2026112,Artificial Intelligence & Machine Learning,Male,82.65,81.07,7.51,2,68,79,71,73,2,Yes,2,0,Yes,71,0,11.85
+Anjali Singh,REG2026113,Electronics & Communication,Male,86.06,85.34,9.85,0,95,99,95,100,3,Yes,1,3,Yes,96,1,15.7
+Abhishek Sen,REG2026114,Information Technology,Female,91.05,87.84,9.24,0,96,96,80,98,2,Yes,1,1,Yes,90,1,13.89
+Amit Kumar,REG2026115,Information Technology,Male,83.88,86.49,8.32,0,88,95,95,87,3,Yes,1,3,Yes,86,1,13.14
+Riya Kumar,REG2026116,Civil Engineering,Female,67.58,73.26,7.92,0,60,68,55,60,3,Yes,1,2,Yes,61,1,12.07
+Riya Joshi,REG2026117,Electronics & Communication,Female,94.93,85.07,9.77,0,94,90,77,91,3,Yes,2,1,Yes,81,1,14.39
+Priya Nair,REG2026118,Information Technology,Male,71.61,71.81,8.18,0,70,76,62,71,2,Yes,1,0,Yes,65,1,11.95
+Sanjay Joshi,REG2026119,Mechanical Engineering,Male,81.59,82.58,7.6,0,68,66,65,69,2,No,2,0,Yes,66,1,10.68
+Priya Reddy,REG2026120,Mechanical Engineering,Female,84.22,94.16,9.95,0,85,89,97,86,3,Yes,3,1,Yes,95,1,14.59
+Aditya Saxena,REG2026121,Electronics & Communication,Female,74.39,73.95,7.46,0,70,77,56,71,3,No,0,0,Yes,58,0,8.82
+Sanjay Joshi,REG2026122,Civil Engineering,Male,62.34,52.28,5.62,1,55,48,52,49,1,No,0,0,Yes,52,0,6.76
+Divya Sharma,REG2026123,Civil Engineering,Female,84.1,81.42,6.8,0,61,65,56,60,2,No,0,0,Yes,54,0,7.74
+Varun Sharma,REG2026124,Mechanical Engineering,Female,71.42,80.0,7.38,0,72,77,69,71,2,Yes,0,0,Yes,68,1,12.12
+Amit Bose,REG2026125,Artificial Intelligence & Machine Learning,Female,81.4,78.9,7.55,0,61,67,77,63,3,Yes,1,1,Yes,69,1,12.46
+Sanjay Patel,REG2026126,Information Technology,Female,73.93,80.97,7.95,1,78,68,62,69,2,No,1,1,Yes,67,0,9.32
+Priya Singh,REG2026127,Computer Science,Male,83.93,71.8,7.52,0,60,67,74,60,2,Yes,2,0,Yes,69,1,11.38
+Aditya Roy,REG2026128,Civil Engineering,Female,65.55,75.11,8.15,0,60,60,64,64,1,Yes,1,0,Yes,63,1,11.81
+Amit Patel,REG2026129,Mechanical Engineering,Female,81.53,84.68,7.2,2,67,67,63,67,2,Yes,1,0,Yes,64,0,10.95
+Aditya Yadav,REG2026130,Information Technology,Male,75.15,78.55,7.13,1,70,63,69,62,3,Yes,2,0,Yes,62,1,12.11
+Abhishek Singh,REG2026131,Civil Engineering,Female,65.79,74.51,7.56,0,79,78,73,77,2,No,0,1,Yes,70,1,11.26
+Sneha Saxena,REG2026132,Electronics & Communication,Male,60.26,51.87,6.36,1,45,48,49,43,0,No,0,1,Yes,42,0,6.32
+Abhishek Sen,REG2026133,Mechanical Engineering,Male,84.12,69.01,6.95,1,68,76,77,72,1,No,1,0,Yes,70,0,8.2
+Pooja Mehta,REG2026134,Artificial Intelligence & Machine Learning,Male,86.46,94.48,8.7,0,99,80,97,86,3,Yes,1,1,Yes,89,1,14.42
+Neha Nair,REG2026135,Civil Engineering,Female,63.17,65.32,6.52,1,41,48,41,40,0,No,0,0,Yes,40,0,6.42
+Anjali Mehta,REG2026136,Mechanical Engineering,Female,59.57,52.9,6.28,1,43,55,47,48,0,No,0,0,Yes,46,0,6.69
+Aditya Yadav,REG2026137,Civil Engineering,Male,62.96,52.46,6.6,1,48,50,51,46,0,No,0,0,Yes,47,0,7.05
+Aditya Nair,REG2026138,Information Technology,Female,74.93,70.69,6.99,0,61,74,62,66,1,No,0,0,Yes,59,0,8.42
+Rahul Das,REG2026139,Electronics & Communication,Male,66.85,56.27,6.42,2,47,56,46,45,1,No,0,0,Yes,48,0,6.38
+Rahul Choudhury,REG2026140,Electronics & Communication,Male,78.52,83.88,7.18,0,72,79,57,70,2,No,2,0,Yes,60,1,9.81
+Tanvi Singh,REG2026141,Civil Engineering,Female,95.31,83.82,9.38,0,97,84,90,87,3,Yes,1,2,Yes,85,1,13.96
+Neha Sharma,REG2026142,Mechanical Engineering,Male,70.75,72.36,6.88,0,70,65,75,66,1,No,0,0,Yes,74,0,8.06
+Arjun Kumar,REG2026143,Information Technology,Female,57.95,65.25,5.82,0,43,42,55,41,0,No,0,0,Yes,48,0,5.48
+Rohit Trivedi,REG2026144,Computer Science,Female,76.41,76.36,7.73,0,77,73,68,73,3,No,0,0,Yes,72,1,10.12
+Kiran Kumar,REG2026145,Information Technology,Female,96.97,94.13,9.98,0,99,81,83,95,3,Yes,1,2,Yes,86,1,14.97
+Yash Das,REG2026146,Electronics & Communication,Male,71.9,83.35,7.21,0,77,74,56,75,1,Yes,1,0,Yes,60,1,11.83
+Riya Singh,REG2026147,Artificial Intelligence & Machine Learning,Female,68.57,65.22,5.98,0,48,50,55,44,0,No,0,0,Yes,49,0,5.76
+Kiran Das,REG2026148,Civil Engineering,Male,83.39,68.52,7.1,0,60,76,73,62,2,No,0,2,Yes,68,0,8.14
+Priya Sen,REG2026149,Artificial Intelligence & Machine Learning,Male,88.25,94.06,9.93,0,97,92,94,94,4,Yes,2,3,Yes,96,1,15.55
+Divya Singh,REG2026150,Electronics & Communication,Male,73.06,82.89,6.8,1,63,79,78,67,2,No,1,1,Yes,71,0,8.13
+Aditya Trivedi,REG2026151,Civil Engineering,Female,76.48,73.31,7.99,1,77,79,55,77,3,No,0,2,Yes,62,0,10.32
+Arjun Yadav,REG2026152,Civil Engineering,Male,71.53,81.79,7.0,0,78,76,65,79,2,No,2,0,Yes,75,1,9.51
+Riya Kumar,REG2026153,Information Technology,Male,67.59,59.2,5.17,2,40,53,53,44,0,No,0,0,Yes,50,0,5.29
+Sanjay Patel,REG2026154,Civil Engineering,Male,84.46,69.52,7.23,0,64,60,73,61,3,Yes,1,1,Yes,68,1,11.7
+Divya Yadav,REG2026155,Artificial Intelligence & Machine Learning,Male,86.68,96.23,9.65,1,95,87,88,87,3,Yes,2,2,Yes,90,1,14.05
+Varun Kumar,REG2026156,Mechanical Engineering,Male,79.29,80.18,6.94,0,70,67,78,63,3,No,1,0,Yes,71,1,9.83
+Sanjay Mishra,REG2026157,Artificial Intelligence & Machine Learning,Female,63.3,53.15,5.21,2,52,47,49,48,0,No,0,0,Yes,44,0,5.71
+Anjali Kumar,REG2026158,Electronics & Communication,Male,81.34,75.93,8.15,0,70,74,76,75,1,No,1,0,Yes,78,1,9.8
+Abhishek Singh,REG2026159,Artificial Intelligence & Machine Learning,Female,68.71,67.01,6.77,1,44,42,43,43,0,No,0,0,Yes,40,0,6.34
+Rahul Roy,REG2026160,Computer Science,Male,78.55,66.44,7.09,0,79,75,73,75,1,No,1,1,Yes,76,1,9.12
+Pooja Saxena,REG2026161,Information Technology,Female,89.86,97.62,9.2,0,91,84,86,84,2,Yes,2,2,Yes,87,1,13.81
+Rohit Sen,REG2026162,Artificial Intelligence & Machine Learning,Female,70.95,66.84,7.64,0,72,65,55,69,3,Yes,1,1,Yes,65,1,12.35
+Priya Sharma,REG2026163,Electronics & Communication,Female,58.98,62.25,5.38,3,40,53,51,46,0,No,0,0,Yes,43,0,5.56
+Sanjay Mishra,REG2026164,Artificial Intelligence & Machine Learning,Female,64.79,54.29,6.2,1,53,45,56,52,0,No,1,0,Yes,58,0,6.77
+Aditya Nair,REG2026165,Computer Science,Male,95.79,93.3,8.22,0,84,85,80,80,2,Yes,2,2,Yes,81,1,13.07
+Aditya Rao,REG2026166,Electronics & Communication,Female,89.24,84.56,9.98,0,95,88,79,91,4,Yes,3,3,Yes,88,1,15.17
+Sneha Nair,REG2026167,Mechanical Engineering,Female,77.99,83.73,6.89,1,65,68,55,64,2,No,0,0,Yes,54,0,8.92
+Rahul Patel,REG2026168,Artificial Intelligence & Machine Learning,Male,68.21,66.41,7.06,0,77,76,72,78,1,Yes,0,0,Yes,79,1,11.79
+Deepika Mishra,REG2026169,Artificial Intelligence & Machine Learning,Female,81.19,80.73,7.69,0,65,64,62,67,3,Yes,2,0,Yes,64,1,12.14
+Divya Gupta,REG2026170,Artificial Intelligence & Machine Learning,Male,65.27,70.92,7.44,0,74,67,67,67,2,No,2,0,Yes,67,0,9.23
+Pooja Yadav,REG2026171,Artificial Intelligence & Machine Learning,Female,72.09,67.11,7.11,0,72,64,56,70,2,Yes,0,2,Yes,66,1,10.87
+Pooja Nair,REG2026172,Information Technology,Male,69.07,71.55,7.57,0,60,78,72,62,2,No,1,2,Yes,68,1,9.38
+Varun Reddy,REG2026173,Civil Engineering,Male,65.36,80.86,6.9,0,71,72,72,66,1,Yes,1,0,Yes,72,1,11.15
+Sanjay Reddy,REG2026174,Artificial Intelligence & Machine Learning,Male,53.67,67.1,6.59,1,41,46,54,46,1,No,0,0,Yes,52,0,6.73
+Aditya Sen,REG2026175,Mechanical Engineering,Female,83.85,65.86,7.42,0,74,72,72,69,2,No,0,0,Yes,65,1,9.49
+Yash Bose,REG2026176,Computer Science,Female,65.33,61.67,6.41,2,54,49,42,55,0,No,0,0,Yes,48,0,6.87
+Amit Kumar,REG2026177,Information Technology,Male,89.75,93.65,8.75,0,94,87,88,95,2,Yes,3,3,Yes,86,1,13.97
+Tanvi Saxena,REG2026178,Artificial Intelligence & Machine Learning,Female,75.67,77.74,7.85,0,70,76,66,71,1,No,2,0,Yes,66,1,9.86
+Vikram Trivedi,REG2026179,Mechanical Engineering,Male,87.78,80.56,8.67,0,97,84,87,93,2,Yes,2,3,Yes,92,1,14.52
+Tanvi Verma,REG2026180,Electronics & Communication,Male,76.53,66.35,6.93,2,66,74,75,64,3,No,0,0,Yes,66,0,8.7
+Arjun Bose,REG2026181,Civil Engineering,Male,80.28,80.31,9.85,0,86,82,86,81,2,No,2,2,Yes,86,1,11.91
+Anjali Mehta,REG2026182,Civil Engineering,Male,90.42,90.25,9.76,0,87,92,89,93,3,Yes,2,3,Yes,89,1,14.86
+Tanvi Roy,REG2026183,Electronics & Communication,Male,91.37,80.98,9.36,1,81,91,92,81,4,Yes,1,1,Yes,81,1,14.37
+Divya Sharma,REG2026184,Electronics & Communication,Male,59.07,59.1,6.23,3,51,57,55,55,0,No,0,0,Yes,57,0,6.89
+Varun Trivedi,REG2026185,Mechanical Engineering,Male,67.66,63.18,5.38,2,55,43,53,54,0,No,1,0,Yes,48,0,6.2
+Riya Trivedi,REG2026186,Mechanical Engineering,Male,73.71,72.92,7.74,1,66,71,74,70,2,Yes,1,0,Yes,76,1,11.52
+Vikram Nair,REG2026187,Mechanical Engineering,Female,68.11,69.15,7.68,0,60,76,64,64,2,Yes,2,0,Yes,60,1,11.31
+Anjali Das,REG2026188,Mechanical Engineering,Female,66.08,52.74,6.05,1,42,51,44,48,0,No,0,0,Yes,47,0,5.79
+Aditya Bose,REG2026189,Information Technology,Male,84.84,78.28,7.08,0,62,71,74,68,3,Yes,1,0,Yes,71,1,12.03
+Tanvi Bose,REG2026190,Mechanical Engineering,Male,93.72,82.27,8.55,0,83,91,88,89,3,Yes,1,2,Yes,88,1,13.55
+Anjali Bose,REG2026191,Artificial Intelligence & Machine Learning,Female,83.54,84.4,7.6,0,67,75,64,68,1,No,2,1,Yes,69,1,10.47
+Priya Mishra,REG2026192,Civil Engineering,Male,77.01,66.07,7.33,0,65,71,59,69,1,Yes,2,2,Yes,66,1,11.56
+Tanvi Saxena,REG2026193,Artificial Intelligence & Machine Learning,Male,83.7,72.52,7.79,0,73,75,56,72,2,Yes,1,0,Yes,65,1,12.44
+Sanjay Sen,REG2026194,Computer Science,Female,80.45,88.08,8.63,0,94,82,88,86,3,Yes,2,3,Yes,88,1,13.76
+Neha Patel,REG2026195,Artificial Intelligence & Machine Learning,Female,56.36,64.99,5.78,0,45,47,45,40,0,No,0,0,Yes,42,0,6.24
+Vikram Yadav,REG2026196,Mechanical Engineering,Female,86.31,96.43,8.81,0,93,90,82,93,3,Yes,1,1,Yes,82,1,14.2
+Tanvi Kumar,REG2026197,Artificial Intelligence & Machine Learning,Female,82.97,84.32,9.48,0,86,88,96,84,2,Yes,1,3,Yes,92,1,13.87
+Divya Saxena,REG2026198,Electronics & Communication,Female,95.57,84.49,9.49,0,87,95,81,87,3,Yes,2,2,Yes,88,1,14.39
+Rahul Trivedi,REG2026199,Artificial Intelligence & Machine Learning,Male,88.87,85.4,9.27,0,83,82,87,78,4,Yes,2,2,Yes,81,1,14.67
+Amit Nair,REG2026200,Information Technology,Female,71.54,65.22,7.96,1,62,71,66,61,1,No,0,0,Yes,58,0,9.07
+Kiran Choudhury,REG2026201,Information Technology,Male,90.22,85.33,9.89,0,99,85,97,88,3,Yes,1,1,Yes,93,1,14.98
+Pooja Sen,REG2026202,Computer Science,Female,74.55,72.02,7.31,1,66,64,57,67,2,No,2,0,Yes,62,0,8.97
+Amit Patel,REG2026203,Civil Engineering,Female,51.53,58.42,6.08,3,45,44,51,45,0,No,1,0,Yes,49,0,6.11
+Amit Saxena,REG2026204,Electronics & Communication,Male,54.63,63.63,6.69,0,45,47,56,44,1,No,0,0,Yes,48,0,6.8
+Priya Mishra,REG2026205,Information Technology,Female,89.33,92.78,8.37,0,99,85,82,96,4,Yes,2,1,Yes,86,1,14.3
+Rohit Verma,REG2026206,Electronics & Communication,Female,52.93,66.66,5.97,2,47,46,56,45,0,No,0,0,Yes,54,0,6.38
+Amit Mehta,REG2026207,Electronics & Communication,Male,69.57,69.31,5.71,2,46,52,54,52,1,No,0,0,Yes,50,0,5.87
+Sanjay Mehta,REG2026208,Electronics & Communication,Male,69.45,71.14,7.57,0,63,63,65,64,2,No,0,0,Yes,67,0,8.6
+Aditya Reddy,REG2026209,Computer Science,Female,55.6,55.55,5.06,3,43,47,40,48,1,No,1,0,Yes,42,0,6.02
+Yash Nair,REG2026210,Artificial Intelligence & Machine Learning,Male,51.01,58.52,6.5,2,44,44,54,43,1,No,0,0,Yes,49,0,6.3
+Vikram Gupta,REG2026211,Mechanical Engineering,Male,60.6,53.23,6.03,2,53,42,42,47,0,No,0,0,Yes,44,0,6.17
+Aditya Das,REG2026212,Artificial Intelligence & Machine Learning,Female,70.2,82.72,8.05,0,64,68,61,61,2,No,1,1,Yes,60,1,9.66
+Priya Choudhury,REG2026213,Information Technology,Male,84.85,68.12,8.18,2,75,73,69,72,3,Yes,1,1,Yes,74,0,11.45
+Divya Bose,REG2026214,Artificial Intelligence & Machine Learning,Male,83.69,78.78,7.95,0,75,60,75,68,1,No,2,0,Yes,75,1,10.54
+Abhishek Das,REG2026215,Information Technology,Male,84.28,67.7,7.01,1,78,75,55,80,1,No,0,0,Yes,71,0,8.3
+Pooja Sen,REG2026216,Civil Engineering,Female,82.36,90.91,9.73,0,94,86,86,93,4,Yes,2,1,Yes,85,1,15.62
+Abhishek Kumar,REG2026217,Artificial Intelligence & Machine Learning,Male,91.4,94.5,8.92,0,91,83,75,83,3,Yes,3,1,Yes,83,1,13.84
+Priya Rao,REG2026218,Civil Engineering,Female,90.9,85.54,9.71,0,91,85,92,89,2,No,2,1,Yes,90,1,12.53
+Rohit Rao,REG2026219,Mechanical Engineering,Male,94.97,96.53,9.37,0,88,94,92,87,2,Yes,2,1,Yes,89,1,14.24
+Anjali Mishra,REG2026220,Civil Engineering,Female,84.06,87.02,9.06,0,81,96,97,84,3,Yes,1,3,Yes,85,1,12.96
+Anjali Trivedi,REG2026221,Artificial Intelligence & Machine Learning,Female,71.3,67.66,7.69,0,71,73,72,74,2,No,1,1,Yes,73,1,9.46
+Arjun Yadav,REG2026222,Mechanical Engineering,Female,97.34,81.94,9.06,0,90,81,76,90,2,Yes,2,1,Yes,87,1,13.81
+Sneha Saxena,REG2026223,Information Technology,Female,67.96,66.2,6.05,2,46,51,48,47,0,No,0,0,Yes,46,0,6.63
+Arjun Saxena,REG2026224,Artificial Intelligence & Machine Learning,Female,73.25,83.69,7.15,0,71,79,64,69,1,Yes,1,0,Yes,63,1,10.96
+Yash Rao,REG2026225,Computer Science,Male,65.0,77.28,7.66,0,67,69,65,70,2,Yes,0,0,Yes,68,1,11.83
+Rahul Sharma,REG2026226,Mechanical Engineering,Male,92.16,80.69,9.32,0,84,80,83,80,2,Yes,1,1,Yes,84,1,13.23
+Yash Kumar,REG2026227,Civil Engineering,Male,60.47,56.38,5.85,1,43,45,54,40,1,No,0,0,Yes,51,0,5.49
+Abhishek Singh,REG2026228,Information Technology,Male,97.92,80.19,9.81,0,95,92,82,92,4,Yes,1,2,Yes,83,1,15.8
+Amit Reddy,REG2026229,Electronics & Communication,Female,57.66,54.33,5.8,0,54,54,50,54,0,No,0,0,Yes,56,0,6.93
+Divya Rao,REG2026230,Mechanical Engineering,Female,69.41,77.51,7.6,0,61,72,74,62,2,Yes,1,0,Yes,65,1,11.72
+Kiran Sen,REG2026231,Artificial Intelligence & Machine Learning,Male,84.05,82.67,7.18,0,69,60,55,64,2,No,2,0,Yes,62,0,9.17
+Divya Rao,REG2026232,Computer Science,Male,83.74,84.68,7.92,0,73,63,56,65,2,No,0,2,Yes,63,0,9.05
+Sanjay Nair,REG2026233,Mechanical Engineering,Female,86.04,83.19,8.38,0,91,94,82,88,3,Yes,1,1,Yes,81,1,13.83
+Kiran Sen,REG2026234,Civil Engineering,Female,77.55,77.95,7.98,0,73,79,73,77,2,No,1,1,Yes,75,1,10.34
+Rahul Yadav,REG2026235,Mechanical Engineering,Male,51.36,53.62,6.72,2,51,48,52,46,0,No,0,0,Yes,51,0,6.2
+Aditya Das,REG2026236,Information Technology,Male,69.88,78.12,7.08,0,64,61,75,65,1,No,0,1,Yes,69,0,8.21
+Divya Mishra,REG2026237,Civil Engineering,Male,82.4,84.7,8.95,0,90,85,75,84,3,Yes,2,1,Yes,81,1,13.55
+Abhishek Roy,REG2026238,Computer Science,Female,58.15,60.43,6.61,0,40,55,50,46,1,No,1,0,Yes,45,0,6.16
+Divya Choudhury,REG2026239,Information Technology,Female,58.72,61.88,6.06,0,54,43,53,52,1,No,0,0,Yes,50,0,7.34
+Priya Saxena,REG2026240,Electronics & Communication,Male,95.95,88.25,9.22,0,93,98,97,98,4,Yes,3,1,Yes,96,1,14.49
+Sanjay Trivedi,REG2026241,Information Technology,Female,87.39,83.77,9.96,0,98,86,92,88,4,Yes,3,1,Yes,86,1,15.46
+Sneha Gupta,REG2026242,Information Technology,Male,73.55,77.9,7.84,0,68,65,59,67,2,No,0,1,Yes,60,0,9.22
+Rohit Yadav,REG2026243,Computer Science,Male,96.26,84.81,9.66,0,91,89,87,90,4,No,2,1,Yes,90,1,13.07
+Arjun Yadav,REG2026244,Artificial Intelligence & Machine Learning,Female,66.27,68.54,6.81,0,61,73,60,66,3,No,0,1,Yes,66,0,8.65
+Priya Gupta,REG2026245,Electronics & Communication,Male,53.38,51.07,6.29,1,55,46,43,54,1,No,0,0,Yes,43,0,7.02
+Deepika Sen,REG2026246,Artificial Intelligence & Machine Learning,Male,95.1,92.08,9.45,0,97,94,77,91,3,No,1,3,Yes,82,1,12.43
+Aditya Joshi,REG2026247,Information Technology,Female,84.55,76.65,8.19,1,64,61,61,63,2,Yes,0,0,Yes,65,1,11.82
+Deepika Gupta,REG2026248,Civil Engineering,Female,82.06,78.47,6.99,0,60,78,71,64,2,Yes,2,0,Yes,70,1,12.11
+Anjali Joshi,REG2026249,Electronics & Communication,Female,89.23,85.07,9.68,0,94,97,91,90,3,Yes,2,1,Yes,94,1,14.49
+Aditya Saxena,REG2026250,Civil Engineering,Male,92.16,89.16,9.75,0,80,95,85,86,4,Yes,3,2,Yes,89,1,14.56
+Arjun Rao,REG2026251,Computer Science,Male,85.87,97.17,8.42,0,98,81,97,91,4,Yes,2,1,Yes,97,1,13.75
+Arjun Trivedi,REG2026252,Artificial Intelligence & Machine Learning,Male,79.75,75.74,7.98,0,74,79,62,77,2,No,2,1,Yes,66,1,10.06
+Divya Choudhury,REG2026253,Electronics & Communication,Male,88.69,83.82,8.41,0,90,80,93,84,4,Yes,2,3,Yes,89,1,14.3
+Varun Singh,REG2026254,Mechanical Engineering,Female,63.09,58.22,6.19,0,47,54,43,53,0,No,0,0,Yes,43,0,6.34
+Rahul Bose,REG2026255,Artificial Intelligence & Machine Learning,Male,59.55,59.56,6.38,1,51,48,49,52,1,No,0,1,Yes,45,0,7.24
+Pooja Reddy,REG2026256,Information Technology,Female,92.4,89.93,8.64,0,99,93,87,91,4,Yes,2,2,Yes,85,1,14.37
+Aditya Sen,REG2026257,Computer Science,Male,73.25,66.45,7.61,1,74,67,57,73,1,No,0,0,Yes,64,0,9.33
+Sanjay Kumar,REG2026258,Computer Science,Male,53.23,69.32,5.37,2,49,55,49,47,0,No,0,1,Yes,43,0,5.56
+Tanvi Trivedi,REG2026259,Electronics & Communication,Female,65.99,70.14,7.45,0,74,78,65,71,2,No,1,0,Yes,63,1,10.45
+Varun Gupta,REG2026260,Electronics & Communication,Male,95.27,86.54,9.63,0,92,94,93,96,4,Yes,1,2,Yes,96,1,15.6
+Divya Reddy,REG2026261,Computer Science,Female,75.91,69.08,7.21,0,69,64,79,71,2,No,1,0,Yes,70,0,9.16
+Divya Kumar,REG2026262,Information Technology,Female,84.55,69.85,7.73,1,71,63,73,64,2,No,1,2,Yes,64,0,9.32
+Priya Roy,REG2026263,Mechanical Engineering,Female,81.31,76.95,7.35,0,77,66,76,69,1,No,2,0,Yes,76,1,10.01
+Amit Patel,REG2026264,Computer Science,Female,50.83,56.44,6.01,2,52,47,57,53,1,No,0,0,Yes,59,0,6.94
+Abhishek Sharma,REG2026265,Mechanical Engineering,Male,77.01,68.33,7.33,0,79,74,78,80,2,No,0,1,Yes,82,1,10.14
+Priya Mehta,REG2026266,Civil Engineering,Female,55.15,65.49,5.69,1,55,53,54,57,0,No,1,0,Yes,50,0,6.64
+Kiran Mehta,REG2026267,Artificial Intelligence & Machine Learning,Female,80.89,91.22,8.31,0,93,86,79,93,3,Yes,2,2,Yes,84,1,14.14
+Riya Trivedi,REG2026268,Information Technology,Female,69.62,59.33,6.43,1,47,46,52,45,0,No,0,0,Yes,44,0,6.48
+Tanvi Rao,REG2026269,Artificial Intelligence & Machine Learning,Female,77.34,82.7,7.12,0,79,77,69,74,2,Yes,1,1,Yes,70,1,11.68
+Divya Sharma,REG2026270,Mechanical Engineering,Female,58.38,52.27,5.31,1,42,41,45,40,0,No,0,0,Yes,40,0,4.75
+Vikram Reddy,REG2026271,Information Technology,Female,61.51,52.52,6.05,2,47,55,51,54,1,No,0,0,Yes,54,0,6.81
+Yash Bose,REG2026272,Mechanical Engineering,Male,72.46,69.18,7.77,1,79,69,61,73,2,No,0,2,Yes,69,0,9.52
+Kiran Singh,REG2026273,Computer Science,Female,60.11,58.06,6.14,1,42,57,43,48,0,No,1,0,Yes,43,0,6.32
+Vikram Yadav,REG2026274,Information Technology,Male,80.96,79.77,6.89,0,65,66,79,63,2,No,2,0,Yes,70,1,9.24
+Amit Verma,REG2026275,Computer Science,Female,57.88,62.16,5.8,2,44,41,45,44,0,No,0,0,Yes,41,0,6.17
+Sneha Kumar,REG2026276,Computer Science,Male,58.21,60.09,5.01,1,51,40,46,50,1,No,0,1,Yes,51,0,6.22
+Kiran Kumar,REG2026277,Electronics & Communication,Female,78.78,82.27,8.2,0,62,60,73,62,3,Yes,0,0,Yes,66,1,11.13
+Abhishek Mishra,REG2026278,Information Technology,Female,82.32,85.36,9.6,0,84,83,82,84,4,Yes,3,2,Yes,82,1,14.4
+Abhishek Nair,REG2026279,Computer Science,Female,84.23,77.72,7.87,0,60,60,59,56,2,No,1,0,Yes,52,0,8.23
+Arjun Saxena,REG2026280,Mechanical Engineering,Female,70.02,75.19,8.07,0,69,78,56,71,3,Yes,1,1,Yes,65,1,12.37
+Abhishek Sharma,REG2026281,Computer Science,Male,80.99,90.41,8.35,0,88,90,80,89,3,Yes,2,3,Yes,84,1,12.92
+Varun Verma,REG2026282,Electronics & Communication,Male,92.23,90.26,9.3,0,95,80,87,89,3,Yes,1,3,Yes,89,1,14.78
+Sneha Singh,REG2026283,Artificial Intelligence & Machine Learning,Female,66.9,51.18,5.49,0,45,41,52,40,0,No,1,0,Yes,49,0,6.21
+Abhishek Mishra,REG2026284,Mechanical Engineering,Female,84.29,84.04,9.11,0,80,92,86,85,3,No,2,3,Yes,80,1,12.07
+Anjali Reddy,REG2026285,Mechanical Engineering,Female,67.63,70.25,7.61,0,62,71,68,61,2,No,2,0,Yes,64,1,9.47
+Priya Sen,REG2026286,Computer Science,Male,64.95,50.96,6.71,2,40,53,49,46,1,No,0,0,Yes,50,0,7.3
+Anjali Patel,REG2026287,Information Technology,Female,69.73,55.57,5.71,1,54,47,45,46,1,No,0,0,Yes,46,0,6.37
+Varun Trivedi,REG2026288,Artificial Intelligence & Machine Learning,Male,58.22,64.08,5.39,1,47,57,57,53,1,No,0,0,Yes,58,0,6.43
+Sneha Saxena,REG2026289,Mechanical Engineering,Female,84.18,91.44,9.99,0,84,83,94,85,3,Yes,3,3,Yes,88,1,13.97
+Pooja Sharma,REG2026290,Computer Science,Female,73.62,76.39,6.8,0,70,74,59,72,2,No,1,0,Yes,61,0,8.69
+Kiran Reddy,REG2026291,Computer Science,Male,82.35,79.15,6.95,0,76,75,57,75,2,No,1,1,Yes,62,0,8.98
+Vikram Yadav,REG2026292,Information Technology,Male,67.67,78.83,7.91,0,62,62,76,61,2,No,0,1,Yes,69,1,10.23
+Aditya Reddy,REG2026293,Information Technology,Male,55.2,57.7,6.7,1,55,52,42,51,1,No,0,0,Yes,43,0,7.78
+Sneha Das,REG2026294,Electronics & Communication,Male,81.73,84.49,8.17,0,76,72,71,74,1,No,2,2,Yes,70,1,10.16
+Kiran Mehta,REG2026295,Civil Engineering,Male,87.68,88.44,9.87,0,86,90,76,86,4,Yes,2,1,Yes,85,1,15.17
+Yash Bose,REG2026296,Computer Science,Female,76.95,82.39,8.05,0,69,61,71,67,3,Yes,1,1,Yes,71,1,12.15
+Neha Yadav,REG2026297,Artificial Intelligence & Machine Learning,Male,65.5,79.41,7.52,0,72,70,69,71,2,No,1,1,Yes,69,1,9.85
+Divya Patel,REG2026298,Mechanical Engineering,Female,90.31,94.75,8.79,0,91,85,75,87,4,Yes,2,2,Yes,85,1,13.87
+Riya Verma,REG2026299,Computer Science,Male,67.17,69.25,6.13,0,41,54,50,46,0,No,0,0,Yes,47,0,6.01
+Rahul Saxena,REG2026300,Electronics & Communication,Male,50.66,69.08,5.38,2,53,43,51,51,0,No,0,1,Yes,49,0,6.31
+Anjali Das,REG2026301,Computer Science,Male,59.87,68.23,6.67,0,40,57,56,41,0,No,0,0,Yes,52,0,5.68
+Deepika Roy,REG2026302,Civil Engineering,Female,53.8,60.42,5.84,0,54,46,50,52,0,No,0,0,Yes,49,0,6.86
+Deepika Roy,REG2026303,Information Technology,Female,63.12,60.75,6.22,1,51,44,40,43,0,No,0,0,Yes,40,0,6.16
+Yash Yadav,REG2026304,Mechanical Engineering,Female,52.14,65.61,6.64,1,51,47,47,44,0,No,1,1,Yes,44,0,6.8
+Priya Roy,REG2026305,Computer Science,Female,68.24,62.66,6.3,0,52,40,46,44,0,No,1,0,Yes,42,0,6.47
+Pooja Roy,REG2026306,Information Technology,Male,53.55,50.14,6.45,0,47,52,44,52,0,No,0,1,Yes,52,0,6.19
+Kiran Gupta,REG2026307,Information Technology,Male,55.21,51.85,5.72,1,49,52,56,46,0,No,0,0,Yes,47,0,5.23
+Pooja Das,REG2026308,Computer Science,Female,62.75,51.41,5.65,1,57,48,54,48,0,No,0,0,Yes,49,0,6.78
+Priya Nair,REG2026309,Mechanical Engineering,Female,77.87,70.54,7.43,0,63,72,77,68,3,Yes,1,1,Yes,69,1,12.77
+Pooja Reddy,REG2026310,Mechanical Engineering,Male,67.91,82.56,7.18,2,67,63,63,60,2,Yes,1,0,Yes,62,0,10.18
+Divya Mishra,REG2026311,Computer Science,Female,58.83,52.61,5.52,2,56,40,50,53,1,No,0,0,Yes,51,0,7.13
+Kiran Gupta,REG2026312,Artificial Intelligence & Machine Learning,Female,82.97,74.13,7.01,1,69,63,62,70,1,No,2,2,Yes,62,0,7.94
+Sneha Bose,REG2026313,Computer Science,Male,52.19,69.32,5.31,1,44,52,53,43,0,No,1,0,Yes,47,0,5.26
+Riya Gupta,REG2026314,Artificial Intelligence & Machine Learning,Male,73.22,69.69,6.83,1,79,66,63,70,1,No,2,0,Yes,70,0,9.02
+Amit Roy,REG2026315,Computer Science,Female,65.39,66.22,5.72,3,47,53,48,50,1,No,0,1,Yes,45,0,6.18
+Sanjay Das,REG2026316,Civil Engineering,Male,90.21,86.79,9.94,0,87,99,87,87,3,Yes,2,1,Yes,88,1,14.96
+Deepika Patel,REG2026317,Mechanical Engineering,Female,82.26,93.78,8.58,0,96,90,94,92,3,Yes,1,2,Yes,89,1,14.4
+Amit Trivedi,REG2026318,Civil Engineering,Female,93.23,95.6,9.14,0,96,85,81,94,2,No,3,2,Yes,89,1,12.46
+Tanvi Sen,REG2026319,Mechanical Engineering,Male,77.78,69.71,7.8,1,62,77,69,69,1,No,0,1,Yes,68,0,8.17
+Varun Das,REG2026320,Computer Science,Female,89.64,87.1,9.73,0,89,89,94,84,4,Yes,2,2,Yes,86,1,14.5
+Deepika Kumar,REG2026321,Information Technology,Female,80.46,67.13,7.89,0,68,64,72,65,3,Yes,0,0,Yes,64,1,11.84
+Sneha Trivedi,REG2026322,Computer Science,Female,51.53,63.28,5.43,1,45,53,57,52,1,No,0,0,Yes,54,0,6.04
+Pooja Saxena,REG2026323,Artificial Intelligence & Machine Learning,Female,69.69,67.47,6.97,0,74,66,55,72,1,No,1,0,Yes,61,0,9.19
+Amit Das,REG2026324,Electronics & Communication,Male,67.31,62.06,6.31,0,50,52,43,48,1,No,0,0,Yes,43,0,6.93
+Abhishek Das,REG2026325,Mechanical Engineering,Female,97.66,93.33,8.41,0,81,80,84,81,4,Yes,2,1,Yes,84,1,14.04
+Deepika Choudhury,REG2026326,Information Technology,Male,57.45,55.09,5.88,1,57,41,42,46,0,No,0,0,Yes,44,0,6.8
+Aditya Verma,REG2026327,Information Technology,Male,61.87,54.2,5.21,3,40,54,54,47,0,No,0,0,Yes,50,0,5.64
+Kiran Choudhury,REG2026328,Computer Science,Male,51.45,64.07,5.72,3,51,41,57,51,0,No,0,0,Yes,54,0,5.8
+Vikram Sharma,REG2026329,Computer Science,Female,68.07,72.33,7.32,0,75,74,59,72,2,Yes,1,0,Yes,69,1,12.42
+Vikram Gupta,REG2026330,Mechanical Engineering,Male,72.68,84.44,7.02,0,68,67,71,64,1,Yes,1,0,Yes,63,1,10.77
+Riya Choudhury,REG2026331,Computer Science,Male,67.84,55.74,5.59,0,46,40,56,43,0,No,1,0,Yes,46,0,5.22
+Kiran Patel,REG2026332,Electronics & Communication,Male,85.46,91.49,8.83,0,81,90,88,86,3,Yes,2,3,Yes,84,1,13.68
+Neha Singh,REG2026333,Computer Science,Female,75.71,66.7,7.22,0,79,74,79,73,2,Yes,1,1,Yes,76,1,12.56
+Varun Rao,REG2026334,Artificial Intelligence & Machine Learning,Female,73.86,72.52,7.31,0,76,67,68,71,2,Yes,0,2,Yes,73,1,11.92
+Aditya Sharma,REG2026335,Mechanical Engineering,Male,73.53,73.85,7.74,0,73,77,60,75,3,No,0,0,Yes,69,1,10.53
+Kiran Gupta,REG2026336,Civil Engineering,Female,78.02,81.49,7.38,0,65,79,69,71,2,Yes,1,0,Yes,71,1,12.42
+Priya Choudhury,REG2026337,Computer Science,Female,88.46,88.2,9.25,0,83,90,94,88,3,Yes,3,3,Yes,92,1,14.25
+Arjun Singh,REG2026338,Civil Engineering,Female,92.42,91.62,9.81,0,90,99,81,88,4,Yes,2,2,Yes,79,1,14.93
+Pooja Saxena,REG2026339,Electronics & Communication,Female,69.07,82.47,6.88,1,66,66,67,61,3,Yes,0,1,Yes,67,1,11.32
+Rohit Roy,REG2026340,Artificial Intelligence & Machine Learning,Female,95.97,82.47,8.81,0,82,94,83,90,4,Yes,1,2,Yes,88,1,14.14
+Deepika Singh,REG2026341,Computer Science,Female,67.52,75.59,7.18,0,74,60,69,68,2,No,1,0,Yes,64,1,9.67
+Amit Patel,REG2026342,Mechanical Engineering,Female,84.64,78.82,8.04,1,69,74,76,75,2,Yes,2,1,Yes,75,1,12.78
+Priya Singh,REG2026343,Computer Science,Female,75.8,79.99,7.82,0,67,68,79,62,1,Yes,1,1,Yes,65,1,11.68
+Rahul Saxena,REG2026344,Mechanical Engineering,Male,67.61,72.44,6.84,0,75,64,57,68,2,Yes,0,1,Yes,65,1,10.98
+Divya Sharma,REG2026345,Mechanical Engineering,Female,94.38,89.15,8.62,0,94,99,78,95,3,Yes,2,1,Yes,81,1,14.51
+Neha Mishra,REG2026346,Civil Engineering,Female,54.65,52.31,5.59,0,56,55,48,58,0,No,0,1,Yes,52,0,5.59
+Rahul Sharma,REG2026347,Electronics & Communication,Female,82.6,87.96,8.8,0,91,80,92,85,4,Yes,1,2,Yes,92,1,13.84
+Vikram Kumar,REG2026348,Mechanical Engineering,Female,63.94,61.2,5.7,1,50,40,41,44,1,No,0,1,Yes,44,0,6.41
+Yash Mehta,REG2026349,Information Technology,Female,87.39,88.47,8.29,0,95,89,81,87,3,No,2,1,Yes,86,1,12.32
+Arjun Verma,REG2026350,Information Technology,Female,67.58,75.74,8.11,0,77,75,61,80,1,Yes,1,0,Yes,72,1,12.39
+Amit Mehta,REG2026351,Computer Science,Female,84.45,70.72,6.9,0,74,68,75,74,2,No,2,0,Yes,75,1,9.25
+Yash Gupta,REG2026352,Electronics & Communication,Male,78.95,66.81,7.5,0,74,63,77,65,2,Yes,1,0,Yes,73,1,12.82
+Pooja Singh,REG2026353,Electronics & Communication,Male,61.45,58.84,5.62,2,56,53,45,52,1,No,0,0,Yes,47,0,7.17
+Anjali Bose,REG2026354,Artificial Intelligence & Machine Learning,Female,82.52,80.05,6.82,0,70,68,62,73,2,Yes,1,1,Yes,71,1,11.95
+Pooja Verma,REG2026355,Computer Science,Female,65.5,65.08,7.12,0,77,75,61,76,1,Yes,0,0,Yes,64,1,11.67
+Abhishek Bose,REG2026356,Artificial Intelligence & Machine Learning,Male,69.61,70.82,7.88,0,76,68,69,70,1,Yes,0,2,Yes,65,1,11.78
+Vikram Kumar,REG2026357,Civil Engineering,Male,53.56,67.77,5.8,0,53,54,51,50,1,No,1,0,Yes,53,0,6.77
+Rohit Choudhury,REG2026358,Computer Science,Male,81.74,76.45,8.2,0,65,63,59,62,1,No,2,2,Yes,59,1,10.03
+Priya Bose,REG2026359,Artificial Intelligence & Machine Learning,Female,58.6,55.75,6.33,1,57,40,46,54,0,No,0,0,Yes,51,0,7.27
+Deepika Sharma,REG2026360,Civil Engineering,Male,92.39,84.68,8.66,1,83,82,77,77,3,Yes,2,2,Yes,80,1,13.09
+Vikram Patel,REG2026361,Artificial Intelligence & Machine Learning,Male,65.26,80.91,7.47,0,64,78,76,69,2,No,1,2,Yes,72,1,9.8
+Neha Bose,REG2026362,Information Technology,Male,86.98,85.82,9.88,0,87,82,90,81,3,Yes,2,2,Yes,89,1,14.43
+Priya Patel,REG2026363,Artificial Intelligence & Machine Learning,Female,84.08,96.77,9.84,0,80,86,89,82,3,No,2,1,Yes,88,1,12.48
+Anjali Verma,REG2026364,Computer Science,Female,70.28,73.55,7.83,0,66,65,66,60,1,No,1,0,Yes,66,0,8.16
+Yash Das,REG2026365,Artificial Intelligence & Machine Learning,Female,81.91,95.16,9.07,0,90,89,94,93,4,Yes,1,1,Yes,89,1,14.45
+Neha Gupta,REG2026366,Electronics & Communication,Female,51.05,54.62,6.44,2,48,47,57,49,0,No,0,0,Yes,51,0,6.79
+Kiran Bose,REG2026367,Electronics & Communication,Male,82.01,82.56,7.57,0,67,65,73,68,3,No,1,0,Yes,67,1,10.23
+Anjali Mehta,REG2026368,Artificial Intelligence & Machine Learning,Female,71.11,76.86,7.55,0,61,65,77,57,1,No,2,1,Yes,69,1,8.73
+Riya Bose,REG2026369,Electronics & Communication,Male,85.27,86.75,9.12,0,99,98,95,99,3,Yes,3,3,Yes,95,1,14.4
+Kiran Das,REG2026370,Civil Engineering,Male,72.58,72.07,6.99,0,70,74,63,73,2,No,2,0,Yes,68,1,9.45
+Riya Kumar,REG2026371,Information Technology,Male,63.34,68.23,5.62,1,40,43,54,40,1,No,0,0,Yes,48,0,5.63
+Sanjay Reddy,REG2026372,Information Technology,Female,64.18,50.42,5.07,3,41,56,44,48,1,No,1,0,Yes,44,0,5.64
+Pooja Kumar,REG2026373,Mechanical Engineering,Female,76.74,73.91,7.97,0,68,70,71,71,2,No,1,0,Yes,68,1,9.67
+Vikram Joshi,REG2026374,Electronics & Communication,Male,88.71,88.83,8.42,0,84,97,95,91,4,Yes,2,2,Yes,94,1,13.36
+Pooja Gupta,REG2026375,Computer Science,Female,58.65,62.46,5.13,1,43,50,51,41,0,No,0,0,Yes,43,0,5.73
+Sanjay Trivedi,REG2026376,Mechanical Engineering,Male,52.54,57.13,6.07,2,40,44,56,40,0,No,1,0,Yes,49,0,6.19
+Amit Roy,REG2026377,Electronics & Communication,Male,82.85,94.18,8.76,0,80,94,77,89,4,Yes,2,2,Yes,78,1,13.9
+Arjun Roy,REG2026378,Information Technology,Female,76.08,75.54,7.87,0,78,63,79,70,2,No,1,0,Yes,70,1,10.58
+Sneha Mishra,REG2026379,Civil Engineering,Male,85.51,91.8,8.63,0,96,91,86,94,3,Yes,1,2,Yes,94,1,14.64
+Sneha Rao,REG2026380,Mechanical Engineering,Female,69.84,74.66,8.04,0,74,61,66,63,3,No,0,0,Yes,62,1,10.46
+Pooja Gupta,REG2026381,Information Technology,Male,82.61,84.59,9.85,0,95,95,93,95,4,Yes,1,2,Yes,90,1,15.82
+Sneha Rao,REG2026382,Computer Science,Male,85.28,88.83,8.99,0,88,98,95,91,4,Yes,3,2,Yes,96,1,14.48
+Aditya Joshi,REG2026383,Information Technology,Female,76.39,71.86,7.59,0,75,65,77,74,2,Yes,1,0,Yes,71,1,11.69
+Sneha Reddy,REG2026384,Information Technology,Male,66.25,67.07,6.65,0,56,45,49,51,0,Yes,0,0,Yes,45,0,8.21
+Yash Singh,REG2026385,Information Technology,Female,67.47,67.95,6.84,0,73,68,74,66,3,No,0,0,Yes,69,0,8.37
+Neha Saxena,REG2026386,Computer Science,Female,79.45,66.56,6.95,0,63,79,58,67,2,No,1,0,Yes,57,0,8.47
+Arjun Roy,REG2026387,Mechanical Engineering,Male,50.62,69.34,5.95,1,46,41,57,44,0,No,0,1,Yes,45,0,6.67
+Abhishek Mehta,REG2026388,Civil Engineering,Female,54.73,51.96,6.04,1,43,41,41,45,1,No,1,0,Yes,41,0,6.01
+Aditya Das,REG2026389,Artificial Intelligence & Machine Learning,Male,74.1,74.42,7.79,1,66,60,67,67,2,Yes,1,2,Yes,67,1,12.09
+Kiran Kumar,REG2026390,Electronics & Communication,Male,53.89,64.63,5.28,2,49,41,52,40,0,No,0,0,Yes,47,0,5.18
+Rohit Joshi,REG2026391,Electronics & Communication,Male,60.04,65.56,6.51,1,51,45,56,47,0,No,0,0,Yes,48,0,6.99
+Kiran Singh,REG2026392,Electronics & Communication,Female,75.26,74.91,7.27,0,61,68,63,60,2,Yes,1,1,Yes,56,1,10.96
+Vikram Kumar,REG2026393,Information Technology,Female,58.32,59.38,5.66,0,45,51,51,42,0,No,0,0,Yes,43,0,5.78
+Priya Kumar,REG2026394,Computer Science,Female,65.07,69.11,6.39,2,53,43,55,52,0,No,0,0,Yes,54,0,7.34
+Abhishek Rao,REG2026395,Computer Science,Female,57.35,68.28,5.66,1,46,55,51,52,0,No,1,0,Yes,46,0,6.01
+Aditya Gupta,REG2026396,Electronics & Communication,Female,51.08,64.51,5.15,2,44,55,54,49,1,No,1,0,Yes,47,0,5.42
+Varun Nair,REG2026397,Mechanical Engineering,Female,81.66,67.5,6.98,0,78,68,63,75,2,No,2,2,Yes,71,1,9.69
+Deepika Mehta,REG2026398,Mechanical Engineering,Male,94.17,81.01,8.86,0,91,94,83,93,3,Yes,2,2,Yes,87,1,14.0
+Rohit Trivedi,REG2026399,Information Technology,Male,72.87,68.84,6.89,0,79,63,56,69,2,Yes,2,1,Yes,58,1,11.29
+Vikram Mishra,REG2026400,Computer Science,Male,75.85,69.66,7.6,1,60,72,63,67,1,No,0,1,Yes,65,0,8.43
+Riya Sharma,REG2026401,Information Technology,Female,80.15,83.03,9.25,0,98,94,90,99,3,Yes,1,2,Yes,96,1,14.54
+Kiran Patel,REG2026402,Computer Science,Male,65.96,82.0,8.2,1,76,67,60,67,2,Yes,0,1,Yes,59,1,12.42
+Yash Patel,REG2026403,Computer Science,Male,90.85,85.32,9.8,0,89,80,89,87,2,No,3,1,Yes,87,1,12.18
+Tanvi Choudhury,REG2026404,Computer Science,Male,73.12,67.25,7.61,0,70,77,75,72,3,No,0,0,Yes,77,0,9.24
+Vikram Saxena,REG2026405,Artificial Intelligence & Machine Learning,Female,74.67,78.71,7.89,0,77,71,75,77,3,Yes,0,1,Yes,77,1,12.97
+Sanjay Patel,REG2026406,Computer Science,Male,62.86,63.86,6.57,1,53,50,55,50,0,No,0,0,Yes,47,0,6.97
+Rohit Roy,REG2026407,Electronics & Communication,Male,71.23,71.12,7.97,0,77,65,69,70,3,No,1,1,Yes,64,1,11.36
+Priya Reddy,REG2026408,Mechanical Engineering,Male,76.08,80.24,7.55,1,60,67,60,66,2,Yes,2,0,Yes,59,1,11.42
+Abhishek Sharma,REG2026409,Artificial Intelligence & Machine Learning,Female,83.06,67.79,6.93,0,78,70,68,74,1,Yes,2,0,Yes,70,1,11.53
+Vikram Yadav,REG2026410,Information Technology,Male,73.9,65.93,6.82,1,62,68,75,67,3,No,1,1,Yes,67,0,8.7
+Neha Mishra,REG2026411,Electronics & Communication,Female,82.33,84.65,7.54,0,76,72,63,71,2,No,0,2,Yes,68,1,10.77
+Aditya Mishra,REG2026412,Information Technology,Female,91.38,85.19,9.35,0,85,87,94,80,3,Yes,2,1,Yes,85,1,14.02
+Sneha Patel,REG2026413,Computer Science,Female,53.73,55.39,6.44,1,52,45,46,53,1,No,0,0,Yes,52,0,6.53
+Vikram Verma,REG2026414,Computer Science,Male,83.12,76.34,7.3,0,68,74,66,73,3,No,0,0,Yes,67,0,9.09
+Yash Sharma,REG2026415,Electronics & Communication,Male,96.31,95.09,9.05,0,84,94,78,84,3,Yes,1,3,Yes,82,1,14.14
+Abhishek Das,REG2026416,Civil Engineering,Female,90.28,87.34,9.39,0,88,85,75,82,3,Yes,2,1,Yes,74,1,14.32
+Neha Gupta,REG2026417,Computer Science,Female,95.68,80.28,8.98,0,87,88,92,84,2,Yes,2,2,Yes,84,1,12.88
+Sanjay Gupta,REG2026418,Mechanical Engineering,Male,59.81,66.98,6.27,1,44,55,50,45,0,No,1,0,Yes,49,0,5.92
+Divya Das,REG2026419,Artificial Intelligence & Machine Learning,Male,60.75,50.99,5.0,0,52,42,42,46,0,No,0,0,Yes,45,0,5.86
+Vikram Mishra,REG2026420,Mechanical Engineering,Female,80.67,88.01,8.4,0,99,97,76,100,3,Yes,1,1,Yes,92,1,14.41
+Rohit Sen,REG2026421,Artificial Intelligence & Machine Learning,Male,94.88,96.45,9.78,1,84,95,88,89,3,No,3,1,Yes,92,1,12.47
+Arjun Reddy,REG2026422,Civil Engineering,Male,68.43,65.15,6.32,2,43,43,52,40,0,No,0,0,Yes,46,0,6.2
+Kiran Das,REG2026423,Information Technology,Female,67.34,70.46,7.09,0,78,62,73,73,2,Yes,2,0,Yes,71,1,12.21
+Anjali Rao,REG2026424,Mechanical Engineering,Male,77.73,69.42,7.75,0,69,72,66,73,3,No,2,1,Yes,67,1,10.83
+Neha Reddy,REG2026425,Artificial Intelligence & Machine Learning,Male,57.07,62.84,5.44,0,54,41,44,52,1,No,1,1,Yes,44,0,6.74
+Rahul Nair,REG2026426,Mechanical Engineering,Male,58.78,52.26,6.27,3,51,53,46,49,0,No,0,0,Yes,45,0,5.95
+Sanjay Verma,REG2026427,Electronics & Communication,Male,86.0,88.08,9.23,0,88,94,90,94,4,Yes,2,2,Yes,95,1,14.5
+Priya Joshi,REG2026428,Mechanical Engineering,Female,60.61,58.32,6.53,0,44,46,44,48,0,No,0,1,Yes,41,0,6.15
+Neha Das,REG2026429,Mechanical Engineering,Female,90.88,83.57,9.09,0,95,89,82,93,4,Yes,2,1,Yes,90,1,14.57
+Tanvi Das,REG2026430,Computer Science,Female,70.67,65.0,6.98,1,77,64,74,70,2,No,0,1,Yes,70,0,9.27
+Divya Mehta,REG2026431,Civil Engineering,Female,73.06,65.72,7.57,0,62,66,74,65,2,Yes,1,0,Yes,66,1,11.14
+Arjun Rao,REG2026432,Electronics & Communication,Male,74.6,74.83,7.81,1,61,60,75,64,1,No,1,1,Yes,71,0,7.93
+Rahul Nair,REG2026433,Computer Science,Male,82.41,81.02,9.76,0,80,84,82,85,4,Yes,1,1,Yes,83,1,14.12
+Varun Bose,REG2026434,Civil Engineering,Male,63.78,61.34,6.23,0,56,41,47,51,1,No,1,0,Yes,53,0,7.55
+Abhishek Sen,REG2026435,Mechanical Engineering,Male,64.67,67.43,5.35,0,56,46,49,54,0,No,0,0,Yes,50,0,6.31
+Vikram Kumar,REG2026436,Artificial Intelligence & Machine Learning,Female,50.11,56.56,6.19,2,48,52,46,45,0,Yes,0,0,Yes,49,0,8.75
+Neha Saxena,REG2026437,Computer Science,Female,94.28,81.54,8.53,0,80,96,75,86,3,Yes,2,2,Yes,84,1,14.48
+Abhishek Saxena,REG2026438,Computer Science,Male,80.48,86.04,9.96,0,86,91,94,92,3,Yes,1,2,Yes,91,1,14.72
+Kiran Gupta,REG2026439,Civil Engineering,Female,63.97,54.16,5.04,1,49,44,42,44,0,No,1,0,Yes,40,0,5.55
+Tanvi Gupta,REG2026440,Information Technology,Female,70.97,82.34,7.85,1,69,62,72,68,1,No,0,1,Yes,69,0,9.22
+Sneha Singh,REG2026441,Artificial Intelligence & Machine Learning,Male,87.77,94.14,9.03,0,89,89,93,88,4,Yes,1,2,Yes,85,1,14.68
+Rohit Verma,REG2026442,Mechanical Engineering,Male,66.6,50.99,6.53,1,43,45,45,46,0,No,0,0,Yes,43,0,6.84
+Varun Rao,REG2026443,Artificial Intelligence & Machine Learning,Male,82.81,87.87,8.91,0,91,87,78,91,3,Yes,2,2,Yes,81,1,14.42
+Aditya Choudhury,REG2026444,Electronics & Communication,Female,90.91,81.61,9.93,0,95,94,88,98,3,No,3,2,Yes,94,1,14.19
+Deepika Patel,REG2026445,Civil Engineering,Male,66.33,65.03,7.53,0,79,75,74,80,3,No,0,0,Yes,74,1,9.97
+Yash Patel,REG2026446,Electronics & Communication,Female,71.19,67.34,8.18,0,62,63,69,59,1,No,2,0,Yes,62,1,9.5
+Aditya Joshi,REG2026447,Mechanical Engineering,Male,70.2,76.75,7.17,2,66,64,61,67,3,No,1,2,Yes,66,0,9.22
+Divya Nair,REG2026448,Civil Engineering,Male,92.34,93.66,9.16,0,99,82,82,90,3,No,1,1,Yes,88,1,13.18
+Rohit Sen,REG2026449,Civil Engineering,Female,74.8,67.21,7.39,0,60,62,74,55,1,No,0,1,Yes,66,0,7.42
+Rahul Reddy,REG2026450,Computer Science,Male,82.38,76.08,7.65,1,73,73,74,70,1,No,2,2,Yes,68,1,9.76
+Kiran Bose,REG2026451,Civil Engineering,Male,59.67,55.27,5.64,0,48,54,51,49,0,No,0,0,Yes,49,0,6.1
+Varun Das,REG2026452,Computer Science,Male,60.83,56.48,5.25,2,48,55,50,50,0,No,0,0,Yes,48,0,5.94
+Divya Sen,REG2026453,Civil Engineering,Male,57.15,51.32,5.3,3,50,46,45,51,0,No,0,1,Yes,50,0,6.28
+Priya Singh,REG2026454,Civil Engineering,Male,54.04,69.05,5.8,0,43,45,57,47,0,No,0,0,Yes,48,0,6.01
+Varun Saxena,REG2026455,Information Technology,Male,65.95,60.76,5.56,0,53,50,51,46,0,No,0,0,Yes,45,0,5.99
+Pooja Nair,REG2026456,Mechanical Engineering,Male,87.34,92.37,8.65,0,97,88,95,97,4,Yes,1,3,Yes,95,1,14.68
+Anjali Reddy,REG2026457,Electronics & Communication,Female,78.48,69.43,6.85,0,65,76,75,68,2,No,1,1,Yes,69,1,8.73
+Vikram Bose,REG2026458,Computer Science,Female,73.15,78.02,7.88,2,69,62,66,62,2,No,0,2,Yes,61,0,8.6
+Abhishek Mehta,REG2026459,Mechanical Engineering,Male,54.28,51.2,5.59,0,52,49,42,50,0,No,0,0,Yes,42,0,6.43
+Vikram Reddy,REG2026460,Information Technology,Male,58.56,63.17,5.47,0,49,50,57,53,0,No,0,1,Yes,55,0,5.72
+Vikram Mishra,REG2026461,Electronics & Communication,Female,60.06,51.36,6.3,2,45,51,47,46,1,No,0,0,Yes,49,0,6.97
+Kiran Sharma,REG2026462,Artificial Intelligence & Machine Learning,Female,94.98,91.22,9.4,0,93,88,78,87,4,Yes,3,1,Yes,85,1,14.36
+Amit Rao,REG2026463,Artificial Intelligence & Machine Learning,Male,51.08,60.33,5.91,0,41,42,41,41,0,No,0,0,Yes,45,0,5.24
+Divya Reddy,REG2026464,Artificial Intelligence & Machine Learning,Male,94.51,84.56,8.65,0,81,80,81,80,3,No,3,2,Yes,81,1,12.13
+Riya Nair,REG2026465,Artificial Intelligence & Machine Learning,Female,57.02,66.24,5.58,0,47,48,40,42,0,No,0,0,Yes,41,0,6.29
+Anjali Trivedi,REG2026466,Information Technology,Male,68.16,80.29,7.49,0,62,71,73,66,1,Yes,1,0,Yes,70,1,11.48
+Kiran Trivedi,REG2026467,Civil Engineering,Male,72.14,76.54,7.28,0,79,62,56,72,3,Yes,1,0,Yes,66,1,11.85
+Sneha Roy,REG2026468,Civil Engineering,Male,71.18,70.85,7.92,0,67,65,68,70,1,Yes,0,0,Yes,65,1,11.32
+Varun Joshi,REG2026469,Mechanical Engineering,Female,67.49,69.29,6.89,0,72,70,75,73,3,No,0,1,Yes,71,1,9.94
+Aditya Choudhury,REG2026470,Information Technology,Male,83.34,76.2,7.02,0,78,63,75,76,3,No,2,0,Yes,77,1,10.89
+Priya Verma,REG2026471,Electronics & Communication,Male,81.98,70.96,7.64,0,61,78,68,63,2,Yes,0,0,Yes,62,1,11.48
+Kiran Joshi,REG2026472,Artificial Intelligence & Machine Learning,Female,73.56,68.91,6.84,1,60,76,58,69,3,No,1,0,Yes,62,0,9.51
+Riya Patel,REG2026473,Computer Science,Male,86.42,81.95,8.96,0,82,84,78,80,4,Yes,2,1,Yes,82,1,13.83
+Aditya Trivedi,REG2026474,Computer Science,Female,87.17,83.06,9.57,0,97,80,87,93,3,Yes,2,1,Yes,94,1,15.32
+Arjun Saxena,REG2026475,Mechanical Engineering,Male,62.15,57.88,5.48,0,52,51,52,55,0,No,0,0,Yes,50,0,6.38
+Priya Bose,REG2026476,Mechanical Engineering,Male,53.31,69.55,5.19,3,56,49,53,51,0,No,0,0,Yes,55,0,5.99
+Riya Saxena,REG2026477,Computer Science,Male,51.05,55.07,5.13,0,54,40,51,52,0,No,0,0,Yes,54,0,5.96
+Divya Reddy,REG2026478,Information Technology,Female,79.2,72.28,7.97,0,74,62,76,69,2,Yes,0,0,Yes,68,1,11.52
+Priya Verma,REG2026479,Information Technology,Female,60.94,50.82,5.57,1,57,55,44,58,0,No,1,0,Yes,52,0,6.76
+Sanjay Verma,REG2026480,Computer Science,Male,89.26,81.92,9.39,0,94,90,76,89,4,Yes,2,2,Yes,77,1,14.66
+Vikram Yadav,REG2026481,Civil Engineering,Female,73.66,66.42,7.48,0,70,77,62,69,1,No,0,0,Yes,66,0,8.77
+Varun Mishra,REG2026482,Computer Science,Female,54.45,64.35,6.7,1,49,48,45,44,0,No,1,1,Yes,40,0,6.77
+Deepika Saxena,REG2026483,Computer Science,Female,79.92,75.42,7.18,0,71,73,63,70,2,No,1,0,Yes,70,1,9.87
+Sanjay Singh,REG2026484,Civil Engineering,Female,75.88,75.87,7.5,0,69,63,58,69,3,No,1,0,Yes,63,1,10.56
+Amit Mehta,REG2026485,Computer Science,Male,68.44,70.42,7.2,0,77,60,56,72,1,Yes,0,1,Yes,61,0,9.93
+Varun Verma,REG2026486,Computer Science,Female,69.84,54.54,5.56,3,54,48,49,49,1,No,0,0,Yes,46,0,6.56
+Priya Rao,REG2026487,Artificial Intelligence & Machine Learning,Male,87.28,82.92,9.46,0,87,84,87,85,4,Yes,2,2,Yes,88,1,14.44
+Kiran Mehta,REG2026488,Electronics & Communication,Female,89.58,84.79,9.82,0,88,97,83,88,4,Yes,1,3,Yes,89,1,15.04
+Kiran Bose,REG2026489,Information Technology,Male,81.82,75.27,6.99,0,68,63,61,63,2,No,1,1,Yes,66,0,8.26
+Sneha Trivedi,REG2026490,Civil Engineering,Male,87.82,85.95,8.52,0,95,91,97,94,3,Yes,2,2,Yes,94,1,14.45
+Divya Kumar,REG2026491,Artificial Intelligence & Machine Learning,Male,92.99,81.59,9.72,0,92,96,84,92,3,Yes,2,2,Yes,88,1,14.49
+Neha Singh,REG2026492,Artificial Intelligence & Machine Learning,Female,80.31,74.87,8.03,0,65,66,72,60,2,No,1,0,Yes,68,1,10.27
+Divya Verma,REG2026493,Civil Engineering,Female,59.25,51.49,6.76,2,43,56,46,47,0,No,0,0,Yes,45,0,6.69
+Sneha Rao,REG2026494,Electronics & Communication,Female,78.88,82.68,7.46,0,65,72,76,69,2,No,1,0,Yes,73,1,9.98
+Neha Saxena,REG2026495,Information Technology,Male,52.27,60.93,6.28,0,41,54,54,50,0,No,0,0,Yes,54,0,5.77
+Tanvi Mishra,REG2026496,Mechanical Engineering,Male,65.24,71.01,7.61,0,70,77,77,71,1,No,1,2,Yes,75,1,9.43
+Varun Kumar,REG2026497,Electronics & Communication,Female,53.61,66.83,5.02,1,40,41,45,40,0,No,0,0,Yes,40,0,5.03
+Aditya Gupta,REG2026498,Information Technology,Female,82.55,95.01,8.21,0,92,87,97,88,2,No,2,2,Yes,88,1,11.44
+Arjun Saxena,REG2026499,Civil Engineering,Female,79.51,69.6,6.8,0,63,62,60,66,2,No,0,2,Yes,59,0,7.81
+Neha Bose,REG2026500,Electronics & Communication,Female,82.19,70.13,7.33,1,73,66,72,73,1,No,1,1,Yes,69,0,9.09
+Divya Singh,REG2026501,Artificial Intelligence & Machine Learning,Male,83.73,96.53,9.67,1,97,85,77,89,2,Yes,2,3,Yes,83,1,13.46
+Vikram Mishra,REG2026502,Artificial Intelligence & Machine Learning,Female,62.94,59.29,5.89,1,57,43,49,51,1,No,1,0,Yes,51,0,6.88
+Divya Roy,REG2026503,Computer Science,Male,83.94,84.37,9.36,0,84,85,86,80,4,Yes,1,1,Yes,82,1,13.96
+Deepika Mishra,REG2026504,Civil Engineering,Male,84.06,80.38,9.29,0,92,81,76,86,3,Yes,2,1,Yes,82,1,13.39
+Abhishek Sen,REG2026505,Computer Science,Male,86.08,85.58,9.88,0,92,85,86,88,4,No,3,2,Yes,91,1,13.35
+Yash Roy,REG2026506,Computer Science,Male,68.12,69.13,7.76,0,74,63,61,68,1,No,1,0,Yes,60,0,8.82
+Priya Nair,REG2026507,Civil Engineering,Female,73.92,69.49,7.82,0,63,78,56,71,1,Yes,2,0,Yes,63,1,11.3
+Tanvi Kumar,REG2026508,Electronics & Communication,Female,83.7,93.27,9.46,0,98,82,97,92,4,Yes,3,2,Yes,93,1,14.35
+Vikram Gupta,REG2026509,Electronics & Communication,Male,90.72,95.7,8.29,0,83,93,77,91,3,Yes,1,3,Yes,81,1,13.77
+Neha Mehta,REG2026510,Information Technology,Female,60.16,53.24,5.75,2,57,45,49,54,0,No,0,0,Yes,55,0,6.36
+Amit Verma,REG2026511,Artificial Intelligence & Machine Learning,Male,87.21,95.67,8.85,0,82,81,84,78,3,Yes,2,2,Yes,85,1,12.82
+Kiran Reddy,REG2026512,Mechanical Engineering,Female,56.51,64.43,5.13,3,40,57,48,43,0,No,0,0,Yes,42,0,5.18
+Amit Yadav,REG2026513,Mechanical Engineering,Female,67.29,73.02,7.09,0,70,73,77,73,2,No,2,1,Yes,71,1,9.35
+Aditya Roy,REG2026514,Civil Engineering,Female,69.3,70.44,7.04,0,75,69,72,75,2,Yes,2,1,Yes,77,1,11.72
+Amit Choudhury,REG2026515,Artificial Intelligence & Machine Learning,Male,64.93,62.09,6.24,0,45,51,40,51,0,No,0,0,Yes,45,0,6.87
+Kiran Singh,REG2026516,Information Technology,Female,86.15,94.03,9.24,1,84,81,76,83,3,No,1,2,Yes,82,1,12.66
+Sneha Trivedi,REG2026517,Electronics & Communication,Female,93.79,86.1,8.52,0,95,89,87,95,4,Yes,2,1,Yes,95,1,14.44
+Sanjay Kumar,REG2026518,Civil Engineering,Male,50.66,50.02,5.14,2,50,40,48,43,1,No,1,0,Yes,43,0,5.69
+Tanvi Rao,REG2026519,Computer Science,Female,87.73,85.49,8.66,0,80,85,90,83,2,Yes,1,3,Yes,89,1,12.86
+Pooja Bose,REG2026520,Electronics & Communication,Male,80.83,74.51,7.55,0,73,68,77,66,1,No,0,0,Yes,72,0,8.54
+Yash Rao,REG2026521,Mechanical Engineering,Female,92.78,82.08,8.93,0,87,91,86,88,3,No,1,2,Yes,86,1,11.84
+Sneha Singh,REG2026522,Civil Engineering,Male,75.43,83.67,7.93,0,60,68,59,60,3,Yes,0,0,Yes,59,1,11.35
+Arjun Sharma,REG2026523,Information Technology,Female,58.46,61.32,5.66,3,40,52,56,46,1,No,0,0,Yes,47,0,6.37
+Aditya Joshi,REG2026524,Information Technology,Female,95.52,93.37,8.95,0,88,98,82,94,4,No,2,2,Yes,89,1,13.58
+Kiran Saxena,REG2026525,Mechanical Engineering,Male,96.34,85.48,9.18,0,90,92,80,88,3,Yes,2,2,Yes,79,1,14.07
+Yash Mishra,REG2026526,Civil Engineering,Female,68.77,51.08,5.02,1,45,44,45,48,0,No,0,0,Yes,43,0,5.26
+Deepika Das,REG2026527,Information Technology,Female,65.13,63.34,5.42,1,50,48,49,48,0,No,0,0,Yes,44,0,5.81
+Abhishek Kumar,REG2026528,Mechanical Engineering,Male,71.24,83.2,8.02,0,66,65,55,65,3,No,0,0,Yes,55,0,9.66
+Priya Roy,REG2026529,Civil Engineering,Female,62.15,59.53,6.56,0,51,53,53,53,1,No,1,0,Yes,53,0,7.77
+Pooja Nair,REG2026530,Mechanical Engineering,Female,80.22,80.62,9.46,0,91,84,81,92,3,No,2,3,Yes,83,1,12.93
+Neha Patel,REG2026531,Civil Engineering,Male,67.82,69.5,7.58,0,72,64,55,67,2,No,2,0,Yes,62,1,9.04
+Aditya Bose,REG2026532,Artificial Intelligence & Machine Learning,Female,83.3,75.74,7.82,0,72,74,66,73,1,No,1,1,Yes,66,1,9.71
+Rohit Kumar,REG2026533,Information Technology,Male,61.57,55.18,6.64,0,46,52,53,43,0,Yes,0,0,Yes,50,0,7.67
+Riya Trivedi,REG2026534,Computer Science,Male,76.78,79.42,7.14,0,79,72,79,79,2,No,0,0,Yes,76,1,10.07
+Abhishek Sen,REG2026535,Electronics & Communication,Male,51.88,53.43,5.18,1,41,53,40,47,0,No,0,0,Yes,40,0,5.9
+Rohit Roy,REG2026536,Computer Science,Male,74.21,65.79,6.82,0,72,71,68,69,1,No,2,0,Yes,64,1,9.29
+Tanvi Reddy,REG2026537,Civil Engineering,Female,74.89,74.8,7.55,0,67,68,58,67,2,No,2,0,Yes,64,1,9.46
+Neha Verma,REG2026538,Electronics & Communication,Male,75.26,69.85,7.06,0,75,68,70,73,2,No,1,0,Yes,71,1,10.86
+Priya Joshi,REG2026539,Civil Engineering,Female,80.39,89.36,9.42,0,89,94,97,93,3,Yes,2,2,Yes,93,1,14.89
+Neha Das,REG2026540,Civil Engineering,Male,89.09,95.32,9.43,0,97,99,91,100,3,Yes,2,1,Yes,92,1,14.71
+Anjali Joshi,REG2026541,Computer Science,Male,90.93,87.48,8.88,0,91,92,85,94,4,Yes,2,2,Yes,90,1,14.65
+Priya Yadav,REG2026542,Artificial Intelligence & Machine Learning,Male,84.34,68.2,7.9,2,60,73,61,67,1,No,2,0,Yes,64,0,8.27
+Aditya Reddy,REG2026543,Computer Science,Male,68.85,66.46,5.08,1,47,45,48,50,0,No,1,0,Yes,47,0,5.44
+Divya Sen,REG2026544,Computer Science,Female,94.92,81.96,8.39,0,81,92,78,81,3,Yes,2,2,Yes,78,1,13.24
+Arjun Gupta,REG2026545,Artificial Intelligence & Machine Learning,Female,81.4,92.84,8.21,0,80,92,84,86,3,No,1,1,Yes,87,1,11.42
+Aditya Saxena,REG2026546,Artificial Intelligence & Machine Learning,Female,87.6,94.16,9.95,0,96,86,87,89,3,Yes,2,1,Yes,91,1,14.26
+Sneha Joshi,REG2026547,Artificial Intelligence & Machine Learning,Male,79.1,83.1,7.41,0,78,70,67,77,2,No,0,1,Yes,69,1,10.84
+Sneha Kumar,REG2026548,Artificial Intelligence & Machine Learning,Female,95.98,97.24,9.76,0,87,96,83,93,3,Yes,2,3,Yes,85,1,15.06
+Priya Yadav,REG2026549,Mechanical Engineering,Female,65.77,64.16,5.46,2,56,43,42,53,1,No,1,0,Yes,46,0,7.42
+Pooja Yadav,REG2026550,Computer Science,Male,62.95,60.05,5.89,0,45,42,43,40,1,No,0,0,Yes,43,0,6.01
+Aditya Sharma,REG2026551,Mechanical Engineering,Female,96.88,94.86,9.46,0,88,91,79,89,3,Yes,2,2,Yes,82,1,14.52
+Priya Kumar,REG2026552,Electronics & Communication,Male,84.99,78.41,8.19,0,74,67,65,71,1,No,2,1,Yes,64,1,9.92
+Riya Joshi,REG2026553,Computer Science,Female,64.58,69.05,6.5,3,54,48,44,50,0,Yes,0,0,Yes,50,0,8.37
+Yash Nair,REG2026554,Computer Science,Female,80.97,75.48,7.6,1,76,62,72,68,2,Yes,0,0,Yes,73,1,11.56
+Arjun Singh,REG2026555,Artificial Intelligence & Machine Learning,Male,95.28,80.18,9.89,0,86,84,75,81,3,Yes,2,1,Yes,78,1,14.79
+Sanjay Rao,REG2026556,Civil Engineering,Female,81.21,84.56,9.65,0,93,95,82,95,3,Yes,3,1,Yes,88,1,14.69
+Kiran Patel,REG2026557,Civil Engineering,Female,93.66,97.16,8.3,0,88,86,77,85,3,Yes,1,2,Yes,76,1,13.62
+Sanjay Yadav,REG2026558,Civil Engineering,Male,73.71,73.04,7.61,0,74,70,57,69,3,Yes,2,0,Yes,67,1,12.6
+Deepika Joshi,REG2026559,Civil Engineering,Female,85.58,84.53,8.82,0,83,84,81,78,3,Yes,3,1,Yes,80,1,14.34
+Sneha Gupta,REG2026560,Mechanical Engineering,Male,52.79,65.54,6.13,1,44,55,52,52,0,No,0,0,Yes,48,0,6.41
+Anjali Das,REG2026561,Civil Engineering,Male,82.42,79.97,8.02,0,75,62,63,65,2,No,2,1,Yes,67,1,10.34
+Divya Trivedi,REG2026562,Information Technology,Male,66.76,60.5,5.37,1,49,53,43,53,0,No,1,0,Yes,46,0,5.32
+Neha Bose,REG2026563,Information Technology,Female,85.23,92.38,9.05,0,99,87,83,92,3,No,2,2,Yes,91,1,12.32
+Pooja Saxena,REG2026564,Civil Engineering,Female,88.0,90.6,8.45,0,84,94,77,90,4,Yes,1,1,Yes,84,1,13.77
+Neha Reddy,REG2026565,Artificial Intelligence & Machine Learning,Male,65.3,72.06,7.0,1,62,67,60,60,3,Yes,2,0,Yes,56,1,11.15
+Kiran Rao,REG2026566,Computer Science,Female,83.32,87.98,8.5,1,81,91,89,88,3,Yes,1,2,Yes,88,1,13.02
+Priya Sen,REG2026567,Information Technology,Female,85.92,81.71,9.99,0,97,83,91,87,3,No,2,1,Yes,90,1,13.59
+Arjun Trivedi,REG2026568,Electronics & Communication,Male,53.9,53.31,6.4,0,49,48,50,48,1,No,0,0,Yes,53,0,7.66
+Rahul Saxena,REG2026569,Artificial Intelligence & Machine Learning,Female,68.65,80.01,7.27,0,60,68,72,66,1,No,1,0,Yes,69,1,8.93
+Vikram Singh,REG2026570,Mechanical Engineering,Male,69.28,65.12,7.22,0,75,64,78,74,2,No,1,1,Yes,80,1,10.59
+Vikram Nair,REG2026571,Electronics & Communication,Male,83.12,86.14,8.94,0,95,81,83,85,4,Yes,3,3,Yes,81,1,14.26
+Vikram Das,REG2026572,Information Technology,Male,67.36,81.66,7.79,0,77,74,60,79,2,No,0,2,Yes,72,1,11.37
+Aditya Joshi,REG2026573,Artificial Intelligence & Machine Learning,Male,69.38,53.99,5.11,3,49,54,40,53,0,No,0,0,Yes,41,0,6.38
+Deepika Bose,REG2026574,Information Technology,Female,83.76,66.07,7.5,0,72,75,62,73,2,No,0,1,Yes,63,0,9.09
+Pooja Roy,REG2026575,Electronics & Communication,Female,80.07,75.5,7.32,0,72,71,62,71,3,Yes,1,0,Yes,64,1,11.81
+Sneha Bose,REG2026576,Mechanical Engineering,Female,76.86,80.12,7.7,0,74,65,59,73,2,No,1,0,Yes,61,0,9.31
+Abhishek Sen,REG2026577,Computer Science,Female,94.22,91.81,9.3,0,89,88,94,84,3,Yes,2,1,Yes,86,1,14.1
+Divya Verma,REG2026578,Artificial Intelligence & Machine Learning,Female,56.5,50.51,6.35,0,55,47,50,52,1,No,0,0,Yes,47,0,7.53
+Tanvi Das,REG2026579,Computer Science,Female,78.6,66.16,8.1,0,79,63,74,71,1,Yes,2,1,Yes,76,1,11.96
+Aditya Yadav,REG2026580,Civil Engineering,Female,82.94,83.52,7.33,0,78,61,73,69,1,No,1,0,Yes,75,1,9.72
+Riya Kumar,REG2026581,Artificial Intelligence & Machine Learning,Female,90.66,95.82,8.84,0,84,80,75,85,4,Yes,2,2,Yes,78,1,14.24
+Abhishek Sen,REG2026582,Civil Engineering,Male,96.03,90.59,9.85,0,90,84,87,85,2,No,2,3,Yes,90,1,12.4
+Pooja Trivedi,REG2026583,Civil Engineering,Female,67.84,50.62,6.61,0,51,41,52,48,0,No,0,0,Yes,47,0,6.63
+Kiran Choudhury,REG2026584,Artificial Intelligence & Machine Learning,Male,68.9,62.17,5.46,3,53,50,52,50,1,No,0,0,Yes,46,0,6.62
+Aditya Sharma,REG2026585,Civil Engineering,Female,82.38,90.72,9.01,0,85,87,77,81,3,Yes,2,1,Yes,75,1,13.63
+Varun Kumar,REG2026586,Mechanical Engineering,Male,84.27,73.87,7.91,0,70,74,60,72,1,Yes,1,0,Yes,66,1,11.65
+Neha Saxena,REG2026587,Civil Engineering,Male,80.89,65.8,7.27,0,66,74,75,69,2,No,0,1,Yes,73,1,9.4
+Amit Das,REG2026588,Electronics & Communication,Female,55.85,63.12,6.15,0,40,47,50,41,1,No,0,0,Yes,47,0,6.5
+Abhishek Das,REG2026589,Artificial Intelligence & Machine Learning,Male,81.71,72.98,7.43,1,75,65,63,75,2,No,0,0,Yes,71,0,9.0
+Varun Rao,REG2026590,Civil Engineering,Male,63.42,59.39,5.62,2,55,40,50,45,0,No,1,0,Yes,45,0,6.43
+Kiran Gupta,REG2026591,Information Technology,Female,72.0,76.61,7.12,0,72,68,70,70,1,Yes,1,0,Yes,73,1,11.62
+Yash Bose,REG2026592,Artificial Intelligence & Machine Learning,Female,85.1,91.52,9.29,0,84,92,77,83,3,Yes,2,2,Yes,78,1,14.14
+Tanvi Rao,REG2026593,Civil Engineering,Male,87.87,84.61,8.42,0,99,83,75,91,3,Yes,1,1,Yes,79,1,13.29
+Tanvi Patel,REG2026594,Mechanical Engineering,Female,55.42,55.93,6.52,0,51,47,45,48,0,No,0,0,Yes,46,0,6.47
+Vikram Joshi,REG2026595,Mechanical Engineering,Female,58.52,53.74,6.39,1,46,46,55,47,0,No,1,1,Yes,50,0,6.24
+Vikram Yadav,REG2026596,Computer Science,Male,91.02,87.89,9.51,0,93,84,96,90,3,Yes,1,2,Yes,94,1,14.96
+Amit Reddy,REG2026597,Artificial Intelligence & Machine Learning,Female,55.25,54.91,6.74,0,55,43,57,49,0,No,0,0,Yes,49,0,7.03
+Sanjay Joshi,REG2026598,Computer Science,Male,63.29,54.28,5.78,0,49,42,40,45,0,No,0,0,Yes,43,0,5.62
+Pooja Nair,REG2026599,Computer Science,Female,79.62,78.29,6.98,0,75,77,55,72,2,Yes,1,1,Yes,58,1,11.76
+Rahul Saxena,REG2026600,Mechanical Engineering,Female,88.34,82.84,9.26,0,98,97,86,100,4,Yes,2,1,Yes,92,1,15.4
+Priya Sen,REG2026601,Electronics & Communication,Male,65.99,52.67,5.2,3,53,50,53,51,0,No,0,0,Yes,47,0,6.09
+Neha Roy,REG2026602,Artificial Intelligence & Machine Learning,Female,65.96,58.66,6.65,1,53,48,44,48,0,No,0,0,Yes,50,0,6.01
+Priya Verma,REG2026603,Electronics & Communication,Male,53.4,63.05,6.1,2,44,53,52,43,0,No,0,0,Yes,50,0,5.9
+Vikram Reddy,REG2026604,Artificial Intelligence & Machine Learning,Male,75.12,72.97,6.97,0,61,61,65,60,2,No,0,1,Yes,59,0,8.52
+Deepika Patel,REG2026605,Information Technology,Male,86.57,81.8,9.41,0,89,83,89,82,4,Yes,3,2,Yes,83,1,14.25
+Varun Gupta,REG2026606,Civil Engineering,Male,87.46,80.32,9.75,0,92,80,84,83,4,Yes,2,1,Yes,78,1,14.8
+Sanjay Saxena,REG2026607,Civil Engineering,Male,70.25,77.9,7.99,0,76,63,75,70,2,Yes,1,2,Yes,67,1,12.87
+Arjun Kumar,REG2026608,Electronics & Communication,Female,71.87,73.02,7.87,0,78,65,65,67,2,No,1,0,Yes,62,1,10.25
+Priya Sen,REG2026609,Artificial Intelligence & Machine Learning,Female,81.81,82.67,7.02,0,66,60,69,64,3,No,1,1,Yes,67,1,9.51
+Priya Mishra,REG2026610,Information Technology,Female,90.27,93.62,8.4,0,91,93,97,91,2,No,1,1,Yes,98,1,12.04
+Priya Reddy,REG2026611,Information Technology,Female,74.63,74.01,7.39,0,78,70,78,75,1,No,2,1,Yes,79,1,10.01
+Neha Sen,REG2026612,Civil Engineering,Male,86.07,82.21,8.35,0,82,86,88,78,2,No,3,2,Yes,85,1,11.02
+Tanvi Trivedi,REG2026613,Artificial Intelligence & Machine Learning,Female,88.92,89.03,8.24,0,94,90,80,91,3,No,2,2,Yes,85,1,11.63
+Priya Das,REG2026614,Information Technology,Female,82.35,83.87,9.38,0,96,98,93,93,3,Yes,2,1,Yes,92,1,14.7
+Amit Reddy,REG2026615,Artificial Intelligence & Machine Learning,Female,87.17,92.59,8.73,0,81,95,88,82,3,Yes,1,2,Yes,87,1,13.71
+Rahul Choudhury,REG2026616,Computer Science,Female,93.83,95.05,8.42,0,90,97,95,88,2,Yes,2,2,Yes,94,1,12.65
+Anjali Kumar,REG2026617,Civil Engineering,Female,51.09,53.37,5.82,2,46,49,56,45,1,No,0,0,Yes,48,0,5.6
+Varun Gupta,REG2026618,Information Technology,Female,54.37,53.28,5.43,1,44,57,48,52,0,No,0,0,Yes,49,0,5.98
+Sanjay Reddy,REG2026619,Civil Engineering,Male,82.11,83.23,9.95,0,89,99,87,95,3,Yes,2,2,Yes,92,1,14.55
+Riya Verma,REG2026620,Electronics & Communication,Male,55.37,63.04,5.24,1,53,42,53,47,1,No,0,1,Yes,49,0,6.73
+Arjun Verma,REG2026621,Mechanical Engineering,Male,56.14,59.5,5.81,2,51,51,52,48,0,No,0,0,Yes,48,0,6.33
+Tanvi Reddy,REG2026622,Computer Science,Female,50.73,58.59,6.36,1,56,55,45,52,0,No,0,0,Yes,50,0,6.35
+Yash Saxena,REG2026623,Electronics & Communication,Male,65.97,69.29,5.27,0,55,43,40,45,0,No,0,0,Yes,40,0,6.3
+Kiran Sharma,REG2026624,Mechanical Engineering,Female,63.19,54.57,5.76,2,52,53,50,50,0,No,0,0,Yes,45,0,5.78
+Priya Patel,REG2026625,Civil Engineering,Male,68.21,79.31,7.78,2,66,75,65,67,2,No,0,0,Yes,64,0,8.63
+Divya Mishra,REG2026626,Civil Engineering,Male,71.79,83.72,7.03,0,69,76,74,66,3,No,0,0,Yes,66,0,8.85
+Varun Patel,REG2026627,Computer Science,Female,72.23,77.52,6.84,2,78,78,64,80,2,No,2,1,Yes,74,0,9.21
+Rahul Verma,REG2026628,Artificial Intelligence & Machine Learning,Female,68.77,65.79,5.23,0,40,51,51,47,1,No,0,0,Yes,50,0,5.41
+Sanjay Choudhury,REG2026629,Mechanical Engineering,Male,88.48,82.14,9.73,0,99,88,89,97,3,Yes,2,1,Yes,88,1,14.38
+Arjun Reddy,REG2026630,Information Technology,Male,66.3,84.5,7.75,0,74,75,74,73,2,No,0,2,Yes,72,1,10.49
+Priya Mishra,REG2026631,Information Technology,Male,50.08,50.42,5.84,0,52,50,41,55,0,No,0,0,Yes,52,0,6.37
+Rahul Trivedi,REG2026632,Mechanical Engineering,Male,53.47,51.97,5.59,0,42,52,40,50,0,No,1,0,Yes,43,0,6.37
+Vikram Singh,REG2026633,Electronics & Communication,Male,61.78,67.96,6.43,1,47,51,47,45,0,No,1,0,Yes,41,0,6.79
+Sanjay Nair,REG2026634,Mechanical Engineering,Male,81.93,87.05,9.26,0,83,95,96,88,2,Yes,3,1,Yes,94,1,13.71
+Deepika Reddy,REG2026635,Electronics & Communication,Male,79.4,66.7,6.95,0,78,70,74,77,1,No,2,0,Yes,70,1,9.79
+Anjali Rao,REG2026636,Artificial Intelligence & Machine Learning,Female,92.7,92.16,9.65,0,90,93,75,93,3,Yes,1,3,Yes,79,1,14.54
+Anjali Reddy,REG2026637,Information Technology,Female,86.44,95.2,9.02,0,81,87,97,84,4,Yes,1,1,Yes,94,1,14.81
+Rahul Kumar,REG2026638,Information Technology,Male,76.29,84.05,7.91,0,72,78,65,70,2,No,2,0,Yes,67,1,10.21
+Tanvi Nair,REG2026639,Computer Science,Male,65.28,61.62,6.13,0,43,41,45,45,0,No,0,0,Yes,45,0,5.89
+Tanvi Yadav,REG2026640,Civil Engineering,Male,86.12,96.2,8.29,0,82,80,77,78,3,Yes,1,3,Yes,76,1,13.31
+Pooja Nair,REG2026641,Electronics & Communication,Female,65.78,65.2,5.63,1,50,57,45,54,1,No,1,0,Yes,45,0,6.95
+Rahul Patel,REG2026642,Electronics & Communication,Male,65.26,62.16,5.18,2,50,57,52,47,0,No,0,0,Yes,51,0,5.51
+Rohit Reddy,REG2026643,Artificial Intelligence & Machine Learning,Male,69.3,71.48,7.53,0,76,71,65,74,3,Yes,2,1,Yes,68,1,12.29
+Rohit Bose,REG2026644,Computer Science,Female,53.67,58.49,5.71,1,54,49,55,47,0,No,0,0,Yes,52,0,7.14
+Rohit Patel,REG2026645,Computer Science,Female,76.78,71.22,7.43,1,63,65,71,65,2,No,0,1,Yes,63,0,9.03
+Rohit Gupta,REG2026646,Electronics & Communication,Male,67.24,59.83,5.23,0,52,49,45,45,0,No,0,0,Yes,47,0,5.69
+Sanjay Choudhury,REG2026647,Civil Engineering,Male,83.16,85.81,8.32,0,92,92,87,95,4,Yes,3,1,Yes,94,1,14.54
+Aditya Sharma,REG2026648,Artificial Intelligence & Machine Learning,Female,90.29,97.22,8.74,1,92,84,85,84,4,Yes,1,1,Yes,79,1,14.75
+Rahul Reddy,REG2026649,Computer Science,Male,83.9,77.93,7.1,0,72,79,60,69,2,No,0,0,Yes,68,0,8.78
+Amit Sen,REG2026650,Computer Science,Male,76.98,66.91,7.34,1,71,66,70,67,3,Yes,1,2,Yes,67,1,12.62
+Riya Singh,REG2026651,Civil Engineering,Male,72.99,74.21,8.07,1,79,77,55,79,2,Yes,0,0,Yes,63,1,12.68
+Yash Roy,REG2026652,Artificial Intelligence & Machine Learning,Female,53.56,63.77,6.5,1,52,43,57,44,0,No,1,0,Yes,52,0,6.65
+Kiran Joshi,REG2026653,Information Technology,Male,68.17,54.52,5.98,3,48,47,48,45,1,No,0,0,Yes,44,0,6.25
+Rahul Joshi,REG2026654,Computer Science,Male,65.3,69.09,6.53,3,50,42,56,47,1,No,0,0,Yes,47,0,8.01
+Varun Sharma,REG2026655,Computer Science,Female,82.58,78.64,7.56,2,62,74,58,62,2,No,1,0,Yes,55,0,8.92
+Priya Sen,REG2026656,Mechanical Engineering,Male,50.87,54.35,6.75,3,51,55,43,47,1,No,0,0,Yes,40,0,7.82
+Vikram Patel,REG2026657,Computer Science,Female,88.26,90.68,8.68,0,99,80,95,93,3,Yes,3,2,Yes,96,1,14.01
+Priya Mishra,REG2026658,Computer Science,Male,82.18,80.11,9.11,1,93,86,95,88,4,Yes,3,1,Yes,89,1,13.99
+Amit Sen,REG2026659,Electronics & Communication,Male,80.95,77.87,7.89,0,71,66,63,65,2,No,0,0,Yes,67,0,9.68
+Yash Nair,REG2026660,Information Technology,Male,67.06,54.4,5.12,2,43,47,41,40,0,No,1,0,Yes,40,0,5.42
+Arjun Reddy,REG2026661,Mechanical Engineering,Female,92.02,92.7,9.89,0,89,85,76,88,3,Yes,1,1,Yes,83,1,14.59
+Priya Sharma,REG2026662,Artificial Intelligence & Machine Learning,Male,81.84,77.96,7.37,0,71,60,55,70,2,Yes,0,1,Yes,60,1,12.11
+Yash Trivedi,REG2026663,Mechanical Engineering,Male,81.42,87.67,9.9,0,85,82,88,86,3,Yes,3,2,Yes,86,1,13.93
+Pooja Das,REG2026664,Civil Engineering,Male,80.7,70.88,7.86,0,68,73,74,70,2,No,0,2,Yes,75,1,11.37
+Sanjay Das,REG2026665,Civil Engineering,Male,75.83,72.76,6.94,1,78,75,75,78,1,Yes,0,1,Yes,78,0,10.44
+Tanvi Roy,REG2026666,Computer Science,Male,63.91,58.77,5.99,1,44,48,48,40,0,No,0,0,Yes,42,0,5.49
+Neha Sharma,REG2026667,Mechanical Engineering,Male,82.8,91.35,9.52,0,98,84,82,92,3,Yes,3,2,Yes,84,1,14.74
+Priya Das,REG2026668,Mechanical Engineering,Male,54.31,64.44,6.46,1,53,47,52,52,1,No,0,0,Yes,48,0,6.68
+Kiran Sharma,REG2026669,Mechanical Engineering,Male,95.3,95.21,9.86,0,84,88,91,85,4,Yes,2,3,Yes,83,1,14.22
+Anjali Patel,REG2026670,Computer Science,Male,67.27,63.2,6.3,0,55,43,44,45,0,No,1,0,Yes,42,0,6.93
+Yash Choudhury,REG2026671,Electronics & Communication,Female,93.21,89.27,9.67,0,92,83,94,90,4,Yes,2,1,Yes,87,1,15.14
+Tanvi Gupta,REG2026672,Electronics & Communication,Male,90.98,87.32,8.77,0,88,81,96,88,4,Yes,2,1,Yes,95,1,14.05
+Tanvi Saxena,REG2026673,Mechanical Engineering,Female,85.51,83.92,8.79,0,83,85,85,85,3,Yes,3,2,Yes,86,1,14.74
+Varun Rao,REG2026674,Information Technology,Female,51.83,65.0,5.32,1,40,42,43,44,0,No,1,0,Yes,45,0,5.54
+Vikram Singh,REG2026675,Civil Engineering,Female,93.71,89.82,9.33,0,85,87,91,81,3,Yes,2,2,Yes,82,1,14.61
+Yash Trivedi,REG2026676,Mechanical Engineering,Male,75.85,80.98,6.85,2,69,67,62,65,1,No,2,0,Yes,63,0,8.63
+Amit Sharma,REG2026677,Computer Science,Male,79.88,80.3,7.02,0,77,62,66,70,2,No,0,0,Yes,65,0,8.85
+Varun Patel,REG2026678,Electronics & Communication,Female,82.64,89.92,8.46,0,98,83,92,89,2,Yes,1,1,Yes,90,1,14.43
+Amit Rao,REG2026679,Information Technology,Male,68.85,70.41,8.0,0,69,62,66,61,1,No,2,0,Yes,64,1,10.12
+Sneha Sen,REG2026680,Electronics & Communication,Female,74.36,69.35,7.27,2,70,68,68,70,2,Yes,0,0,Yes,72,0,10.75
+Arjun Sharma,REG2026681,Mechanical Engineering,Female,91.24,85.45,8.73,0,97,95,97,93,2,Yes,1,2,Yes,90,1,14.75
+Sneha Bose,REG2026682,Mechanical Engineering,Male,52.14,59.88,6.57,2,40,55,44,48,0,No,1,0,Yes,50,0,6.53
+Divya Choudhury,REG2026683,Computer Science,Female,87.24,93.76,8.64,0,87,90,96,89,3,Yes,2,3,Yes,90,1,13.8
+Deepika Saxena,REG2026684,Computer Science,Female,66.35,60.67,5.61,1,52,50,41,54,0,No,0,0,Yes,50,0,6.58
+Anjali Mishra,REG2026685,Civil Engineering,Female,66.71,73.89,7.99,0,65,68,72,65,3,No,0,2,Yes,70,0,9.53
+Amit Rao,REG2026686,Civil Engineering,Male,69.75,75.07,8.1,1,66,79,72,67,1,Yes,0,1,Yes,66,1,11.62
+Yash Patel,REG2026687,Mechanical Engineering,Female,80.11,88.35,8.24,0,90,81,77,90,3,No,2,3,Yes,86,1,12.09
+Divya Gupta,REG2026688,Electronics & Communication,Male,53.22,53.62,6.02,1,53,43,57,48,0,No,0,0,Yes,56,0,6.99
+Arjun Choudhury,REG2026689,Information Technology,Female,82.69,67.25,7.75,0,69,65,63,62,1,No,0,1,Yes,60,1,9.18
+Neha Nair,REG2026690,Civil Engineering,Female,91.6,83.19,9.21,1,90,98,84,94,4,Yes,1,2,Yes,87,1,15.39
+Aditya Kumar,REG2026691,Computer Science,Female,54.66,65.46,5.16,1,49,44,49,43,1,No,0,0,Yes,42,0,6.14
+Kiran Yadav,REG2026692,Information Technology,Female,95.89,85.34,9.68,0,81,95,88,83,3,Yes,3,3,Yes,87,1,14.39
+Amit Mishra,REG2026693,Mechanical Engineering,Female,85.43,83.62,9.59,0,92,87,95,87,4,Yes,1,2,Yes,93,1,14.78
+Riya Kumar,REG2026694,Information Technology,Female,78.7,83.65,7.01,0,78,70,64,73,1,No,0,2,Yes,72,0,8.68
+Rahul Kumar,REG2026695,Artificial Intelligence & Machine Learning,Male,50.09,67.71,5.12,3,45,46,41,46,0,No,1,0,Yes,40,0,4.82
+Tanvi Mehta,REG2026696,Artificial Intelligence & Machine Learning,Female,55.28,62.86,6.27,0,53,43,49,53,1,No,1,0,Yes,47,0,7.47
+Vikram Gupta,REG2026697,Electronics & Communication,Male,70.95,74.41,6.93,0,62,63,67,65,3,Yes,2,2,Yes,66,1,11.16
+Divya Trivedi,REG2026698,Information Technology,Male,71.9,68.72,6.81,0,71,76,67,71,3,No,2,0,Yes,73,1,9.83
+Pooja Patel,REG2026699,Information Technology,Female,69.2,68.98,8.12,0,73,64,57,71,3,Yes,0,0,Yes,61,1,12.21
+Anjali Mehta,REG2026700,Information Technology,Female,80.44,92.16,9.88,0,93,99,97,97,3,Yes,1,2,Yes,96,1,15.43
+Varun Reddy,REG2026701,Mechanical Engineering,Female,58.83,56.77,5.53,0,44,41,46,44,0,No,0,0,Yes,41,0,6.35
+Abhishek Das,REG2026702,Civil Engineering,Female,97.26,95.52,8.5,0,83,92,91,86,3,Yes,2,2,Yes,87,1,13.29
+Riya Mishra,REG2026703,Artificial Intelligence & Machine Learning,Female,67.58,58.09,5.52,0,49,42,49,47,0,No,0,1,Yes,50,0,5.81
+Sneha Saxena,REG2026704,Civil Engineering,Female,77.32,77.68,7.56,1,78,70,62,76,2,Yes,1,0,Yes,66,1,11.66
+Divya Bose,REG2026705,Computer Science,Female,86.1,90.29,9.01,0,81,89,81,86,3,No,1,1,Yes,87,1,12.4
+Divya Joshi,REG2026706,Information Technology,Female,86.42,94.99,8.28,0,93,91,85,88,3,Yes,2,2,Yes,85,1,13.4
+Tanvi Verma,REG2026707,Mechanical Engineering,Female,82.92,78.04,7.83,0,72,71,68,74,2,No,2,0,Yes,66,1,10.16
+Varun Verma,REG2026708,Information Technology,Female,93.2,87.76,9.0,0,92,83,89,83,2,Yes,2,1,Yes,83,1,13.79
+Sanjay Mehta,REG2026709,Mechanical Engineering,Male,70.59,77.19,7.76,0,71,73,74,69,3,No,2,1,Yes,70,1,10.78
+Vikram Joshi,REG2026710,Electronics & Communication,Male,68.67,54.4,6.51,1,55,54,46,57,1,No,0,0,Yes,53,0,7.47
+Neha Roy,REG2026711,Artificial Intelligence & Machine Learning,Female,93.84,87.09,9.51,0,87,80,92,85,3,Yes,2,2,Yes,89,1,14.19
+Sneha Das,REG2026712,Mechanical Engineering,Male,55.61,69.51,5.33,1,53,51,50,55,0,No,0,0,Yes,53,0,5.13
+Priya Roy,REG2026713,Artificial Intelligence & Machine Learning,Female,67.3,63.89,5.01,1,41,54,57,47,0,No,0,0,Yes,51,0,5.8
+Priya Saxena,REG2026714,Mechanical Engineering,Female,81.7,86.67,9.48,0,93,83,76,89,2,No,2,2,Yes,83,1,13.37
+Aditya Trivedi,REG2026715,Civil Engineering,Male,80.83,89.89,9.04,0,85,85,84,83,3,Yes,3,2,Yes,80,1,14.17
+Kiran Mishra,REG2026716,Computer Science,Female,67.62,84.39,8.18,0,77,67,64,70,1,Yes,0,0,Yes,62,1,12.19
+Divya Sharma,REG2026717,Electronics & Communication,Female,81.83,86.25,9.17,0,84,96,84,86,2,Yes,1,2,Yes,88,1,12.94
+Arjun Reddy,REG2026718,Computer Science,Female,69.61,70.06,8.12,0,74,72,62,69,2,No,1,0,Yes,65,1,10.65
+Anjali Trivedi,REG2026719,Information Technology,Female,55.91,50.43,6.7,0,40,44,44,41,0,No,1,0,Yes,42,0,6.34
+Abhishek Patel,REG2026720,Computer Science,Female,52.26,68.18,5.36,2,55,50,44,49,0,No,0,0,Yes,45,0,5.76
+Varun Mehta,REG2026721,Mechanical Engineering,Female,67.47,65.79,6.21,1,40,55,47,44,0,Yes,1,1,Yes,43,0,8.04
+Vikram Das,REG2026722,Civil Engineering,Male,59.51,62.9,6.0,1,51,52,51,55,0,No,0,0,Yes,48,0,7.0
+Divya Das,REG2026723,Computer Science,Female,90.96,92.38,9.05,0,88,85,95,81,4,Yes,1,1,Yes,84,1,14.43
+Aditya Rao,REG2026724,Computer Science,Male,71.3,83.82,7.99,1,70,75,59,75,2,No,0,1,Yes,62,0,8.98
+Sneha Saxena,REG2026725,Civil Engineering,Male,57.78,65.12,5.13,2,47,50,53,46,0,No,1,0,Yes,52,0,5.35
+Deepika Roy,REG2026726,Electronics & Communication,Female,67.04,67.86,8.01,0,63,70,65,68,1,No,1,0,Yes,63,0,8.42
+Priya Das,REG2026727,Artificial Intelligence & Machine Learning,Female,67.42,55.44,5.15,1,51,41,45,43,1,No,0,0,Yes,40,0,5.68
+Tanvi Mehta,REG2026728,Information Technology,Female,51.53,51.92,5.89,2,53,56,42,53,0,No,1,0,Yes,48,0,5.46
+Amit Choudhury,REG2026729,Computer Science,Male,84.74,86.09,8.39,0,84,98,79,84,3,Yes,2,2,Yes,82,1,13.64
+Riya Roy,REG2026730,Information Technology,Female,67.89,50.23,6.74,1,54,42,47,46,0,No,0,0,Yes,42,0,6.55
+Priya Mehta,REG2026731,Electronics & Communication,Male,84.02,81.85,7.34,0,78,64,56,70,2,Yes,0,1,Yes,58,1,12.26
+Rahul Mehta,REG2026732,Electronics & Communication,Male,80.09,69.42,6.84,2,79,67,55,71,2,No,0,0,Yes,66,0,8.37
+Sanjay Sharma,REG2026733,Mechanical Engineering,Male,70.66,75.19,7.52,1,75,78,75,76,1,Yes,1,0,Yes,77,1,11.2
+Arjun Mishra,REG2026734,Civil Engineering,Female,89.29,86.23,9.41,0,89,89,90,89,2,Yes,3,2,Yes,92,1,13.56
+Varun Bose,REG2026735,Mechanical Engineering,Female,93.69,80.87,8.87,0,87,83,77,82,3,Yes,2,2,Yes,75,1,13.85
+Rahul Mishra,REG2026736,Mechanical Engineering,Male,59.47,64.93,6.45,2,56,48,43,51,0,No,0,0,Yes,46,0,6.74
+Anjali Patel,REG2026737,Computer Science,Male,67.46,56.74,6.12,0,56,54,44,56,1,No,0,0,Yes,52,0,6.84
+Abhishek Sharma,REG2026738,Civil Engineering,Male,97.34,92.73,8.34,0,92,87,81,85,3,No,1,2,Yes,87,1,12.52
+Anjali Kumar,REG2026739,Information Technology,Male,63.01,57.9,6.1,0,53,41,47,49,0,No,0,0,Yes,45,0,7.16
+Sneha Yadav,REG2026740,Mechanical Engineering,Male,67.24,58.49,6.65,1,47,53,41,49,0,No,0,0,Yes,46,0,7.6
+Aditya Sen,REG2026741,Information Technology,Male,92.49,86.06,8.39,0,91,99,85,94,3,Yes,1,2,Yes,93,1,13.39
+Amit Sharma,REG2026742,Information Technology,Male,59.77,51.55,5.34,1,47,50,55,52,0,Yes,0,0,Yes,56,0,7.85
+Priya Mishra,REG2026743,Artificial Intelligence & Machine Learning,Female,62.69,63.45,6.22,0,45,49,43,48,0,No,0,0,Yes,41,0,6.31
+Abhishek Trivedi,REG2026744,Civil Engineering,Male,85.4,83.27,9.0,0,90,85,94,91,3,Yes,3,1,Yes,89,1,13.62
+Rahul Sen,REG2026745,Electronics & Communication,Female,79.59,70.0,7.81,0,62,63,56,59,3,No,0,0,Yes,59,0,9.17
+Divya Verma,REG2026746,Mechanical Engineering,Female,71.07,80.66,7.22,0,64,76,57,63,3,No,0,0,Yes,60,0,8.31
+Sneha Verma,REG2026747,Computer Science,Male,52.52,59.06,5.93,0,57,44,48,46,0,No,0,0,Yes,49,0,6.5
+Divya Patel,REG2026748,Artificial Intelligence & Machine Learning,Female,76.36,71.99,7.79,0,69,70,70,66,2,Yes,0,0,Yes,71,1,11.74
+Pooja Joshi,REG2026749,Electronics & Communication,Male,90.92,95.49,8.23,0,81,94,76,88,3,Yes,2,3,Yes,81,1,13.27
+Sneha Yadav,REG2026750,Computer Science,Female,83.89,82.53,9.14,0,80,99,88,85,4,Yes,2,2,Yes,83,1,13.73
+Amit Das,REG2026751,Electronics & Communication,Female,68.07,80.29,7.81,0,69,77,74,69,3,No,1,0,Yes,74,1,10.88
+Amit Yadav,REG2026752,Mechanical Engineering,Male,67.16,61.02,5.74,2,57,51,55,56,0,No,0,0,Yes,54,0,6.76
+Yash Joshi,REG2026753,Electronics & Communication,Female,96.9,84.89,9.12,0,96,97,94,93,3,Yes,1,1,Yes,94,1,14.66
+Kiran Yadav,REG2026754,Mechanical Engineering,Female,94.39,85.0,9.7,0,82,98,87,85,4,Yes,1,3,Yes,81,1,13.78
+Kiran Reddy,REG2026755,Computer Science,Male,78.84,75.12,7.55,0,64,64,78,59,1,Yes,1,1,Yes,69,1,11.24
+Yash Reddy,REG2026756,Information Technology,Male,65.6,65.12,6.46,0,49,52,42,52,0,No,0,0,Yes,49,0,6.71
+Sanjay Singh,REG2026757,Computer Science,Female,75.5,79.48,6.83,0,78,74,55,77,2,No,2,0,Yes,63,1,10.37
+Tanvi Choudhury,REG2026758,Computer Science,Male,71.13,84.23,7.61,2,67,69,63,69,1,Yes,2,2,Yes,70,0,9.94
+Priya Bose,REG2026759,Information Technology,Male,65.85,51.84,5.1,2,44,50,47,44,0,Yes,1,0,Yes,49,0,6.92
+Amit Singh,REG2026760,Electronics & Communication,Female,83.1,94.76,8.8,0,95,89,86,96,2,Yes,2,1,Yes,93,1,14.02
+Sanjay Gupta,REG2026761,Artificial Intelligence & Machine Learning,Female,80.15,95.0,8.36,0,90,90,96,85,2,Yes,1,1,Yes,85,1,13.45
+Arjun Roy,REG2026762,Computer Science,Male,66.12,58.76,6.0,2,50,44,51,51,0,No,0,1,Yes,52,0,6.58
+Riya Choudhury,REG2026763,Mechanical Engineering,Male,65.8,75.93,6.92,2,77,60,76,66,3,No,1,0,Yes,74,0,9.19
+Pooja Singh,REG2026764,Electronics & Communication,Female,66.5,69.89,5.3,0,49,51,43,47,1,No,0,0,Yes,41,0,6.45
+Divya Singh,REG2026765,Civil Engineering,Male,68.45,50.71,6.38,1,40,49,49,42,0,No,1,0,Yes,40,0,6.05
+Amit Singh,REG2026766,Electronics & Communication,Male,65.8,81.7,7.09,0,77,74,60,73,1,No,0,1,Yes,67,0,8.61
+Rahul Reddy,REG2026767,Electronics & Communication,Male,77.61,83.68,7.86,0,64,67,59,65,2,No,2,0,Yes,62,1,9.33
+Amit Mishra,REG2026768,Mechanical Engineering,Female,79.03,79.37,7.42,0,72,75,70,72,2,Yes,1,0,Yes,72,1,11.52
+Divya Yadav,REG2026769,Civil Engineering,Female,76.99,76.33,7.72,0,62,75,76,67,1,No,1,0,Yes,73,1,9.17
+Anjali Roy,REG2026770,Mechanical Engineering,Male,96.01,93.88,8.94,0,98,90,94,90,3,Yes,3,2,Yes,88,1,14.33
+Tanvi Kumar,REG2026771,Computer Science,Male,84.65,68.62,7.63,0,74,79,75,75,2,No,2,2,Yes,70,1,10.05
+Varun Bose,REG2026772,Artificial Intelligence & Machine Learning,Female,60.28,64.17,5.7,2,52,52,49,49,1,No,0,0,Yes,46,0,5.35
+Neha Saxena,REG2026773,Computer Science,Female,68.84,78.34,7.6,0,70,64,76,63,2,Yes,1,0,Yes,66,1,11.9
+Vikram Reddy,REG2026774,Information Technology,Male,81.45,75.93,7.11,0,67,73,66,71,3,No,1,0,Yes,72,1,9.35
+Divya Sharma,REG2026775,Mechanical Engineering,Female,82.17,68.98,8.03,0,72,61,77,68,1,No,1,0,Yes,76,1,9.88
+Pooja Rao,REG2026776,Artificial Intelligence & Machine Learning,Male,71.12,65.97,7.75,0,79,63,64,70,3,No,1,0,Yes,68,1,10.29
+Sanjay Patel,REG2026777,Artificial Intelligence & Machine Learning,Male,78.37,72.77,7.16,0,76,79,70,72,2,No,1,2,Yes,67,1,10.55
+Divya Verma,REG2026778,Computer Science,Male,84.94,92.57,8.48,0,90,91,77,89,4,Yes,1,1,Yes,85,1,14.2
+Tanvi Saxena,REG2026779,Computer Science,Male,63.12,68.5,5.45,2,56,56,57,58,1,No,0,0,Yes,55,0,7.32
+Vikram Mishra,REG2026780,Computer Science,Male,65.77,76.36,7.36,2,70,71,72,71,2,Yes,1,2,Yes,74,0,11.1
+Deepika Kumar,REG2026781,Civil Engineering,Female,69.38,62.51,5.69,0,46,56,56,48,0,No,0,0,Yes,53,0,5.41
+Sanjay Reddy,REG2026782,Information Technology,Male,54.51,53.78,6.11,2,50,44,40,47,0,No,0,0,Yes,40,0,6.21
+Tanvi Yadav,REG2026783,Mechanical Engineering,Female,56.7,50.03,5.55,0,47,42,49,41,0,No,1,0,Yes,44,0,6.25
+Arjun Gupta,REG2026784,Electronics & Communication,Female,86.09,84.04,8.85,0,91,95,93,95,3,No,2,1,Yes,91,1,12.94
+Abhishek Singh,REG2026785,Computer Science,Male,92.3,90.58,9.72,0,91,82,90,84,4,Yes,2,2,Yes,88,1,14.68
+Rohit Sharma,REG2026786,Electronics & Communication,Male,65.45,83.62,7.76,0,76,64,69,68,2,No,2,0,Yes,66,1,10.5
+Kiran Sharma,REG2026787,Electronics & Communication,Female,66.37,75.75,7.02,0,68,62,59,60,1,Yes,1,1,Yes,57,1,10.16
+Yash Reddy,REG2026788,Information Technology,Male,56.52,65.64,5.44,1,45,49,52,44,0,No,0,0,Yes,47,0,5.35
+Riya Rao,REG2026789,Information Technology,Female,66.43,83.87,7.88,1,67,75,67,65,1,Yes,0,0,Yes,61,1,11.54
+Kiran Kumar,REG2026790,Artificial Intelligence & Machine Learning,Male,73.68,78.47,7.39,1,66,62,75,61,2,Yes,1,0,Yes,70,1,11.18
+Vikram Sharma,REG2026791,Electronics & Communication,Female,77.06,85.0,7.49,0,63,60,68,62,2,Yes,1,1,Yes,65,1,11.14
+Arjun Singh,REG2026792,Computer Science,Male,83.78,76.6,7.13,0,75,73,59,72,1,No,0,0,Yes,63,1,9.46
+Abhishek Sharma,REG2026793,Civil Engineering,Male,66.35,68.43,8.18,0,77,76,67,71,2,Yes,1,0,Yes,65,1,12.52
+Yash Mehta,REG2026794,Artificial Intelligence & Machine Learning,Female,88.78,86.59,9.36,0,80,98,89,84,4,Yes,2,3,Yes,82,1,13.83
+Amit Gupta,REG2026795,Civil Engineering,Male,52.87,58.91,5.64,1,55,53,41,51,1,No,0,0,Yes,47,0,6.01
+Abhishek Reddy,REG2026796,Civil Engineering,Male,53.86,66.04,6.36,1,48,46,46,51,0,No,0,0,Yes,49,0,6.34
+Vikram Joshi,REG2026797,Computer Science,Female,67.35,59.48,6.67,0,49,42,48,50,0,No,0,0,Yes,48,0,7.7
+Vikram Reddy,REG2026798,Artificial Intelligence & Machine Learning,Male,84.87,73.01,7.03,1,64,70,58,61,2,No,1,0,Yes,56,0,8.23
+Vikram Mehta,REG2026799,Information Technology,Male,85.74,83.17,8.94,0,88,87,80,88,3,No,1,2,Yes,79,1,11.83
+Anjali Choudhury,REG2026800,Computer Science,Female,87.53,92.58,10.0,0,95,98,77,99,4,No,3,1,Yes,83,1,12.89
+Aditya Nair,REG2026801,Artificial Intelligence & Machine Learning,Male,85.94,82.26,9.06,0,87,97,83,92,3,No,2,3,Yes,91,1,12.81
+Yash Kumar,REG2026802,Computer Science,Male,55.62,60.43,5.5,0,41,42,53,41,1,Yes,0,0,Yes,50,0,7.5
+Priya Nair,REG2026803,Artificial Intelligence & Machine Learning,Female,80.31,87.34,8.61,0,92,99,79,89,3,Yes,3,1,Yes,88,1,14.63
+Priya Mehta,REG2026804,Information Technology,Female,95.59,96.9,9.99,0,80,80,78,81,3,Yes,3,1,Yes,78,1,14.05
+Yash Rao,REG2026805,Civil Engineering,Female,94.57,97.15,8.85,0,86,91,82,84,3,No,2,1,Yes,86,1,12.06
+Deepika Trivedi,REG2026806,Civil Engineering,Female,83.73,71.35,7.02,0,74,75,65,76,2,No,2,0,Yes,70,1,10.12
+Sanjay Mehta,REG2026807,Civil Engineering,Female,77.31,72.51,7.35,0,61,74,65,66,2,No,0,1,Yes,63,0,8.12
+Vikram Sen,REG2026808,Electronics & Communication,Male,56.37,62.66,6.77,2,42,49,46,41,0,No,0,0,Yes,47,0,6.17
+Rahul Rao,REG2026809,Electronics & Communication,Male,59.7,63.38,5.67,0,55,57,40,58,0,No,0,0,Yes,44,0,6.29
+Divya Sen,REG2026810,Civil Engineering,Female,86.09,86.07,8.26,0,82,99,75,92,2,No,2,2,Yes,83,1,11.5
+Sneha Patel,REG2026811,Computer Science,Female,83.54,72.97,7.25,1,60,62,57,57,3,Yes,2,0,Yes,60,1,10.93
+Yash Sen,REG2026812,Computer Science,Male,95.16,92.97,9.69,0,97,86,75,92,4,No,2,1,Yes,85,1,12.82
+Neha Mehta,REG2026813,Information Technology,Male,70.72,69.66,7.36,0,69,64,57,71,2,No,1,0,Yes,65,0,9.03
+Rohit Reddy,REG2026814,Computer Science,Female,82.66,71.15,7.77,0,63,68,67,66,2,Yes,1,0,Yes,64,1,11.81
+Priya Kumar,REG2026815,Information Technology,Female,59.21,50.82,6.58,0,55,47,46,51,0,No,1,0,Yes,46,0,6.78
+Deepika Verma,REG2026816,Electronics & Communication,Female,97.89,88.87,9.23,0,97,84,79,93,3,No,2,2,Yes,87,1,12.13
+Vikram Trivedi,REG2026817,Civil Engineering,Female,81.37,91.75,9.15,0,97,86,83,93,3,Yes,1,1,Yes,91,1,14.11
+Neha Yadav,REG2026818,Electronics & Communication,Male,79.11,72.15,7.85,0,69,63,62,66,2,No,2,0,Yes,61,1,10.17
+Neha Roy,REG2026819,Mechanical Engineering,Male,76.17,80.74,8.01,0,67,72,55,65,2,No,0,1,Yes,63,1,10.45
+Riya Gupta,REG2026820,Computer Science,Female,54.58,57.84,5.48,3,55,56,54,54,0,No,0,0,Yes,55,0,6.58
+Riya Rao,REG2026821,Mechanical Engineering,Female,78.32,72.43,8.12,0,75,64,59,65,2,No,2,0,Yes,60,1,10.66
+Sneha Verma,REG2026822,Civil Engineering,Male,54.27,55.34,5.42,1,45,42,48,40,1,No,1,0,Yes,46,0,6.88
+Riya Roy,REG2026823,Information Technology,Male,72.97,69.13,7.57,0,65,64,64,67,1,Yes,1,1,Yes,68,1,11.01
+Rahul Verma,REG2026824,Electronics & Communication,Female,59.25,66.08,5.2,0,40,49,52,44,0,No,0,1,Yes,50,0,6.13
+Tanvi Saxena,REG2026825,Mechanical Engineering,Male,88.19,88.32,8.97,0,85,98,86,87,4,Yes,2,1,Yes,86,1,13.88
+Vikram Yadav,REG2026826,Civil Engineering,Male,73.14,65.52,7.59,0,76,75,66,72,2,No,0,0,Yes,70,1,10.77
+Amit Sharma,REG2026827,Civil Engineering,Male,65.48,54.8,6.31,0,47,57,44,47,0,No,0,0,Yes,48,0,6.55
+Anjali Saxena,REG2026828,Information Technology,Male,66.11,77.33,7.76,0,76,78,75,73,2,No,2,0,Yes,74,1,10.54
+Amit Joshi,REG2026829,Electronics & Communication,Female,68.54,78.64,7.54,0,65,70,76,63,2,No,1,0,Yes,71,1,9.68
+Amit Sharma,REG2026830,Artificial Intelligence & Machine Learning,Male,52.18,59.23,6.69,0,40,54,50,49,0,Yes,0,0,Yes,45,0,8.6
+Riya Das,REG2026831,Computer Science,Male,59.59,64.46,5.71,0,53,54,56,49,0,No,0,0,Yes,48,0,5.62
+Priya Sen,REG2026832,Artificial Intelligence & Machine Learning,Male,94.03,91.54,8.31,0,80,89,93,86,3,Yes,3,3,Yes,87,1,13.28
+Varun Mehta,REG2026833,Computer Science,Female,78.98,82.93,7.43,0,74,69,57,73,2,Yes,1,2,Yes,68,1,11.81
+Riya Bose,REG2026834,Civil Engineering,Female,67.25,77.56,7.83,0,74,66,74,73,2,Yes,2,0,Yes,71,1,12.36
+Neha Verma,REG2026835,Artificial Intelligence & Machine Learning,Male,54.9,62.98,6.11,2,43,52,40,48,0,No,0,0,Yes,43,0,5.88
+Varun Sharma,REG2026836,Artificial Intelligence & Machine Learning,Male,92.83,96.84,8.32,0,81,97,93,85,3,Yes,1,1,Yes,88,1,13.29
+Pooja Trivedi,REG2026837,Computer Science,Male,82.3,94.45,9.22,0,89,98,95,93,3,No,2,1,Yes,97,1,12.77
+Varun Mishra,REG2026838,Artificial Intelligence & Machine Learning,Male,91.92,82.84,9.83,0,85,97,85,91,2,Yes,1,3,Yes,83,1,14.2
+Rohit Singh,REG2026839,Information Technology,Female,86.15,85.86,8.26,0,90,89,95,84,2,Yes,1,1,Yes,86,1,13.2
+Riya Saxena,REG2026840,Civil Engineering,Male,58.33,52.66,5.29,1,50,50,48,52,1,No,0,0,Yes,53,0,5.7
+Varun Bose,REG2026841,Information Technology,Male,69.09,69.93,8.11,0,75,62,75,64,2,Yes,1,1,Yes,69,1,11.57
+Vikram Mishra,REG2026842,Computer Science,Female,50.84,69.78,5.09,0,48,42,42,41,0,No,0,0,Yes,40,0,5.92
+Amit Mehta,REG2026843,Artificial Intelligence & Machine Learning,Female,69.21,67.73,6.83,1,78,61,59,75,1,Yes,0,2,Yes,67,0,11.07
+Kiran Singh,REG2026844,Mechanical Engineering,Male,55.29,56.22,6.08,0,50,46,40,48,0,No,0,0,Yes,44,0,6.44
+Varun Saxena,REG2026845,Civil Engineering,Male,76.34,71.11,7.11,0,70,70,56,71,2,No,2,0,Yes,60,1,9.86
+Priya Saxena,REG2026846,Electronics & Communication,Male,84.06,93.06,9.15,0,83,81,93,83,3,No,2,2,Yes,88,1,11.48
+Varun Rao,REG2026847,Civil Engineering,Male,97.43,88.81,9.45,0,88,96,86,91,4,Yes,1,3,Yes,84,1,14.6
+Divya Saxena,REG2026848,Information Technology,Female,84.45,72.75,7.23,0,63,71,58,64,2,Yes,0,1,Yes,62,1,11.6
+Divya Roy,REG2026849,Computer Science,Female,81.82,80.24,7.3,2,68,60,64,67,1,Yes,0,0,Yes,61,0,9.54
+Anjali Das,REG2026850,Mechanical Engineering,Male,83.17,84.77,8.34,0,81,91,80,81,3,No,2,3,Yes,80,1,11.52
+Arjun Yadav,REG2026851,Computer Science,Male,55.76,53.05,5.95,1,50,42,50,50,0,No,0,0,Yes,47,0,5.82
+Priya Bose,REG2026852,Mechanical Engineering,Male,59.39,57.58,6.67,0,45,57,54,51,0,No,0,0,Yes,50,0,6.7
+Pooja Yadav,REG2026853,Computer Science,Female,69.48,59.03,5.2,1,45,42,47,45,1,No,0,0,Yes,46,0,5.42
+Tanvi Yadav,REG2026854,Artificial Intelligence & Machine Learning,Female,96.68,92.7,8.47,0,81,88,92,87,3,Yes,2,1,Yes,93,1,13.92
+Neha Nair,REG2026855,Computer Science,Female,68.85,69.95,5.51,1,48,50,42,51,1,No,0,0,Yes,44,0,6.78
+Yash Joshi,REG2026856,Information Technology,Male,80.62,84.94,9.98,0,98,95,87,92,2,Yes,2,3,Yes,91,1,14.21
+Sneha Nair,REG2026857,Electronics & Communication,Female,67.2,65.79,7.64,0,70,79,72,68,2,No,0,0,Yes,66,1,9.39
+Anjali Reddy,REG2026858,Mechanical Engineering,Male,86.01,94.88,8.72,0,94,92,95,92,4,No,1,2,Yes,95,1,12.75
+Abhishek Mishra,REG2026859,Information Technology,Female,57.8,58.05,6.32,1,52,40,45,45,0,No,0,0,Yes,40,0,7.13
+Abhishek Nair,REG2026860,Civil Engineering,Female,81.51,71.93,7.59,1,65,74,57,65,2,No,1,1,Yes,60,0,9.46
+Varun Verma,REG2026861,Electronics & Communication,Female,79.15,67.71,7.94,0,75,64,77,71,1,Yes,1,1,Yes,71,1,12.49
+Sanjay Choudhury,REG2026862,Civil Engineering,Male,54.45,52.26,6.23,1,54,55,55,58,0,No,0,0,Yes,53,0,6.75
+Rahul Kumar,REG2026863,Mechanical Engineering,Male,97.69,86.72,9.61,0,97,94,75,95,3,Yes,3,1,Yes,83,1,14.31
+Arjun Sharma,REG2026864,Mechanical Engineering,Male,71.9,75.45,7.3,0,71,62,57,65,2,Yes,2,0,Yes,65,1,11.99
+Rohit Saxena,REG2026865,Artificial Intelligence & Machine Learning,Female,86.46,93.5,9.9,0,97,87,79,97,2,Yes,2,3,Yes,87,1,14.54
+Vikram Verma,REG2026866,Civil Engineering,Male,66.46,77.0,7.54,0,77,64,56,71,2,Yes,0,0,Yes,62,1,12.02
+Deepika Kumar,REG2026867,Information Technology,Female,61.64,65.91,5.77,1,55,56,44,59,0,No,1,0,Yes,55,0,7.07
+Sneha Sharma,REG2026868,Electronics & Communication,Female,79.57,71.9,7.74,0,64,74,68,71,2,Yes,1,0,Yes,72,1,11.97
+Aditya Mishra,REG2026869,Electronics & Communication,Female,78.91,79.08,7.76,0,67,65,58,66,2,Yes,2,1,Yes,60,1,12.1
+Anjali Sen,REG2026870,Mechanical Engineering,Male,81.35,97.79,9.41,0,84,93,75,89,4,Yes,2,1,Yes,81,1,15.56
+Riya Reddy,REG2026871,Artificial Intelligence & Machine Learning,Female,86.8,94.68,8.52,0,86,88,87,90,3,Yes,1,2,Yes,92,1,13.77
+Kiran Trivedi,REG2026872,Electronics & Communication,Male,65.62,68.31,7.35,0,61,68,63,63,1,Yes,2,0,Yes,61,1,10.89
+Deepika Das,REG2026873,Information Technology,Male,83.87,82.1,9.78,0,92,89,95,94,3,Yes,3,2,Yes,95,1,14.7
+Kiran Mishra,REG2026874,Artificial Intelligence & Machine Learning,Female,61.06,68.83,6.66,2,41,51,54,41,1,No,0,1,Yes,44,0,5.94
+Pooja Trivedi,REG2026875,Artificial Intelligence & Machine Learning,Female,84.84,66.09,7.49,0,63,67,58,67,3,No,0,1,Yes,62,0,8.97
+Pooja Sen,REG2026876,Artificial Intelligence & Machine Learning,Male,68.17,60.48,6.09,3,45,45,43,44,1,No,0,1,Yes,46,0,5.92
+Divya Reddy,REG2026877,Information Technology,Male,66.36,57.49,6.53,0,44,40,46,40,0,No,0,0,Yes,41,0,6.61
+Sneha Gupta,REG2026878,Electronics & Communication,Female,54.3,62.62,5.38,0,48,55,48,53,0,No,0,0,Yes,54,0,6.27
+Abhishek Gupta,REG2026879,Mechanical Engineering,Male,88.7,90.33,9.09,0,91,85,78,86,3,Yes,1,1,Yes,82,1,13.93
+Pooja Saxena,REG2026880,Electronics & Communication,Male,82.22,69.31,7.05,0,77,78,69,80,2,No,1,0,Yes,72,1,9.04
+Amit Roy,REG2026881,Information Technology,Male,62.87,54.59,5.28,1,56,52,46,55,0,No,1,0,Yes,50,0,6.02
+Deepika Reddy,REG2026882,Information Technology,Female,70.38,69.88,7.22,0,70,69,72,69,2,No,0,1,Yes,70,0,9.6
+Rahul Rao,REG2026883,Computer Science,Female,74.51,75.28,7.09,0,74,67,69,67,2,Yes,1,1,Yes,66,1,11.52
+Priya Patel,REG2026884,Electronics & Communication,Male,78.84,81.92,7.3,0,72,78,59,77,3,No,1,0,Yes,66,1,10.62
+Aditya Mishra,REG2026885,Information Technology,Male,94.28,87.73,9.99,0,81,81,94,81,3,Yes,3,3,Yes,87,1,14.43
+Yash Mishra,REG2026886,Civil Engineering,Female,82.99,75.39,7.51,0,78,63,68,67,3,Yes,1,0,Yes,66,1,12.41
+Amit Joshi,REG2026887,Information Technology,Female,89.89,86.92,9.37,0,88,86,83,87,3,Yes,2,2,Yes,88,1,14.29
+Priya Trivedi,REG2026888,Civil Engineering,Female,79.12,71.72,7.01,0,63,60,77,64,2,No,2,1,Yes,65,1,8.84
+Deepika Patel,REG2026889,Civil Engineering,Male,89.33,91.66,8.93,0,90,94,84,90,2,Yes,2,3,Yes,89,1,13.57
+Yash Kumar,REG2026890,Artificial Intelligence & Machine Learning,Male,66.77,64.45,5.24,1,52,40,55,48,1,No,1,0,Yes,53,0,6.62
+Rahul Saxena,REG2026891,Information Technology,Female,92.5,94.97,8.96,0,82,94,83,82,2,Yes,3,3,Yes,84,1,13.73
+Rohit Yadav,REG2026892,Mechanical Engineering,Male,94.53,90.1,9.89,0,83,87,90,79,4,No,2,2,Yes,81,1,12.36
+Rohit Mehta,REG2026893,Civil Engineering,Male,75.46,65.15,7.96,0,73,61,64,64,3,No,0,0,Yes,60,0,9.51
+Rohit Choudhury,REG2026894,Mechanical Engineering,Female,96.25,80.71,9.13,0,81,97,92,83,2,Yes,2,3,Yes,82,1,13.37
+Amit Trivedi,REG2026895,Electronics & Communication,Female,62.44,56.3,5.29,0,43,48,44,43,0,No,0,0,Yes,40,0,6.03
+Riya Joshi,REG2026896,Civil Engineering,Male,91.28,94.12,9.78,0,90,85,94,86,3,Yes,1,2,Yes,91,1,14.4
+Kiran Yadav,REG2026897,Electronics & Communication,Male,66.22,67.16,7.51,0,60,76,67,70,2,Yes,2,0,Yes,64,1,11.82
+Sneha Reddy,REG2026898,Civil Engineering,Female,62.38,54.92,6.58,0,40,41,55,41,0,No,0,0,Yes,44,0,6.55
+Kiran Trivedi,REG2026899,Mechanical Engineering,Male,60.47,66.42,5.54,2,47,41,57,42,0,No,0,0,Yes,51,0,6.13
+Aditya Verma,REG2026900,Mechanical Engineering,Female,80.79,71.34,8.0,1,73,66,67,70,2,Yes,2,0,Yes,68,1,12.33
+Rohit Sen,REG2026901,Civil Engineering,Female,66.7,76.47,7.6,1,70,62,69,62,1,Yes,0,0,Yes,60,0,10.33
+Kiran Bose,REG2026902,Information Technology,Male,65.21,76.56,8.15,0,65,60,56,62,1,No,2,1,Yes,56,1,9.77
+Sanjay Mehta,REG2026903,Civil Engineering,Female,83.09,76.37,7.89,0,65,70,79,63,1,No,2,0,Yes,74,1,9.59
+Pooja Verma,REG2026904,Mechanical Engineering,Male,50.77,52.74,5.51,0,51,48,40,51,0,No,0,0,Yes,41,0,6.35
+Pooja Gupta,REG2026905,Electronics & Communication,Female,80.02,69.46,8.19,0,75,74,63,75,2,No,2,0,Yes,72,1,10.73
+Vikram Patel,REG2026906,Electronics & Communication,Female,61.93,62.73,6.53,1,53,44,46,45,0,No,0,1,Yes,47,0,7.03
+Yash Choudhury,REG2026907,Artificial Intelligence & Machine Learning,Male,81.25,87.69,8.27,0,92,83,78,92,3,Yes,2,2,Yes,80,1,13.98
+Divya Mishra,REG2026908,Information Technology,Male,77.52,78.97,7.32,0,63,73,60,63,1,No,0,0,Yes,56,0,7.34
+Varun Kumar,REG2026909,Civil Engineering,Female,52.35,58.1,5.51,0,55,55,43,50,0,No,0,1,Yes,45,0,6.07
+Aditya Rao,REG2026910,Computer Science,Female,80.3,93.53,8.63,0,97,88,80,95,3,Yes,1,3,Yes,86,1,13.82
+Yash Verma,REG2026911,Civil Engineering,Male,90.49,91.01,9.51,0,95,93,79,97,3,Yes,3,1,Yes,89,1,14.82
+Vikram Gupta,REG2026912,Computer Science,Female,54.66,59.02,5.17,1,49,53,43,48,0,No,0,0,Yes,43,0,6.29
+Yash Gupta,REG2026913,Computer Science,Female,85.75,87.64,9.09,0,90,87,80,92,3,Yes,2,1,Yes,89,1,13.72
+Deepika Trivedi,REG2026914,Artificial Intelligence & Machine Learning,Female,77.48,69.64,7.81,0,68,76,61,75,3,No,1,1,Yes,63,1,10.24
+Yash Choudhury,REG2026915,Mechanical Engineering,Female,70.91,66.03,7.87,0,77,67,72,74,3,No,1,0,Yes,76,1,10.99
+Pooja Das,REG2026916,Civil Engineering,Male,80.41,82.32,8.12,0,69,67,67,68,1,Yes,1,0,Yes,66,1,11.48
+Amit Patel,REG2026917,Civil Engineering,Male,55.13,58.89,6.19,1,52,51,42,46,1,No,0,0,Yes,44,0,6.44
+Varun Singh,REG2026918,Artificial Intelligence & Machine Learning,Female,84.07,96.53,8.54,0,99,94,97,100,3,Yes,1,1,Yes,96,1,14.73
+Divya Roy,REG2026919,Mechanical Engineering,Female,84.82,80.95,9.27,0,95,84,93,86,2,Yes,2,2,Yes,88,1,13.99
+Varun Verma,REG2026920,Computer Science,Male,67.21,69.4,7.63,2,68,73,68,74,2,Yes,0,1,Yes,73,0,10.73
+Sanjay Choudhury,REG2026921,Artificial Intelligence & Machine Learning,Male,60.61,57.93,5.96,1,56,43,45,53,1,No,0,0,Yes,48,0,6.81
+Riya Das,REG2026922,Mechanical Engineering,Female,94.51,93.5,9.54,0,89,93,93,88,3,Yes,2,2,Yes,91,1,13.67
+Deepika Sharma,REG2026923,Information Technology,Male,89.77,96.86,8.55,1,85,92,86,88,3,Yes,1,2,Yes,86,1,13.43
+Riya Bose,REG2026924,Civil Engineering,Male,71.85,65.44,7.3,1,73,62,69,65,3,No,0,1,Yes,63,0,8.17
+Neha Patel,REG2026925,Mechanical Engineering,Female,80.14,96.59,8.3,0,90,89,88,93,3,No,1,1,Yes,93,1,12.37
+Kiran Choudhury,REG2026926,Computer Science,Female,67.8,73.02,6.91,0,73,78,73,79,2,No,1,0,Yes,72,1,9.83
+Pooja Sen,REG2026927,Computer Science,Male,68.08,67.68,5.92,1,47,48,56,50,1,No,0,0,Yes,56,0,5.94
+Arjun Mishra,REG2026928,Artificial Intelligence & Machine Learning,Female,62.41,51.4,5.37,1,46,52,49,47,0,No,0,0,Yes,44,0,6.24
+Divya Mehta,REG2026929,Civil Engineering,Female,66.77,79.59,7.64,0,77,75,74,73,3,No,1,0,Yes,77,1,11.43
+Sanjay Bose,REG2026930,Civil Engineering,Male,71.42,70.31,7.71,0,67,72,61,67,2,Yes,0,1,Yes,68,1,11.57
+Amit Nair,REG2026931,Computer Science,Male,89.13,80.34,8.9,0,89,88,85,83,2,Yes,2,1,Yes,81,1,13.78
+Deepika Bose,REG2026932,Information Technology,Female,54.99,68.65,6.67,0,44,52,57,50,1,No,0,0,Yes,52,0,6.89
+Anjali Mehta,REG2026933,Mechanical Engineering,Female,81.45,70.57,7.53,0,62,79,76,67,1,No,0,2,Yes,72,1,8.74
+Rahul Rao,REG2026934,Artificial Intelligence & Machine Learning,Female,87.21,80.78,8.56,0,81,97,79,90,4,Yes,3,1,Yes,82,1,14.74
+Rahul Trivedi,REG2026935,Mechanical Engineering,Male,92.28,81.54,9.33,0,90,95,91,93,2,Yes,3,1,Yes,87,1,14.34
+Pooja Rao,REG2026936,Artificial Intelligence & Machine Learning,Female,61.36,69.97,6.72,1,48,42,49,42,0,No,1,0,Yes,47,0,7.06
+Tanvi Sen,REG2026937,Computer Science,Male,60.73,55.78,5.63,1,45,44,50,45,1,No,0,0,Yes,46,0,6.08
+Aditya Choudhury,REG2026938,Computer Science,Male,76.98,68.61,7.47,0,68,73,66,70,2,Yes,1,0,Yes,63,1,12.1
+Kiran Choudhury,REG2026939,Mechanical Engineering,Female,67.12,56.09,5.54,1,47,46,51,44,0,No,0,0,Yes,51,0,5.93
+Priya Reddy,REG2026940,Artificial Intelligence & Machine Learning,Male,70.17,67.05,7.41,0,64,71,75,61,1,No,0,0,Yes,63,0,8.17
+Kiran Nair,REG2026941,Electronics & Communication,Female,54.45,59.75,6.53,0,57,42,43,55,0,No,1,0,Yes,53,0,7.07
+Varun Nair,REG2026942,Information Technology,Female,67.8,68.23,7.74,1,78,76,79,75,2,Yes,0,0,Yes,80,1,12.08
+Divya Kumar,REG2026943,Information Technology,Male,52.29,64.29,5.39,0,46,51,44,48,0,Yes,0,0,Yes,47,0,7.68
+Kiran Roy,REG2026944,Civil Engineering,Female,61.46,69.94,6.55,0,40,50,51,45,1,No,0,0,Yes,52,0,6.61
+Riya Rao,REG2026945,Computer Science,Female,66.8,83.83,7.69,1,79,63,72,73,3,No,1,0,Yes,75,0,9.79
+Amit Mehta,REG2026946,Civil Engineering,Male,50.42,53.12,6.41,2,54,56,42,55,0,No,1,0,Yes,51,0,6.38
+Rohit Roy,REG2026947,Computer Science,Male,92.23,81.89,9.77,0,87,81,83,84,4,Yes,2,3,Yes,86,1,14.06
+Rohit Mishra,REG2026948,Civil Engineering,Female,83.42,67.13,7.1,0,76,65,77,68,1,No,1,1,Yes,75,0,8.72
+Yash Sharma,REG2026949,Civil Engineering,Female,65.1,60.34,6.03,0,55,54,51,58,0,No,1,0,Yes,53,0,6.51
+Riya Saxena,REG2026950,Computer Science,Male,87.71,84.74,9.57,0,81,87,95,84,4,Yes,3,1,Yes,93,1,14.06
+Sanjay Mehta,REG2026951,Electronics & Communication,Male,77.82,66.29,7.83,0,63,70,59,66,2,No,1,0,Yes,65,0,8.88
+Arjun Singh,REG2026952,Mechanical Engineering,Male,50.66,55.92,6.57,0,49,53,51,52,1,No,0,0,Yes,53,0,6.05
+Rahul Nair,REG2026953,Information Technology,Male,86.42,82.52,8.92,0,92,90,87,89,2,Yes,2,3,Yes,88,1,14.02
+Abhishek Singh,REG2026954,Electronics & Communication,Male,67.74,59.06,6.39,2,52,49,51,51,1,No,1,1,Yes,49,0,6.8
+Kiran Yadav,REG2026955,Civil Engineering,Female,68.32,51.7,5.6,3,54,56,50,54,0,No,1,0,Yes,49,0,5.64
+Arjun Kumar,REG2026956,Computer Science,Female,82.38,84.96,7.62,0,64,73,71,70,3,No,2,1,Yes,67,1,10.01
+Anjali Mishra,REG2026957,Computer Science,Male,85.91,88.42,9.43,0,96,89,83,95,3,Yes,1,3,Yes,91,1,14.82
+Abhishek Joshi,REG2026958,Civil Engineering,Male,69.01,79.22,7.55,1,76,66,67,68,2,Yes,0,1,Yes,64,1,11.89
+Sneha Joshi,REG2026959,Artificial Intelligence & Machine Learning,Female,84.45,80.26,7.65,0,63,73,79,62,2,No,1,0,Yes,69,0,8.56
+Aditya Joshi,REG2026960,Civil Engineering,Male,89.72,92.78,8.77,0,80,88,95,78,3,Yes,3,1,Yes,81,1,13.69
+Aditya Rao,REG2026961,Civil Engineering,Female,78.64,73.79,8.18,0,64,65,72,64,3,Yes,0,1,Yes,72,1,11.67
+Sneha Sharma,REG2026962,Information Technology,Female,67.15,65.76,7.09,0,62,61,73,56,1,No,0,1,Yes,59,0,7.21
+Aditya Yadav,REG2026963,Mechanical Engineering,Female,73.98,82.81,7.67,2,76,60,63,72,2,No,1,1,Yes,63,0,9.57
+Abhishek Mishra,REG2026964,Computer Science,Female,51.04,51.99,6.26,1,52,54,55,53,0,No,0,0,Yes,53,0,6.34
+Rahul Kumar,REG2026965,Electronics & Communication,Female,81.2,80.26,9.79,0,99,88,79,96,4,No,3,2,Yes,88,1,13.56
+Arjun Verma,REG2026966,Information Technology,Female,82.61,85.52,9.58,0,88,86,76,85,4,Yes,2,2,Yes,76,1,14.38
+Sneha Singh,REG2026967,Artificial Intelligence & Machine Learning,Female,54.38,51.22,5.98,1,44,53,57,42,0,No,0,0,Yes,46,0,5.77
+Arjun Kumar,REG2026968,Artificial Intelligence & Machine Learning,Male,76.07,67.66,7.28,0,78,61,71,69,1,No,1,1,Yes,67,0,8.44
+Anjali Mehta,REG2026969,Information Technology,Female,60.29,64.78,5.54,1,45,41,47,47,1,No,0,0,Yes,47,0,5.84
+Varun Sen,REG2026970,Artificial Intelligence & Machine Learning,Female,53.44,52.08,6.22,2,49,46,47,44,0,No,0,0,Yes,41,0,6.6
+Varun Das,REG2026971,Computer Science,Male,67.39,65.61,7.22,0,73,68,61,68,1,Yes,1,1,Yes,67,1,11.85
+Aditya Singh,REG2026972,Artificial Intelligence & Machine Learning,Male,56.4,56.68,6.51,1,52,51,57,50,0,No,1,0,Yes,54,0,6.89
+Priya Mishra,REG2026973,Electronics & Communication,Male,74.99,71.24,8.09,0,73,61,56,70,1,Yes,1,0,Yes,63,1,12.07
+Abhishek Trivedi,REG2026974,Electronics & Communication,Male,66.82,56.92,6.11,1,57,57,57,57,1,No,0,0,Yes,57,0,7.5
+Kiran Sen,REG2026975,Electronics & Communication,Male,73.69,66.89,7.82,0,75,63,68,65,2,Yes,0,0,Yes,62,1,12.6
+Anjali Choudhury,REG2026976,Computer Science,Female,52.86,56.58,5.8,0,48,42,50,46,0,No,1,0,Yes,50,0,6.85
+Deepika Choudhury,REG2026977,Mechanical Engineering,Female,84.3,70.3,7.24,1,79,65,58,71,2,No,1,1,Yes,60,0,8.56
+Priya Yadav,REG2026978,Electronics & Communication,Male,82.64,79.99,7.55,0,63,66,74,65,2,No,0,0,Yes,69,0,8.72
+Anjali Nair,REG2026979,Electronics & Communication,Male,79.67,73.11,7.68,0,70,70,57,68,2,No,1,2,Yes,60,1,9.73
+Aditya Joshi,REG2026980,Artificial Intelligence & Machine Learning,Male,81.96,74.2,7.63,1,76,73,75,69,2,Yes,0,2,Yes,69,1,12.18
+Riya Roy,REG2026981,Artificial Intelligence & Machine Learning,Male,88.97,91.09,8.8,0,89,88,94,88,2,No,3,2,Yes,88,1,12.12
+Arjun Choudhury,REG2026982,Civil Engineering,Female,62.88,52.34,5.67,0,55,53,53,54,0,No,0,0,Yes,52,0,6.37
+Aditya Joshi,REG2026983,Information Technology,Male,81.97,70.91,7.7,0,69,65,64,68,2,Yes,1,2,Yes,63,1,11.74
+Tanvi Gupta,REG2026984,Mechanical Engineering,Male,52.89,56.63,6.05,2,46,48,48,42,0,No,0,0,Yes,44,0,5.82
+Divya Kumar,REG2026985,Electronics & Communication,Male,72.54,69.4,7.65,0,68,69,78,72,2,Yes,0,2,Yes,76,1,12.23
+Abhishek Mishra,REG2026986,Artificial Intelligence & Machine Learning,Male,79.95,75.36,7.72,0,60,61,64,56,2,No,0,0,Yes,61,0,8.63
+Aditya Gupta,REG2026987,Civil Engineering,Male,65.74,62.47,6.51,2,50,57,43,47,1,No,0,0,Yes,49,0,7.0
+Kiran Das,REG2026988,Artificial Intelligence & Machine Learning,Male,93.73,82.17,9.57,0,97,94,83,94,4,Yes,3,2,Yes,86,1,15.21
+Amit Trivedi,REG2026989,Civil Engineering,Female,59.29,57.96,6.55,1,44,53,46,48,1,No,0,0,Yes,50,0,6.55
+Varun Yadav,REG2026990,Mechanical Engineering,Male,82.68,86.35,8.81,0,88,95,92,89,3,Yes,1,1,Yes,93,1,14.24
+Varun Kumar,REG2026991,Mechanical Engineering,Female,74.08,70.54,8.08,0,70,66,71,67,3,Yes,2,0,Yes,73,1,12.17
+Rahul Roy,REG2026992,Electronics & Communication,Female,52.67,65.44,5.39,0,44,50,51,41,0,No,0,0,Yes,46,0,6.04
+Varun Sharma,REG2026993,Artificial Intelligence & Machine Learning,Female,80.8,84.05,8.08,0,76,69,76,77,1,No,0,0,Yes,78,1,9.78
+Varun Trivedi,REG2026994,Civil Engineering,Female,82.07,90.45,9.45,0,97,99,86,100,4,Yes,2,1,Yes,91,1,15.27
+Priya Das,REG2026995,Artificial Intelligence & Machine Learning,Male,58.47,53.22,5.46,3,42,57,49,51,0,No,0,0,Yes,54,0,5.72
+Riya Gupta,REG2026996,Civil Engineering,Male,71.64,78.38,7.16,0,60,63,61,56,2,Yes,0,0,Yes,54,1,11.57
+Deepika Trivedi,REG2026997,Electronics & Communication,Male,82.5,88.13,8.89,0,83,99,82,89,3,Yes,2,1,Yes,88,1,14.08
+Arjun Saxena,REG2026998,Electronics & Communication,Female,50.46,56.94,6.26,0,55,56,41,56,1,No,0,0,Yes,49,0,7.56
+Riya Roy,REG2026999,Civil Engineering,Female,81.81,84.82,8.94,0,97,90,88,95,3,Yes,2,2,Yes,88,1,14.43

@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+joblib
+pypdf
+docx2txt
+python-docx
+python-pptx
+python-multipart
+reportlab
+
