@@ -206,7 +206,7 @@ export default function AdminDashboard({ onSelectStudent }) {
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
-                <Tooltip formatter={(v) => `${v} Students`} contentStyle={{ backgroundColor: "#111827", borderColor: "rgba(255,255,255,0.08)", fontSize: 10 }} />
+                <Tooltip formatter={(v) => `${v} Students`} contentStyle={{ backgroundColor: "var(--bg-tooltip)", borderColor: "var(--border-tooltip)", color: "var(--text-tooltip)", fontSize: 10 }} />
                 <Legend layout="horizontal" align="center" verticalAlign="bottom" iconSize={8} wrapperStyle={{ fontSize: 9 }} />
               </PieChart>
             </ResponsiveContainer>
@@ -223,10 +223,10 @@ export default function AdminDashboard({ onSelectStudent }) {
             {analytics.dept_analytics.length > 0 ? (
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={analytics.dept_analytics} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
-                  <XAxis dataKey="department" stroke="#6b7280" tick={{ fontSize: 9 }} />
-                  <YAxis stroke="#6b7280" tick={{ fontSize: 9 }} tickFormatter={(v) => `${v}%`} />
-                  <Tooltip formatter={(v) => `${v}% Rate`} contentStyle={{ backgroundColor: "#111827", borderColor: "rgba(255,255,255,0.08)", fontSize: 10 }} />
-                  <Bar dataKey="placement_rate" fill="#8b5cf6" radius={[4, 4, 0, 0]} />
+                  <XAxis dataKey="department" stroke="var(--chart-axis)" tick={{ fontSize: 9 }} />
+                  <YAxis stroke="var(--chart-axis)" tick={{ fontSize: 9 }} tickFormatter={(v) => `${v}%`} />
+                  <Tooltip formatter={(v) => `${v}% Rate`} contentStyle={{ backgroundColor: "var(--bg-tooltip)", borderColor: "var(--border-tooltip)", color: "var(--text-tooltip)", fontSize: 10 }} />
+                  <Bar dataKey="placement_rate" fill="var(--chart-purple)" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             ) : (

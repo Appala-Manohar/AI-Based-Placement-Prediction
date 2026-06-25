@@ -210,12 +210,12 @@ export default function StudentDashboard({ student }) {
           <div className="h-64 w-full mt-4 flex items-center justify-center">
             <ResponsiveContainer width="100%" height="100%">
               <RadarChart cx="50%" cy="50%" radius="70%" data={skillData}>
-                <PolarGrid stroke="rgba(255,255,255,0.05)" />
-                <PolarAngleAxis dataKey="subject" stroke="#9ca3af" tick={{ fontSize: 10 }} />
-                <PolarRadiusAxis angle={30} domain={[0, 100]} stroke="#4b5563" />
-                <Radar name="Student" dataKey="A" stroke="#8b5cf6" fill="#8b5cf6" fillOpacity={0.25} />
-                <Radar name="Benchmark" dataKey="B" stroke="#4b5563" fill="#4b5563" fillOpacity={0.08} />
-                <Tooltip contentStyle={{ backgroundColor: "#111827", borderColor: "rgba(255,255,255,0.08)", fontSize: 11 }} />
+                <PolarGrid stroke="var(--chart-grid)" />
+                <PolarAngleAxis dataKey="subject" stroke="var(--chart-axis)" tick={{ fontSize: 10 }} />
+                <PolarRadiusAxis angle={30} domain={[0, 100]} stroke="var(--chart-axis-radius)" />
+                <Radar name="Student" dataKey="A" stroke="var(--chart-purple)" fill="var(--chart-purple)" fillOpacity={0.25} />
+                <Radar name="Benchmark" dataKey="B" stroke="var(--chart-benchmark)" fill="var(--chart-benchmark)" fillOpacity={0.08} />
+                <Tooltip contentStyle={{ backgroundColor: "var(--bg-tooltip)", borderColor: "var(--border-tooltip)", color: "var(--text-tooltip)", fontSize: 11 }} />
               </RadarChart>
             </ResponsiveContainer>
           </div>

@@ -100,9 +100,9 @@ export default function SalaryPrediction({ student }) {
         <div className="h-64 w-full mt-6 flex justify-center items-center">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={salaryData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-              <XAxis dataKey="name" stroke="#9ca3af" tick={{ fontSize: 11 }} />
-              <YAxis stroke="#9ca3af" tickFormatter={(v) => `${v}L`} />
-              <Tooltip formatter={(value) => [`${value} LPA`, "Amount"]} contentStyle={{ backgroundColor: "#1e1b4b", borderColor: "#312e81" }} />
+              <XAxis dataKey="name" stroke="var(--chart-axis)" tick={{ fontSize: 11 }} />
+              <YAxis stroke="var(--chart-axis)" tickFormatter={(v) => `${v}L`} />
+              <Tooltip formatter={(value) => [`${value} LPA`, "Amount"]} contentStyle={{ backgroundColor: "var(--bg-tooltip)", borderColor: "var(--border-tooltip)", color: "var(--text-tooltip)" }} />
               <Bar dataKey="amount" radius={[8, 8, 0, 0]}>
                 {salaryData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />

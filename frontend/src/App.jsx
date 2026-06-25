@@ -23,10 +23,44 @@ import AdminDashboard from "./pages/AdminDashboard";
 import Reports from "./pages/Reports";
 import InterviewSimulator from "./pages/InterviewSimulator";
 import MyProfile from "./pages/MyProfile";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 export default function App() {
   const [activeStudent, setActiveStudent] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Theme & Collapsed states
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(() => localStorage.getItem("sidebar_collapsed") === "true");
+
+  const toggleTheme = () => {
+    setTheme(prev => {
+      const next = prev === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", next);
+      return next;
+    });
+  };
+
+  const toggleSidebarCollapse = () => {
+    setIsSidebarCollapsed(prev => {
+      const next = !prev;
+      localStorage.setItem("sidebar_collapsed", String(next));
+      return next;
+    });
+  };
+
+  // Sync theme to document element
+  useEffect(() => {
+    const root = window.document.documentElement;
+    const body = window.document.body;
+    if (theme === "light") {
+      root.classList.add("light-theme");
+      body.classList.add("light-theme");
+    } else {
+      root.classList.remove("light-theme");
+      body.classList.remove("light-theme");
+    }
+  }, [theme]);
 
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -190,6 +224,8 @@ export default function App() {
             isOpen={isSidebarOpen}
             onClose={() => setIsSidebarOpen(false)}
             onLogout={handleLogout}
+            isCollapsed={isSidebarCollapsed}
+            onToggleCollapse={toggleSidebarCollapse}
           />
         )}
 
@@ -202,8 +238,8 @@ export default function App() {
         )}
 
         {/* Main Workspace Area */}
-        <div className={`flex-1 flex flex-col min-h-screen relative w-full overflow-x-hidden ${
-          isAuthenticated ? "md:pl-68" : ""
+        <div className={`flex-1 flex flex-col min-h-screen relative w-full overflow-x-hidden transition-all duration-300 ${
+          isAuthenticated ? (isSidebarCollapsed ? "md:pl-20" : "md:pl-68") : ""
         }`}>
           
           {/* Top Navbar */}
@@ -212,60 +248,66 @@ export default function App() {
             activeStudent={activeStudent} 
             onClearStudent={handleClearStudent} 
             onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
+            theme={theme}
+            onToggleTheme={toggleTheme}
+            onLogout={handleLogout}
+            isSidebarCollapsed={isSidebarCollapsed}
           />
 
           {/* Page Routing */}
           <main className="flex-1 relative z-10">
-            <Routes>
-              {/* Public Routes */}
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/login" element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <LoginPage onLogin={handleLogin} />} />
-              <Route path="/register" element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <RegisterPage />} />
-              
-              {/* Protected Routes */}
-              <Route path="/dashboard" element={isAuthenticated ? <StudentDashboard student={activeStudent} /> : <Navigate to="/login" replace />} />
-              <Route path="/predict-form" element={isAuthenticated ? <PredictionForm user={user} onPredictSuccess={handleSelectStudent} /> : <Navigate to="/login" replace />} />
-              <Route path="/skill-gap" element={isAuthenticated ? <SkillGap student={activeStudent} /> : <Navigate to="/login" replace />} />
-              <Route path="/companies" element={isAuthenticated ? <CompanyRecommendations student={activeStudent} /> : <Navigate to="/login" replace />} />
-              
-              <Route 
-                path="/resume-analyzer" 
-                element={
-                  isAuthenticated ? (
-                    <ResumeAnalyzer 
-                      student={activeStudent} 
-                      onResumeAnalyzeSuccess={handleSelectStudent} 
-                    />
-                  ) : (
-                    <Navigate to="/login" replace />
-                  )
-                } 
-              />
-              
-              <Route 
-                path="/interview" 
-                element={
-                  isAuthenticated ? (
-                    <InterviewSimulator 
-                      student={activeStudent} 
-                      onInterviewSuccess={handleSelectStudent} 
-                    />
-                  ) : (
-                    <Navigate to="/login" replace />
-                  )
-                } 
-              />
-              <Route path="/salary-prediction" element={isAuthenticated ? <SalaryPrediction student={activeStudent} /> : <Navigate to="/login" replace />} />
-              <Route path="/roadmap" element={isAuthenticated ? <LearningRoadmap student={activeStudent} /> : <Navigate to="/login" replace />} />
-              <Route path="/ranking" element={isAuthenticated ? <StudentRanking onSelectStudent={handleSelectStudent} /> : <Navigate to="/login" replace />} />
-              <Route path="/chatbot" element={isAuthenticated ? <AIChatbot student={activeStudent} /> : <Navigate to="/login" replace />} />
-              <Route path="/admin" element={isAuthenticated ? <AdminDashboard onSelectStudent={handleSelectStudent} /> : <Navigate to="/login" replace />} />
-              <Route path="/reports" element={isAuthenticated ? <Reports student={activeStudent} /> : <Navigate to="/login" replace />} />
-              <Route path="/profile" element={isAuthenticated ? <MyProfile user={user} token={token} onUpdateUser={handleUpdateUser} /> : <Navigate to="/login" replace />} />
-              
-              {/* Fallback */}
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
+            <ErrorBoundary>
+              <Routes>
+                {/* Public Routes */}
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/login" element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <LoginPage onLogin={handleLogin} />} />
+                <Route path="/register" element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <RegisterPage />} />
+                
+                {/* Protected Routes */}
+                <Route path="/dashboard" element={isAuthenticated ? <StudentDashboard student={activeStudent} /> : <Navigate to="/login" replace />} />
+                <Route path="/predict-form" element={isAuthenticated ? <PredictionForm user={user} onPredictSuccess={handleSelectStudent} /> : <Navigate to="/login" replace />} />
+                <Route path="/skill-gap" element={isAuthenticated ? <SkillGap student={activeStudent} /> : <Navigate to="/login" replace />} />
+                <Route path="/companies" element={isAuthenticated ? <CompanyRecommendations student={activeStudent} /> : <Navigate to="/login" replace />} />
+                
+                <Route 
+                  path="/resume-analyzer" 
+                  element={
+                    isAuthenticated ? (
+                      <ResumeAnalyzer 
+                        student={activeStudent} 
+                        onResumeAnalyzeSuccess={handleSelectStudent} 
+                      />
+                    ) : (
+                      <Navigate to="/login" replace />
+                    )
+                  } 
+                />
+                
+                <Route 
+                  path="/interview" 
+                  element={
+                    isAuthenticated ? (
+                      <InterviewSimulator 
+                        student={activeStudent} 
+                        onInterviewSuccess={handleSelectStudent} 
+                      />
+                    ) : (
+                      <Navigate to="/login" replace />
+                    )
+                  } 
+                />
+                <Route path="/salary-prediction" element={isAuthenticated ? <SalaryPrediction student={activeStudent} /> : <Navigate to="/login" replace />} />
+                <Route path="/roadmap" element={isAuthenticated ? <LearningRoadmap student={activeStudent} /> : <Navigate to="/login" replace />} />
+                <Route path="/ranking" element={isAuthenticated ? <StudentRanking onSelectStudent={handleSelectStudent} /> : <Navigate to="/login" replace />} />
+                <Route path="/chatbot" element={isAuthenticated ? <AIChatbot student={activeStudent} /> : <Navigate to="/login" replace />} />
+                <Route path="/admin" element={isAuthenticated ? <AdminDashboard onSelectStudent={handleSelectStudent} /> : <Navigate to="/login" replace />} />
+                <Route path="/reports" element={isAuthenticated ? <Reports student={activeStudent} /> : <Navigate to="/login" replace />} />
+                <Route path="/profile" element={isAuthenticated ? <MyProfile user={user} token={token} onUpdateUser={handleUpdateUser} /> : <Navigate to="/login" replace />} />
+                
+                {/* Fallback */}
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </ErrorBoundary>
           </main>
 
           {/* Footer Component */}
