@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 // Pages
 import LandingPage from "./pages/LandingPage";
+import LoginPage from "./pages/LoginPage";
 import StudentDashboard from "./pages/StudentDashboard";
 import PredictionForm from "./pages/PredictionForm";
 import SkillGap from "./pages/SkillGap";
@@ -71,6 +72,30 @@ const MOCK_DEMO_STUDENT = {
 export default function App() {
   const [activeStudent, setActiveStudent] = useState(MOCK_DEMO_STUDENT);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem("is_auth") === "true";
+  });
+
+  const handleLogin = async (username) => {
+    setIsAuthenticated(true);
+    localStorage.setItem("is_auth", "true");
+    if (username && username.toLowerCase() !== "admin") {
+      try {
+        const res = await fetch(`http://localhost:8000/api/students/${username}`);
+        if (res.ok) {
+          const data = await res.json();
+          setActiveStudent(data);
+        }
+      } catch (err) {
+        console.log("Could not auto-load student profile: backend not reached.");
+      }
+    }
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    localStorage.removeItem("is_auth");
+  };
 
   // Automatically attempt to load a seeded student on mount for demonstration purposes
   useEffect(() => {
@@ -144,6 +169,17 @@ export default function App() {
     setActiveStudent(MOCK_DEMO_STUDENT); // Fallback to demo student to avoid locks
   };
 
+  if (!isAuthenticated) {
+    return (
+      <Router>
+        <Routes>
+          <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        </Routes>
+      </Router>
+    );
+  }
+
   return (
     <Router>
       <div className="min-h-screen flex bg-[#0b0f19] text-[#f3f4f6] overflow-x-hidden">
@@ -153,6 +189,7 @@ export default function App() {
           onSearchStudent={handleSearchStudent} 
           isOpen={isSidebarOpen}
           onClose={() => setIsSidebarOpen(false)}
+          onLogout={handleLogout}
         />
 
         {/* Mobile Sidebar Overlay */}

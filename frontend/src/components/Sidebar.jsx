@@ -14,10 +14,11 @@ import {
   ShieldAlert, 
   FileText,
   UserCheck,
-  Mic
+  Mic,
+  LogOut
 } from "lucide-react";
 
-export default function Sidebar({ activeStudent, onSearchStudent, isOpen, onClose }) {
+export default function Sidebar({ activeStudent, onSearchStudent, isOpen, onClose, onLogout }) {
   const location = useLocation();
   const [searchReg, setSearchReg] = React.useState("");
 
@@ -121,9 +122,20 @@ export default function Sidebar({ activeStudent, onSearchStudent, isOpen, onClos
         })}
       </nav>
 
-      {/* Footer */}
-      <div className="pt-4 border-t border-white/5 text-center">
-        <p className="text-[10px] text-gray-500">Antigravity AI Platform v1.0</p>
+      {/* Footer & Logout */}
+      <div className="pt-4 border-t border-white/5 space-y-2">
+        {onLogout && (
+          <button
+            onClick={onLogout}
+            className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-red-950/20 hover:bg-red-900/30 border border-red-500/20 hover:border-red-500/40 text-red-400 rounded-xl text-xs font-semibold cursor-pointer transition"
+          >
+            <LogOut size={14} />
+            <span>Log Out</span>
+          </button>
+        )}
+        <div className="text-center">
+          <p className="text-[10px] text-gray-500">Antigravity AI Platform v1.0</p>
+        </div>
       </div>
     </aside>
   );
