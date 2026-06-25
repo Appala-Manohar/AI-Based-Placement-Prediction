@@ -74,7 +74,7 @@ An end-to-end web application that leverages Machine Learning to predict student
    ```
    The frontend will be running at `http://localhost:5173`.
 
+## Contributors
 
-Contributors
-Appala Manohar
-Sahith Sai Pasupula 
+- [Appala Manohar](https://github.com/Appala-Manohar)
+- [Sahith Sai Pasupula](https://github.com/<Sahith-GitHub-Username>)
