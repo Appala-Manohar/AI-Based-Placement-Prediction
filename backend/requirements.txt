@@ -10,4 +10,6 @@ python-docx
 python-pptx
 python-multipart
 reportlab
+pyjwt
+bcrypt
 

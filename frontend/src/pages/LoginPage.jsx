@@ -1,43 +1,39 @@
 import React, { useState } from "react";
-import { GraduationCap, Lock, User, Eye, EyeOff, Loader2, ArrowRight, BookOpen, UserPlus, Info } from "lucide-react";
+import { Link } from "react-router-dom";
+import { GraduationCap, Lock, User, Eye, EyeOff, Loader2, ArrowRight, CheckCircle2, AlertCircle, Mail, Key } from "lucide-react";
 
 export default function LoginPage({ onLogin }) {
-  // Form view state: "login" or "register"
+  // Views: "login", "forgot", "reset"
   const [viewMode, setViewMode] = useState("login");
   const [loginRole, setLoginRole] = useState("student"); // "student" or "admin"
 
   // Login form fields
-  const [username, setUsername] = useState("");
+  const [usernameOrEmail, setUsernameOrEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
 
-  // Registration form fields
-  const [regName, setRegName] = useState("");
-  const [regNo, setRegNo] = useState("");
-  const [regDept, setRegDept] = useState("Computer Science");
-  const [regGender, setRegGender] = useState("Male");
-  const [regCgpa, setRegCgpa] = useState("");
-  const [regLangs, setRegLangs] = useState("Python, Java, SQL");
-  const [regPassword, setRegPassword] = useState("");
-  const [regConfirmPassword, setRegConfirmPassword] = useState("");
-
+  // Forgot/Reset password fields
+  const [resetEmail, setResetEmail] = useState("");
+  const [otpCode, setOtpCode] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmNewPassword, setConfirmNewPassword] = useState("");
+  const [showNewPassword, setShowNewPassword] = useState(false);
+  
+  // Status states
   const [isLoading, setIsLoading] = useState(false);
+  const [loadingStep, setLoadingStep] = useState("");
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const [loadingStep, setLoadingStep] = useState("");
+  const [demoOtp, setDemoOtp] = useState(""); // For ease of test in simulation
 
-  const handleLoginSubmit = (e) => {
+  const handleLoginSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setSuccessMessage("");
 
-    if (!username.trim()) {
-      setError(
-        loginRole === "student"
-          ? "Please enter your student registration number."
-          : "Please enter your administrator ID."
-      );
+    if (!usernameOrEmail.trim()) {
+      setError("Please enter your Username or Email Address.");
       return;
     }
     if (!password.trim()) {
@@ -46,126 +42,160 @@ export default function LoginPage({ onLogin }) {
     }
 
     setIsLoading(true);
-    setLoadingStep("Connecting to authentication server...");
-    
-    setTimeout(() => {
-      setLoadingStep(
-        loginRole === "student"
-          ? "Retrieving student profile details..."
-          : "Authorizing administrative session..."
-      );
-      
-      setTimeout(() => {
-        setLoadingStep("Initializing user session workspace...");
-        
+    setLoadingStep("Connecting to authorization gateway...");
+
+    try {
+      setLoadingStep("Verifying credentials with database records...");
+      const response = await fetch("http://localhost:8000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username_or_email: usernameOrEmail.trim(),
+          password: password
+        })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setLoadingStep("Session authorized! Retrieving profile details...");
         setTimeout(() => {
           setIsLoading(false);
-          // Pass the username string to the parent
-          onLogin(username.trim());
+          // Pass JWT token and user info back to App container
+          onLogin(data.token, data.user);
         }, 800);
-      }, 800);
-    }, 700);
+      } else {
+        const errData = await response.json();
+        setError(errData.detail || "Invalid credentials. Please verify and try again.");
+        setIsLoading(false);
+      }
+    } catch (err) {
+      // Local fallback simulation (Offline Dev mode)
+      setLoadingStep("Server offline. Booting offline user mock session...");
+      setTimeout(() => {
+        setIsLoading(false);
+        const mockUser = {
+          id: 999,
+          full_name: usernameOrEmail.includes("@") ? "Offline Student" : usernameOrEmail,
+          username: usernameOrEmail.split("@")[0],
+          register_number: "REG2026000",
+          email: usernameOrEmail.includes("@") ? usernameOrEmail : "student@example.com",
+          mobile: "9876543210",
+          profile_photo: null
+        };
+        onLogin("mock-offline-jwt-token-value", mockUser);
+      }, 1500);
+    }
   };
 
-  const handleRegisterSubmit = async (e) => {
+  const handleForgotPasswordSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setSuccessMessage("");
 
-    // Registration validations
-    if (!regName.trim()) {
-      setError("Please enter your full name.");
+    if (!resetEmail.trim()) {
+      setError("Please enter your registered email address.");
       return;
     }
-    if (!regNo.trim()) {
-      setError("Please enter your registration number.");
+
+    setIsLoading(true);
+    setLoadingStep("Generating secure OTP verification key...");
+
+    try {
+      const response = await fetch("http://localhost:8000/api/forgot-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: resetEmail.trim() })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setIsLoading(false);
+        setSuccessMessage("OTP generated successfully! Enter OTP to reset password.");
+        if (data.otp_demo) {
+          setDemoOtp(data.otp_demo); // Display for simulation purposes
+        }
+        setViewMode("reset");
+      } else {
+        const errData = await response.json();
+        setError(errData.detail || "Email address is not registered.");
+        setIsLoading(false);
+      }
+    } catch (err) {
+      // Simulate locally
+      setIsLoading(false);
+      setSuccessMessage("OTP simulation generated successfully! (OTP Code is 123456).");
+      setDemoOtp("123456");
+      setViewMode("reset");
+    }
+  };
+
+  const handleResetPasswordSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    setSuccessMessage("");
+
+    if (!otpCode.trim()) {
+      setError("Please enter the 6-digit OTP code.");
       return;
     }
-    if (!regCgpa.trim() || isNaN(parseFloat(regCgpa)) || parseFloat(regCgpa) < 0 || parseFloat(regCgpa) > 10) {
-      setError("Please enter a valid CGPA between 0 and 10.");
+    if (newPassword.length < 8) {
+      setError("Password must be at least 8 characters long.");
       return;
     }
-    if (!regPassword.trim()) {
-      setError("Please enter a password.");
+    // Complexity check
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,}$/;
+    if (!passwordRegex.test(newPassword)) {
+      setError("Password must have at least 1 uppercase, 1 lowercase, 1 digit, and 1 special char.");
       return;
     }
-    if (regPassword !== regConfirmPassword) {
+    if (newPassword !== confirmNewPassword) {
       setError("Passwords do not match.");
       return;
     }
 
     setIsLoading(true);
-    setLoadingStep("Connecting to database registration API...");
+    setLoadingStep("Resetting your password...");
 
-    // Build prediction/creation payload with standard default scores
-    const payload = {
-      student_name: regName.trim(),
-      register_no: regNo.trim(),
-      department: regDept,
-      gender: regGender,
-      tenth_percentage: 75.0, // defaults for registration
-      twelfth_percentage: 75.0,
-      cgpa: parseFloat(regCgpa),
-      backlogs: 0,
-      programming_skills: 60,
-      aptitude_score: 60,
-      communication_skills: 65,
-      technical_skills: 60,
-      projects: 1,
-      internship: "No",
-      certifications: 0,
-      hackathons: 0,
-      resume_uploaded: "No",
-      mock_interview_score: 60,
-      programming_languages: regLangs.trim() || "Python, Java, SQL"
-    };
+    try {
+      const response = await fetch("http://localhost:8000/api/reset-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: resetEmail.trim(),
+          otp: otpCode.trim(),
+          new_password: newPassword
+        })
+      });
 
-    setTimeout(async () => {
-      setLoadingStep("Creating placement evaluation profile...");
-      try {
-        const response = await fetch("http://localhost:8000/api/predict", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
-
-        if (response.ok) {
-          await response.json();
-          setIsLoading(false);
-          setSuccessMessage("Account created successfully! Please sign in using your Registration Number.");
-          setUsername(payload.register_no);
-          setViewMode("login");
-          setLoginRole("student");
-          // Clear registration inputs
-          setRegName("");
-          setRegNo("");
-          setRegCgpa("");
-          setRegPassword("");
-          setRegConfirmPassword("");
-        } else {
-          const errorData = await response.json();
-          setError(errorData.detail || "Registration failed. Registration number may already exist.");
-          setIsLoading(false);
-        }
-      } catch (err) {
-        // Fallback locally if backend server is not running
+      if (response.ok) {
         setIsLoading(false);
-        setSuccessMessage("Account created successfully (Local Offline Backup Mode)! Please sign in.");
-        setUsername(payload.register_no);
+        setSuccessMessage("Password reset successfully! Please sign in with your new password.");
         setViewMode("login");
-        setLoginRole("student");
-        // Clear registration inputs
-        setRegName("");
-        setRegNo("");
-        setRegCgpa("");
-        setRegPassword("");
-        setRegConfirmPassword("");
+        // Clear fields
+        setResetEmail("");
+        setOtpCode("");
+        setNewPassword("");
+        setConfirmNewPassword("");
+        setDemoOtp("");
+      } else {
+        const errData = await response.json();
+        setError(errData.detail || "Invalid or expired OTP code.");
+        setIsLoading(false);
       }
-    }, 800);
+    } catch (err) {
+      setIsLoading(false);
+      setSuccessMessage("Password reset successfully (Simulation Mode)! Please sign in.");
+      setViewMode("login");
+      setResetEmail("");
+      setOtpCode("");
+      setNewPassword("");
+      setConfirmNewPassword("");
+      setDemoOtp("");
+    }
   };
 
   return (
-    <div className="relative min-h-screen w-screen flex items-center justify-center bg-[#070a13] overflow-y-auto py-12 px-4 sm:px-6 font-['Outfit',sans-serif]">
-      {/* CSS Animations style tag */}
+    <div className="relative min-h-screen w-screen flex items-center justify-center bg-[#070a13] overflow-hidden font-['Outfit',sans-serif]">
       <style>{`
         @keyframes float-orb-1 {
           0%, 100% { transform: translate(0px, 0px) scale(1); }
@@ -228,7 +258,6 @@ export default function LoginPage({ onLogin }) {
       {/* Floating Particle Orbs */}
       <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-violet-600/10 rounded-full blur-[120px] animate-orb-1 pointer-events-none" />
       <div className="absolute bottom-[-15%] right-[-10%] w-[55vw] h-[55vw] bg-fuchsia-600/10 rounded-full blur-[130px] animate-orb-2 pointer-events-none" />
-      <div className="absolute top-[30%] right-[10%] w-[35vw] h-[35vw] bg-cyan-600/5 rounded-full blur-[110px] pointer-events-none" />
 
       {/* Background Floating Tiny Particles */}
       {[...Array(12)].map((_, i) => (
@@ -247,7 +276,7 @@ export default function LoginPage({ onLogin }) {
       ))}
 
       {/* Main Login Card */}
-      <div className="w-full max-w-lg z-10 my-auto">
+      <div className="w-full max-w-md px-6 z-10 animate-fade-in">
         
         {/* Brand Header */}
         <div className="flex flex-col items-center mb-6 space-y-3 text-center">
@@ -265,7 +294,7 @@ export default function LoginPage({ onLogin }) {
         </div>
 
         {/* Card Body */}
-        <div className="glass-login-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+        <div className="glass-login-card rounded-3xl p-8 relative overflow-hidden">
           
           {/* Card subtle top glow line */}
           <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-violet-500 to-transparent opacity-50" />
@@ -278,42 +307,33 @@ export default function LoginPage({ onLogin }) {
                 <div className="absolute inset-0 bg-violet-500/10 rounded-full blur-md animate-pulse" />
               </div>
               <div className="text-center space-y-1.5 px-4">
-                <h3 className="text-sm font-semibold text-white">
-                  {viewMode === "login" ? "Signing in..." : "Creating Account..."}
-                </h3>
+                <h3 className="text-sm font-semibold text-white">Please Wait...</h3>
                 <p className="text-[11px] text-gray-400 min-h-[16px] transition-all duration-300">
                   {loadingStep}
                 </p>
               </div>
             </div>
           ) : viewMode === "login" ? (
-            /* Login Form */
+            /* ==========================================
+               LOGIN VIEW
+               ========================================== */
             <form onSubmit={handleLoginSubmit} className="space-y-5">
               
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-lg font-bold text-white">Welcome Back</h2>
-                  <p className="text-xs text-gray-400">Select portal role and enter credentials</p>
+                  <p className="text-xs text-gray-400">Sign in to your student workspace</p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => { setViewMode("register"); setError(""); setSuccessMessage(""); }}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-xl text-[11px] font-bold cursor-pointer hover:bg-violet-500/25 transition duration-150"
+                <Link
+                  to="/register"
+                  className="flex items-center gap-1 px-2.5 py-1.5 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-xl text-[10px] font-bold hover:bg-violet-500/25 transition duration-150"
                 >
-                  <UserPlus size={12} />
-                  Register
-                </button>
+                  Sign Up
+                </Link>
               </div>
-
-              {successMessage && (
-                <div className="p-3 bg-emerald-950/30 border border-emerald-500/20 text-emerald-400 text-xs rounded-xl font-medium">
-                  {successMessage}
-                </div>
-              )}
 
               {/* Role Toggle Switch */}
               <div className="relative p-1 bg-white/5 rounded-xl border border-white/5 flex">
-                {/* Sliding background pill */}
                 <div 
                   className={`absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg transition-transform duration-300 ease-out ${
                     loginRole === "admin" ? "transform translate-x-[100%]" : ""
@@ -321,7 +341,7 @@ export default function LoginPage({ onLogin }) {
                 />
                 <button
                   type="button"
-                  onClick={() => { setLoginRole("student"); setUsername(""); setPassword(""); setError(""); }}
+                  onClick={() => { setLoginRole("student"); setError(""); setSuccessMessage(""); }}
                   className={`relative z-10 w-1/2 py-2 text-xs font-bold transition-colors duration-200 cursor-pointer rounded-lg ${
                     loginRole === "student" ? "text-white" : "text-gray-400 hover:text-white"
                   }`}
@@ -330,7 +350,7 @@ export default function LoginPage({ onLogin }) {
                 </button>
                 <button
                   type="button"
-                  onClick={() => { setLoginRole("admin"); setUsername(""); setPassword(""); setError(""); }}
+                  onClick={() => { setLoginRole("admin"); setError(""); setSuccessMessage(""); }}
                   className={`relative z-10 w-1/2 py-2 text-xs font-bold transition-colors duration-200 cursor-pointer rounded-lg ${
                     loginRole === "admin" ? "text-white" : "text-gray-400 hover:text-white"
                   }`}
@@ -339,16 +359,24 @@ export default function LoginPage({ onLogin }) {
                 </button>
               </div>
 
-              {error && (
-                <div className="p-3 bg-red-950/30 border border-red-500/20 text-red-400 text-xs rounded-xl font-medium">
-                  {error}
+              {successMessage && (
+                <div className="p-3 bg-emerald-950/30 border border-emerald-500/20 text-emerald-400 text-xs rounded-xl font-medium flex items-center gap-2">
+                  <CheckCircle2 size={14} className="text-emerald-400 flex-shrink-0" />
+                  <span>{successMessage}</span>
                 </div>
               )}
 
-              {/* Username/RegNo Input */}
+              {error && (
+                <div className="p-3 bg-red-950/30 border border-red-500/20 text-red-400 text-xs rounded-xl font-medium flex items-center gap-2">
+                  <AlertCircle size={14} className="text-red-400 flex-shrink-0" />
+                  <span>{error}</span>
+                </div>
+              )}
+
+              {/* Username/Email Input */}
               <div className="space-y-1.5">
                 <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
-                  {loginRole === "student" ? "Registration Number" : "Administrator ID"}
+                  Username or Email
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
@@ -356,9 +384,9 @@ export default function LoginPage({ onLogin }) {
                   </div>
                   <input
                     type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    placeholder={loginRole === "student" ? "e.g., REG2026000" : "e.g., admin"}
+                    value={usernameOrEmail}
+                    onChange={(e) => setUsernameOrEmail(e.target.value)}
+                    placeholder="Enter username or email"
                     className="w-full text-xs pl-10 pr-4 py-3 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 focus:ring-4 focus:ring-violet-500/10 transition"
                   />
                 </div>
@@ -370,9 +398,13 @@ export default function LoginPage({ onLogin }) {
                   <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
                     Password
                   </label>
-                  <a href="#" onClick={(e) => { e.preventDefault(); alert("Verification code sent to registered contact details."); }} className="text-[10px] text-violet-400 hover:text-violet-300 font-semibold hover:underline">
+                  <button 
+                    type="button" 
+                    onClick={() => { setViewMode("forgot"); setError(""); setSuccessMessage(""); }}
+                    className="text-[10px] text-violet-400 hover:text-violet-300 font-semibold hover:underline"
+                  >
                     Forgot?
-                  </a>
+                  </button>
                 </div>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
@@ -395,10 +427,10 @@ export default function LoginPage({ onLogin }) {
                 </div>
               </div>
 
-              {/* Remember Me iOS Toggle Switch */}
+              {/* Remember Me Toggle */}
               <div className="flex items-center justify-between py-1">
                 <span className="text-xs text-gray-400 font-medium select-none">
-                  Keep me signed in
+                  Remember my session
                 </span>
                 <button
                   type="button"
@@ -426,184 +458,171 @@ export default function LoginPage({ onLogin }) {
               <div className="text-center pt-2">
                 <p className="text-[11px] text-gray-400">
                   New student?{" "}
-                  <button
-                    type="button"
-                    onClick={() => { setViewMode("register"); setError(""); setSuccessMessage(""); }}
-                    className="text-violet-400 hover:text-violet-300 font-semibold cursor-pointer underline hover:no-underline"
+                  <Link
+                    to="/register"
+                    className="text-violet-400 hover:text-violet-300 font-semibold underline hover:no-underline"
                   >
                     Create student account
-                  </button>
+                  </Link>
                 </p>
               </div>
 
             </form>
-          ) : (
-            /* Student Registration Form */
-            <form onSubmit={handleRegisterSubmit} className="space-y-4">
-              
-              <div className="flex items-center justify-between">
-                <div>
-                  <h2 className="text-lg font-bold text-white">Create Account</h2>
-                  <p className="text-xs text-gray-400">Register as a student in the placement directory</p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => { setViewMode("login"); setError(""); setSuccessMessage(""); }}
-                  className="text-xs text-violet-400 hover:text-violet-300 font-semibold cursor-pointer hover:underline"
-                >
-                  Sign In instead
-                </button>
+          ) : viewMode === "forgot" ? (
+            /* ==========================================
+               FORGOT PASSWORD VIEW
+               ========================================== */
+            <form onSubmit={handleForgotPasswordSubmit} className="space-y-5">
+              <div>
+                <h2 className="text-lg font-bold text-white">Reset Password</h2>
+                <p className="text-xs text-gray-400">Enter your registered email address to request an OTP code</p>
               </div>
 
               {error && (
-                <div className="p-3 bg-red-950/30 border border-red-500/20 text-red-400 text-xs rounded-xl font-medium">
-                  {error}
+                <div className="p-3 bg-red-950/30 border border-red-500/20 text-red-400 text-xs rounded-xl font-medium flex items-center gap-2">
+                  <AlertCircle size={14} className="text-red-400 flex-shrink-0" />
+                  <span>{error}</span>
                 </div>
               )}
 
-              {/* Dual inputs: Name & Registration Number */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-1.5">
-                  <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
-                    Full Name
-                  </label>
+              <div className="space-y-1.5">
+                <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
+                  Email Address
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                    <Mail size={16} />
+                  </div>
                   <input
-                    type="text"
-                    value={regName}
-                    onChange={(e) => setRegName(e.target.value)}
-                    placeholder="e.g. John Doe"
-                    className="w-full text-xs px-3.5 py-2.5 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 transition"
-                  />
-                </div>
-
-                <div className="space-y-1.5">
-                  <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
-                    Registration No
-                  </label>
-                  <input
-                    type="text"
-                    value={regNo}
-                    onChange={(e) => setRegNo(e.target.value)}
-                    placeholder="e.g. REG2026001"
-                    className="w-full text-xs px-3.5 py-2.5 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 transition"
+                    type="email"
+                    value={resetEmail}
+                    onChange={(e) => setResetEmail(e.target.value)}
+                    placeholder="Enter email address"
+                    className="w-full text-xs pl-10 pr-4 py-3 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 transition"
                   />
                 </div>
               </div>
 
-              {/* Dual inputs: Department & Gender */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-1.5">
-                  <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
-                    Department
-                  </label>
-                  <select
-                    value={regDept}
-                    onChange={(e) => setRegDept(e.target.value)}
-                    className="w-full text-xs px-3.5 py-2.5 bg-white/5 border border-white/8 rounded-xl text-white outline-none focus:border-violet-500/70 focus:bg-white/10 transition cursor-pointer"
-                  >
-                    <option value="Computer Science" className="bg-[#0b0f19]">Computer Science</option>
-                    <option value="Information Technology" className="bg-[#0b0f19]">Information Technology</option>
-                    <option value="Electronics & Communication" className="bg-[#0b0f19]">Electronics & Communication</option>
-                    <option value="Mechanical Engineering" className="bg-[#0b0f19]">Mechanical Engineering</option>
-                    <option value="Civil Engineering" className="bg-[#0b0f19]">Civil Engineering</option>
-                    <option value="Artificial Intelligence & Machine Learning" className="bg-[#0b0f19]">AIML & Data Science</option>
-                  </select>
-                </div>
-
-                <div className="space-y-1.5">
-                  <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
-                    Gender
-                  </label>
-                  <select
-                    value={regGender}
-                    onChange={(e) => setRegGender(e.target.value)}
-                    className="w-full text-xs px-3.5 py-2.5 bg-white/5 border border-white/8 rounded-xl text-white outline-none focus:border-violet-500/70 focus:bg-white/10 transition cursor-pointer"
-                  >
-                    <option value="Male" className="bg-[#0b0f19]">Male</option>
-                    <option value="Female" className="bg-[#0b0f19]">Female</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Dual inputs: CGPA & Preferred Languages */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-1.5">
-                  <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
-                    Current CGPA
-                  </label>
-                  <input
-                    type="text"
-                    value={regCgpa}
-                    onChange={(e) => setRegCgpa(e.target.value)}
-                    placeholder="e.g. 8.45"
-                    className="w-full text-xs px-3.5 py-2.5 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 transition"
-                  />
-                </div>
-
-                <div className="space-y-1.5">
-                  <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block font-medium">
-                    Programming Languages
-                  </label>
-                  <input
-                    type="text"
-                    value={regLangs}
-                    onChange={(e) => setRegLangs(e.target.value)}
-                    placeholder="e.g. Python, Java, SQL"
-                    className="w-full text-xs px-3.5 py-2.5 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 transition"
-                  />
-                </div>
-              </div>
-
-              {/* Dual inputs: Password & Confirm Password */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-1.5">
-                  <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    value={regPassword}
-                    onChange={(e) => setRegPassword(e.target.value)}
-                    placeholder="Create password"
-                    className="w-full text-xs px-3.5 py-2.5 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 transition"
-                  />
-                </div>
-
-                <div className="space-y-1.5">
-                  <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
-                    Confirm Password
-                  </label>
-                  <input
-                    type="password"
-                    value={regConfirmPassword}
-                    onChange={(e) => setRegConfirmPassword(e.target.value)}
-                    placeholder="Confirm password"
-                    className="w-full text-xs px-3.5 py-2.5 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 transition"
-                  />
-                </div>
-              </div>
-
-              {/* Register Action Button */}
               <button
                 type="submit"
-                className="w-full shimmer-btn py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white rounded-xl text-xs font-bold shadow-lg shadow-violet-500/15 cursor-pointer transform hover:-translate-y-0.5 transition duration-150 flex items-center justify-center gap-1.5 mt-2"
+                className="w-full shimmer-btn py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white rounded-xl text-xs font-bold shadow-lg shadow-violet-500/15 cursor-pointer transform hover:-translate-y-0.5 transition duration-150 flex items-center justify-center gap-1.5"
               >
-                Register & Sign In <ArrowRight size={14} />
+                Send OTP Code <ArrowRight size={14} />
               </button>
 
-              <div className="text-center pt-1.5">
-                <p className="text-[11px] text-gray-400">
-                  Already registered?{" "}
-                  <button
-                    type="button"
-                    onClick={() => { setViewMode("login"); setError(""); }}
-                    className="text-violet-400 hover:text-violet-300 font-semibold cursor-pointer underline hover:no-underline"
-                  >
-                    Sign in to your account
-                  </button>
-                </p>
+              <div className="text-center pt-2">
+                <button
+                  type="button"
+                  onClick={() => { setViewMode("login"); setError(""); setSuccessMessage(""); }}
+                  className="text-xs text-violet-400 hover:text-violet-300 font-bold hover:underline"
+                >
+                  Return to Sign In
+                </button>
+              </div>
+            </form>
+          ) : (
+            /* ==========================================
+               RESET PASSWORD VIEW (OTP & NEW PASS)
+               ========================================== */
+            <form onSubmit={handleResetPasswordSubmit} className="space-y-5">
+              <div>
+                <h2 className="text-lg font-bold text-white">Enter Verification Code</h2>
+                <p className="text-xs text-gray-400">Check your email for the OTP code and enter your new password</p>
               </div>
 
+              {successMessage && (
+                <div className="p-3 bg-emerald-950/30 border border-emerald-500/20 text-emerald-400 text-xs rounded-xl font-medium">
+                  {successMessage}
+                </div>
+              )}
+
+              {demoOtp && (
+                <div className="p-3 bg-violet-950/30 border border-violet-500/20 text-violet-400 text-xs rounded-xl font-medium flex items-center gap-1.5">
+                  <Info size={14} />
+                  <span>Demo Mode OTP: <span className="font-mono font-bold text-white bg-white/10 px-1.5 py-0.5 rounded">{demoOtp}</span></span>
+                </div>
+              )}
+
+              {error && (
+                <div className="p-3 bg-red-950/30 border border-red-500/20 text-red-400 text-xs rounded-xl font-medium flex items-center gap-2">
+                  <AlertCircle size={14} className="text-red-400 flex-shrink-0" />
+                  <span>{error}</span>
+                </div>
+              )}
+
+              {/* OTP Code */}
+              <div className="space-y-1.5">
+                <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
+                  6-Digit OTP Code
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                    <Key size={16} />
+                  </div>
+                  <input
+                    type="text"
+                    value={otpCode}
+                    onChange={(e) => setOtpCode(e.target.value)}
+                    placeholder="Enter OTP code"
+                    maxLength={6}
+                    className="w-full text-xs pl-10 pr-4 py-3 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 transition"
+                  />
+                </div>
+              </div>
+
+              {/* New Password */}
+              <div className="space-y-1.5">
+                <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
+                  New Password
+                </label>
+                <div className="relative">
+                  <input
+                    type={showNewPassword ? "text" : "password"}
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    placeholder="Min 8 characters"
+                    className="w-full text-xs px-3.5 pr-10 py-3 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 transition"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowNewPassword(!showNewPassword)}
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white"
+                  >
+                    {showNewPassword ? <EyeOff size={14} /> : <Eye size={14} />}
+                  </button>
+                </div>
+              </div>
+
+              {/* Confirm New Password */}
+              <div className="space-y-1.5">
+                <label className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold block">
+                  Confirm New Password
+                </label>
+                <input
+                  type="password"
+                  value={confirmNewPassword}
+                  onChange={(e) => setConfirmNewPassword(e.target.value)}
+                  placeholder="Retype new password"
+                  className="w-full text-xs px-3.5 py-3 bg-white/5 border border-white/8 rounded-xl text-white placeholder-gray-500 outline-none focus:border-violet-500/70 focus:bg-white/10 transition"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full shimmer-btn py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white rounded-xl text-xs font-bold shadow-lg shadow-violet-500/15 cursor-pointer transform hover:-translate-y-0.5 transition duration-150 flex items-center justify-center gap-1.5"
+              >
+                Reset Password & Log In <ArrowRight size={14} />
+              </button>
+
+              <div className="text-center pt-2">
+                <button
+                  type="button"
+                  onClick={() => { setViewMode("login"); setError(""); setSuccessMessage(""); }}
+                  className="text-xs text-violet-400 hover:text-violet-300 font-bold hover:underline"
+                >
+                  Return to Sign In
+                </button>
+              </div>
             </form>
           )}
 

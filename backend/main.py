@@ -194,6 +194,34 @@ def init_db():
             (model_name, accuracy, precision, recall, f1_score, confusion_matrix, classification_report, is_best)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """, default_metrics)
+        
+    # Create users table
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            full_name TEXT NOT NULL,
+            username TEXT UNIQUE NOT NULL,
+            register_number TEXT UNIQUE NOT NULL,
+            email TEXT UNIQUE NOT NULL,
+            mobile TEXT NOT NULL,
+            password_hash TEXT NOT NULL,
+            profile_photo TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            last_login TIMESTAMP
+        )
+    """)
+    
+    # Create password resets table
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS password_resets (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            email TEXT NOT NULL,
+            otp TEXT NOT NULL,
+            expires_at TIMESTAMP NOT NULL
+        )
+    """)
+    
     conn.commit()
     conn.close()
 
@@ -2461,6 +2489,345 @@ def get_pdf_report(register_no: str):
             "Pragma": "no-cache"
         }
     )
+
+# ==========================================
+# AUTHENTICATION & SESSION MANAGEMENT
+# ==========================================
+import datetime
+import jwt
+import bcrypt
+from fastapi import Header
+
+JWT_SECRET = "placement_prediction_system_secret_key_2026"
+JWT_ALGORITHM = "HS256"
+
+# Pydantic Schemas for Auth
+class UserRegisterRequest(BaseModel):
+    full_name: str
+    username: str
+    register_number: str
+    email: str
+    mobile: str
+    password: str
+    profile_photo: Optional[str] = None
+
+class UserLoginRequest(BaseModel):
+    username_or_email: str
+    password: str
+
+class ForgotPasswordRequest(BaseModel):
+    email: str
+
+class ResetPasswordRequest(BaseModel):
+    email: str
+    otp: str
+    new_password: str
+
+class ProfileUpdateRequest(BaseModel):
+    full_name: Optional[str] = None
+    email: Optional[str] = None
+    mobile: Optional[str] = None
+    password: Optional[str] = None
+    profile_photo: Optional[str] = None
+
+# Helper Functions
+def hash_password(password: str) -> str:
+    return bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+
+def verify_password(password: str, hashed: str) -> bool:
+    try:
+        return bcrypt.checkpw(password.encode('utf-8'), hashed.encode('utf-8'))
+    except Exception:
+        return False
+
+def create_jwt_token(user_id: int, username: str, register_number: str) -> str:
+    payload = {
+        "user_id": user_id,
+        "username": username,
+        "register_number": register_number,
+        "exp": datetime.datetime.utcnow() + datetime.timedelta(days=7)
+    }
+    return jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
+
+def decode_jwt_token(token: str) -> Optional[dict]:
+    try:
+        return jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
+    except Exception:
+        return None
+
+# Dependency to fetch logged in user payload
+def get_current_user(authorization: Optional[str] = Header(None)):
+    if not authorization:
+        raise HTTPException(status_code=401, detail="Authorization header missing")
+    try:
+        parts = authorization.split(" ")
+        if len(parts) != 2 or parts[0].lower() != "bearer":
+            raise HTTPException(status_code=401, detail="Invalid authorization token format")
+        token = parts[1]
+        payload = decode_jwt_token(token)
+        if not payload:
+            raise HTTPException(status_code=401, detail="Session expired or invalid token")
+        return payload
+    except Exception:
+        raise HTTPException(status_code=401, detail="Authorization failed")
+
+# Endpoints
+@app.post("/api/register")
+def register_user(req: UserRegisterRequest):
+    # Validation checks
+    # Email validation check
+    import re
+    if not re.match(r"[^@]+@[^@]+\.[^@]+", req.email):
+        raise HTTPException(status_code=400, detail="Invalid email format")
+    # Mobile validation check
+    if not req.mobile.isdigit() or len(req.mobile) != 10:
+        raise HTTPException(status_code=400, detail="Mobile number must be exactly 10 digits")
+    # Username check
+    if len(req.username) < 4 or len(req.username) > 25 or not re.match(r"^[a-zA-Z0-9_]+$", req.username):
+        raise HTTPException(status_code=400, detail="Username must be 4-25 characters (letters, numbers, underscores)")
+    # Password complexity check
+    # Min 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special char
+    if len(req.password) < 8 or not re.search(r"[A-Z]", req.password) or not re.search(r"[a-z]", req.password) or not re.search(r"[0-9]", req.password) or not re.search(r"[^a-zA-Z0-9]", req.password):
+        raise HTTPException(status_code=400, detail="Password must be at least 8 characters, with 1 uppercase, 1 lowercase, 1 digit, and 1 special character")
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Check duplicate username
+    cursor.execute("SELECT id FROM users WHERE username = ?", (req.username,))
+    if cursor.fetchone():
+        conn.close()
+        raise HTTPException(status_code=400, detail="Username is already registered")
+
+    # Check duplicate register_number
+    cursor.execute("SELECT id FROM users WHERE register_number = ?", (req.register_number,))
+    if cursor.fetchone():
+        conn.close()
+        raise HTTPException(status_code=400, detail="Register number is already registered")
+
+    # Check duplicate email
+    cursor.execute("SELECT id FROM users WHERE email = ?", (req.email,))
+    if cursor.fetchone():
+        conn.close()
+        raise HTTPException(status_code=400, detail="Email is already registered")
+
+    password_hash = hash_password(req.password)
+    
+    try:
+        cursor.execute("""
+            INSERT INTO users (full_name, username, register_number, email, mobile, password_hash, profile_photo)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        """, (req.full_name, req.username, req.register_number, req.email, req.mobile, password_hash, req.profile_photo))
+        conn.commit()
+    except Exception as e:
+        conn.close()
+        raise HTTPException(status_code=500, detail=f"Database insertion failed: {e}")
+        
+    conn.close()
+    return {"message": "Registration Successful"}
+
+@app.post("/api/login")
+def login_user(req: UserLoginRequest):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("SELECT * FROM users WHERE username = ? OR email = ?", (req.username_or_email, req.username_or_email))
+    user_row = cursor.fetchone()
+    
+    if not user_row:
+        conn.close()
+        raise HTTPException(status_code=401, detail="Invalid username or email")
+        
+    user = dict(user_row)
+    if not verify_password(req.password, user["password_hash"]):
+        conn.close()
+        raise HTTPException(status_code=401, detail="Incorrect password")
+        
+    # Update last_login
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    cursor.execute("UPDATE users SET last_login = ? WHERE id = ?", (now, user["id"]))
+    conn.commit()
+    conn.close()
+    
+    token = create_jwt_token(user["id"], user["username"], user["register_number"])
+    
+    return {
+        "token": token,
+        "user": {
+            "id": user["id"],
+            "full_name": user["full_name"],
+            "username": user["username"],
+            "register_number": user["register_number"],
+            "email": user["email"],
+            "mobile": user["mobile"],
+            "profile_photo": user["profile_photo"],
+            "last_login": now
+        }
+    }
+
+@app.get("/api/profile")
+def get_user_profile(current_user: dict = Depends(get_current_user)):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE id = ?", (current_user["user_id"],))
+    row = cursor.fetchone()
+    conn.close()
+    
+    if not row:
+        raise HTTPException(status_code=404, detail="User not found")
+        
+    user = dict(row)
+    return {
+        "id": user["id"],
+        "full_name": user["full_name"],
+        "username": user["username"],
+        "register_number": user["register_number"],
+        "email": user["email"],
+        "mobile": user["mobile"],
+        "profile_photo": user["profile_photo"],
+        "created_at": user["created_at"],
+        "last_login": user["last_login"]
+    }
+
+@app.put("/api/profile")
+def update_user_profile(req: ProfileUpdateRequest, current_user: dict = Depends(get_current_user)):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Verify user exists
+    cursor.execute("SELECT * FROM users WHERE id = ?", (current_user["user_id"],))
+    user_row = cursor.fetchone()
+    if not user_row:
+        conn.close()
+        raise HTTPException(status_code=404, detail="User not found")
+    user = dict(user_row)
+    
+    updates = []
+    params = []
+    
+    if req.full_name is not None:
+        updates.append("full_name = ?")
+        params.append(req.full_name)
+        
+    if req.email is not None:
+        # Check duplicate email
+        cursor.execute("SELECT id FROM users WHERE email = ? AND id != ?", (req.email, current_user["user_id"]))
+        if cursor.fetchone():
+            conn.close()
+            raise HTTPException(status_code=400, detail="Email is already taken by another user")
+        updates.append("email = ?")
+        params.append(req.email)
+        
+    if req.mobile is not None:
+        if not req.mobile.isdigit() or len(req.mobile) != 10:
+            conn.close()
+            raise HTTPException(status_code=400, detail="Mobile number must be exactly 10 digits")
+        updates.append("mobile = ?")
+        params.append(req.mobile)
+        
+    if req.password is not None and req.password.strip() != "":
+        import re
+        if len(req.password) < 8 or not re.search(r"[A-Z]", req.password) or not re.search(r"[a-z]", req.password) or not re.search(r"[0-9]", req.password) or not re.search(r"[^a-zA-Z0-9]", req.password):
+            conn.close()
+            raise HTTPException(status_code=400, detail="Password must be at least 8 characters, with 1 uppercase, 1 lowercase, 1 digit, and 1 special character")
+        updates.append("password_hash = ?")
+        params.append(hash_password(req.password))
+        
+    if req.profile_photo is not None:
+        updates.append("profile_photo = ?")
+        params.append(req.profile_photo)
+        
+    if updates:
+        updates.append("updated_at = CURRENT_TIMESTAMP")
+        params.append(current_user["user_id"])
+        query = f"UPDATE users SET {', '.join(updates)} WHERE id = ?"
+        cursor.execute(query, params)
+        conn.commit()
+        
+        # Also, update student_name in students table if name updated
+        if req.full_name is not None:
+            cursor.execute("UPDATE students SET student_name = ? WHERE register_no = ?", (req.full_name, current_user["register_number"]))
+            conn.commit()
+            
+    # Fetch updated user
+    cursor.execute("SELECT * FROM users WHERE id = ?", (current_user["user_id"],))
+    updated_row = cursor.fetchone()
+    conn.close()
+    
+    user = dict(updated_row)
+    return {
+        "id": user["id"],
+        "full_name": user["full_name"],
+        "username": user["username"],
+        "register_number": user["register_number"],
+        "email": user["email"],
+        "mobile": user["mobile"],
+        "profile_photo": user["profile_photo"]
+    }
+
+@app.post("/api/logout")
+def logout_user():
+    return {"message": "Logout successful"}
+
+@app.post("/api/forgot-password")
+def forgot_password(req: ForgotPasswordRequest):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("SELECT id FROM users WHERE email = ?", (req.email,))
+    user = cursor.fetchone()
+    if not user:
+        conn.close()
+        raise HTTPException(status_code=404, detail="Email address is not registered")
+        
+    # Generate 6-digit OTP
+    import random
+    otp = str(random.randint(100000, 999999))
+    
+    # Expiration: 15 mins
+    expires_at = (datetime.datetime.now() + datetime.timedelta(minutes=15)).strftime("%Y-%m-%d %H:%M:%S")
+    
+    cursor.execute("INSERT INTO password_resets (email, otp, expires_at) VALUES (?, ?, ?)", (req.email, otp, expires_at))
+    conn.commit()
+    conn.close()
+    
+    # In a real environment we would send an email, but here we return it in response for demo purposes
+    return {
+        "message": "Verification OTP sent to your registered email.",
+        "otp_demo": otp # Return for simulation
+    }
+
+@app.post("/api/reset-password")
+def reset_password(req: ResetPasswordRequest):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    cursor.execute("SELECT id FROM password_resets WHERE email = ? AND otp = ? AND expires_at > ?", (req.email, req.otp, now))
+    reset_row = cursor.fetchone()
+    
+    if not reset_row:
+        conn.close()
+        raise HTTPException(status_code=400, detail="Invalid or expired OTP verification code")
+        
+    # Password complexity check
+    import re
+    if len(req.new_password) < 8 or not re.search(r"[A-Z]", req.new_password) or not re.search(r"[a-z]", req.new_password) or not re.search(r"[0-9]", req.new_password) or not re.search(r"[^a-zA-Z0-9]", req.new_password):
+        conn.close()
+        raise HTTPException(status_code=400, detail="Password must be at least 8 characters, with 1 uppercase, 1 lowercase, 1 digit, and 1 special character")
+        
+    password_hash = hash_password(req.new_password)
+    
+    cursor.execute("UPDATE users SET password_hash = ? WHERE email = ?", (password_hash, req.email))
+    cursor.execute("DELETE FROM password_resets WHERE email = ?", (req.email,))
+    conn.commit()
+    conn.close()
+    
+    return {"message": "Password reset successfully"}
+
+@app.get("/api/verify-token")
+def verify_token(current_user: dict = Depends(get_current_user)):
+    return {"valid": True, "user": current_user}
 
 if __name__ == "__main__":
     import uvicorn

@@ -13,15 +13,15 @@ import {
   Zap
 } from "lucide-react";
 
-export default function PredictionForm({ onPredictSuccess }) {
+export default function PredictionForm({ user, onPredictSuccess }) {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
   
   const [formData, setFormData] = useState({
-    student_name: "",
-    register_no: "",
+    student_name: user && user.username !== "admin" ? user.full_name : "",
+    register_no: user && user.username !== "admin" ? user.register_number : "",
     department: "Computer Science",
     gender: "Male",
     tenth_percentage: "",
@@ -168,7 +168,10 @@ export default function PredictionForm({ onPredictSuccess }) {
                       placeholder="e.g. Aniket Sharma"
                       value={formData.student_name}
                       onChange={handleChange}
-                      className="w-full text-xs p-3 glass-input font-medium"
+                      disabled={user && user.username !== "admin"}
+                      className={`w-full text-xs p-3 glass-input font-medium ${
+                        user && user.username !== "admin" ? "bg-white/3 text-gray-500 cursor-not-allowed border-white/5" : ""
+                      }`}
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -180,7 +183,10 @@ export default function PredictionForm({ onPredictSuccess }) {
                       placeholder="e.g. REG2026000"
                       value={formData.register_no}
                       onChange={handleChange}
-                      className="w-full text-xs p-3 glass-input font-medium"
+                      disabled={user && user.username !== "admin"}
+                      className={`w-full text-xs p-3 glass-input font-medium ${
+                        user && user.username !== "admin" ? "bg-white/3 text-gray-500 cursor-not-allowed border-white/5" : ""
+                      }`}
                     />
                   </div>
                   <div className="space-y-1.5">

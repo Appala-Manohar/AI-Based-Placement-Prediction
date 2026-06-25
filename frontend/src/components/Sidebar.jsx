@@ -14,11 +14,11 @@ import {
   ShieldAlert, 
   FileText,
   UserCheck,
-  Mic,
-  LogOut
+  LogOut,
+  Mic
 } from "lucide-react";
 
-export default function Sidebar({ activeStudent, onSearchStudent, isOpen, onClose, onLogout }) {
+export default function Sidebar({ user, activeStudent, onSearchStudent, isOpen, onClose, onLogout }) {
   const location = useLocation();
   const [searchReg, setSearchReg] = React.useState("");
 
@@ -35,6 +35,7 @@ export default function Sidebar({ activeStudent, onSearchStudent, isOpen, onClos
     { path: "/ranking", label: "Student Ranking", icon: Trophy },
     { path: "/chatbot", label: "AI Career Chatbot", icon: MessageSquare },
     { path: "/admin", label: "Admin Portal", icon: ShieldAlert },
+    { path: "/profile", label: "My Profile", icon: UserCheck },
     { path: "/reports", label: "Student Report", icon: FileText, requiresStudent: true },
   ];
 
@@ -57,6 +58,25 @@ export default function Sidebar({ activeStudent, onSearchStudent, isOpen, onClos
           Prediction System
         </p>
       </div>
+
+      {/* Logged in User Profile Card */}
+      {user && (
+        <div className="mb-4 px-2">
+          <div className="p-3 bg-white/5 border border-white/5 rounded-2xl flex items-center gap-3">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-violet-500 to-fuchsia-500 flex items-center justify-center overflow-hidden font-bold text-xs text-white shadow-inner flex-shrink-0">
+              {user.profile_photo ? (
+                <img src={user.profile_photo} alt="Avatar" className="w-full h-full object-cover" />
+              ) : (
+                user.full_name.charAt(0)
+              )}
+            </div>
+            <div className="overflow-hidden text-left flex-1">
+              <h4 className="text-xs font-semibold text-white truncate">{user.full_name}</h4>
+              <p className="text-[9px] text-violet-400 font-semibold truncate uppercase tracking-wider">@{user.username}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Active Student Search / Profile Card */}
       <div className="mb-6 px-2">

@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 // Pages
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 import StudentDashboard from "./pages/StudentDashboard";
 import PredictionForm from "./pages/PredictionForm";
 import SkillGap from "./pages/SkillGap";
@@ -21,91 +22,95 @@ import AIChatbot from "./pages/AIChatbot";
 import AdminDashboard from "./pages/AdminDashboard";
 import Reports from "./pages/Reports";
 import InterviewSimulator from "./pages/InterviewSimulator";
-
-const MOCK_DEMO_STUDENT = {
-  student_name: "Aniket Sharma",
-  register_no: "REG2026000",
-  department: "Computer Science",
-  gender: "Male",
-  tenth_percentage: 89.5,
-  twelfth_percentage: 86.4,
-  cgpa: 8.75,
-  backlogs: 0,
-  programming_skills: 85,
-  aptitude_score: 80,
-  communication_skills: 82,
-  technical_skills: 84,
-  projects: 3,
-  internship: "Yes",
-  certifications: 2,
-  hackathons: 1,
-  resume_uploaded: "Yes",
-  mock_interview_score: 85,
-  placed: 1,
-  probability: 0.94,
-  readiness_score: 88,
-  salary_low: 7.2,
-  salary_avg: 9.5,
-  salary_high: 12.4,
-  prediction_reason: "Excellent academic track record (CGPA) | Strong technical & programming skills | Valuable hands-on internship experience",
-  weak_areas: [],
-  learning_roadmap: [
-    { week: "Week 1", focus: "Advanced Coding", tasks: ["Solve medium/hard questions on LeetCode.", "Review system design concepts."] },
-    { week: "Week 2", focus: "Company Prep", tasks: ["Research target companies (Google, Microsoft, Amazon).", "Solve company-specific past interview papers."] },
-    { week: "Week 3", focus: "Mock Interviews", tasks: ["Do mock coding interviews on Pramp.", "Fine-tune resume details."] },
-    { week: "Week 4", focus: "Application Drive", tasks: ["Connect with alumni for referrals.", "Apply for developer/analyst roles."] }
-  ],
-  recommended_companies: [
-    { name: "Google", skills: "Data Structures, Algorithms, System Design", package: "₹15 - ₹35 LPA", tier: "Dream", match: 92 },
-    { name: "Microsoft", skills: "C++, C#, Coding, OOPs, Problem Solving", package: "₹12 - ₹25 LPA", tier: "Dream", match: 94 },
-    { name: "Amazon", skills: "Data Structures, System Design, Leadership Principles", package: "₹14 - ₹28 LPA", tier: "Dream", match: 88 },
-    { name: "Accenture (Premium/ASE)", skills: "Analytical Thinking, Coding, Java, Python", package: "₹6.5 - ₹12 LPA", tier: "Dream", match: 95 }
-  ],
-  resume_score: 85,
-  resume_missing_skills: ["System Design"],
-  resume_missing_keywords: ["Kubernetes", "AWS"],
-  resume_strengths: ["Strong programming languages", "Multiple personal projects listed", "Detailed internship description"],
-  resume_weaknesses: ["Missing cloud architecture exposure"],
-  resume_suggestions: ["Add Cloud/AWS hosting details to your projects section", "List system design coursework"]
-};
+import MyProfile from "./pages/MyProfile";
 
 export default function App() {
   const [activeStudent, setActiveStudent] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    return localStorage.getItem("is_auth") === "true";
-  });
 
-  const handleLogin = async (userData) => {
-    setIsAuthenticated(true);
-    localStorage.setItem("is_auth", "true");
-    if (userData) {
-      if (typeof userData === "object") {
-        setActiveStudent(userData);
-      } else if (typeof userData === "string" && userData.toLowerCase() !== "admin") {
-        try {
-          const res = await fetch(`http://localhost:8000/api/students/${userData}`);
-          if (res.ok) {
-            const data = await res.json();
-            setActiveStudent(data);
-          } else {
-            setActiveStudent(null);
-          }
-        } catch (err) {
-          console.log("Could not auto-load student profile: backend not reached.");
-          setActiveStudent(null);
-        }
+  // Authentication State
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [token, setToken] = useState("");
+  const [user, setUser] = useState(null);
+  const [isSessionLoading, setIsSessionLoading] = useState(true);
+
+  // Sync / load student profile from database
+  const fetchStudentProfile = async (regNo) => {
+    if (!regNo) return;
+    try {
+      const res = await fetch(`http://localhost:8000/api/students/${regNo}`);
+      if (res.ok) {
+        const data = await res.json();
+        setActiveStudent(data);
       } else {
         setActiveStudent(null);
       }
-    } else {
+    } catch (err) {
+      console.log("Could not load student profile: backend unreachable.");
       setActiveStudent(null);
     }
   };
 
+  // Restore session on mount
+  useEffect(() => {
+    const verifySession = async () => {
+      const savedToken = localStorage.getItem("jwt_token");
+      const savedUser = localStorage.getItem("user_profile");
+      
+      if (savedToken && savedUser) {
+        try {
+          const res = await fetch("http://localhost:8000/api/verify-token", {
+            headers: { "Authorization": `Bearer ${savedToken}` }
+          });
+          
+          if (res.ok) {
+            const parsedUser = JSON.parse(savedUser);
+            setToken(savedToken);
+            setUser(parsedUser);
+            setIsAuthenticated(true);
+            fetchStudentProfile(parsedUser.register_number);
+          } else {
+            handleLogout();
+          }
+        } catch (e) {
+          // Offline local backup fallback
+          const parsedUser = JSON.parse(savedUser);
+          setToken(savedToken);
+          setUser(parsedUser);
+          setIsAuthenticated(true);
+          fetchStudentProfile(parsedUser.register_number);
+        }
+      }
+      setIsSessionLoading(false);
+    };
+    verifySession();
+  }, []);
+
+  const handleLogin = (jwtToken, userProfile) => {
+    setIsAuthenticated(true);
+    setToken(jwtToken);
+    setUser(userProfile);
+    localStorage.setItem("is_auth", "true");
+    localStorage.setItem("jwt_token", jwtToken);
+    localStorage.setItem("user_profile", JSON.stringify(userProfile));
+    
+    // Auto load student details
+    fetchStudentProfile(userProfile.register_number);
+  };
+
   const handleLogout = () => {
     setIsAuthenticated(false);
+    setToken("");
+    setUser(null);
+    setActiveStudent(null);
     localStorage.removeItem("is_auth");
+    localStorage.removeItem("jwt_token");
+    localStorage.removeItem("user_profile");
+  };
+
+  const handleUpdateUser = (updatedProfile) => {
+    setUser(updatedProfile);
+    localStorage.setItem("user_profile", JSON.stringify(updatedProfile));
   };
 
   const handleSearchStudent = async (regNo) => {
@@ -164,14 +169,12 @@ export default function App() {
     setActiveStudent(null);
   };
 
-  if (!isAuthenticated) {
+  if (isSessionLoading) {
     return (
-      <Router>
-        <Routes>
-          <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
-          <Route path="*" element={<Navigate to="/login" replace />} />
-        </Routes>
-      </Router>
+      <div className="min-h-screen w-screen bg-[#070a13] flex flex-col items-center justify-center space-y-4">
+        <Loader2 className="w-10 h-10 text-violet-500 animate-spin" />
+        <p className="text-xs text-gray-400 font-semibold tracking-wider uppercase">Verifying User Session...</p>
+      </div>
     );
   }
 
@@ -179,16 +182,19 @@ export default function App() {
     <Router>
       <div className="min-h-screen flex bg-[#0b0f19] text-[#f3f4f6] overflow-x-hidden">
         {/* Sidebar Nav */}
-        <Sidebar 
-          activeStudent={activeStudent} 
-          onSearchStudent={handleSearchStudent} 
-          isOpen={isSidebarOpen}
-          onClose={() => setIsSidebarOpen(false)}
-          onLogout={handleLogout}
-        />
+        {isAuthenticated && (
+          <Sidebar 
+            user={user}
+            activeStudent={activeStudent} 
+            onSearchStudent={handleSearchStudent} 
+            isOpen={isSidebarOpen}
+            onClose={() => setIsSidebarOpen(false)}
+            onLogout={handleLogout}
+          />
+        )}
 
         {/* Mobile Sidebar Overlay */}
-        {isSidebarOpen && (
+        {isAuthenticated && isSidebarOpen && (
           <div 
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 md:hidden transition-all duration-300"
             onClick={() => setIsSidebarOpen(false)}
@@ -196,10 +202,13 @@ export default function App() {
         )}
 
         {/* Main Workspace Area */}
-        <div className="flex-1 flex flex-col md:pl-68 min-h-screen relative w-full overflow-x-hidden">
+        <div className={`flex-1 flex flex-col min-h-screen relative w-full overflow-x-hidden ${
+          isAuthenticated ? "md:pl-68" : ""
+        }`}>
           
           {/* Top Navbar */}
           <Navbar 
+            user={user}
             activeStudent={activeStudent} 
             onClearStudent={handleClearStudent} 
             onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -208,37 +217,51 @@ export default function App() {
           {/* Page Routing */}
           <main className="flex-1 relative z-10">
             <Routes>
+              {/* Public Routes */}
               <Route path="/" element={<LandingPage />} />
-              <Route path="/dashboard" element={<StudentDashboard student={activeStudent} />} />
-              <Route path="/predict-form" element={<PredictionForm onPredictSuccess={handleSelectStudent} />} />
-              <Route path="/skill-gap" element={<SkillGap student={activeStudent} />} />
-              <Route path="/companies" element={<CompanyRecommendations student={activeStudent} />} />
+              <Route path="/login" element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <LoginPage onLogin={handleLogin} />} />
+              <Route path="/register" element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <RegisterPage />} />
+              
+              {/* Protected Routes */}
+              <Route path="/dashboard" element={isAuthenticated ? <StudentDashboard student={activeStudent} /> : <Navigate to="/login" replace />} />
+              <Route path="/predict-form" element={isAuthenticated ? <PredictionForm user={user} onPredictSuccess={handleSelectStudent} /> : <Navigate to="/login" replace />} />
+              <Route path="/skill-gap" element={isAuthenticated ? <SkillGap student={activeStudent} /> : <Navigate to="/login" replace />} />
+              <Route path="/companies" element={isAuthenticated ? <CompanyRecommendations student={activeStudent} /> : <Navigate to="/login" replace />} />
               
               <Route 
                 path="/resume-analyzer" 
                 element={
-                  <ResumeAnalyzer 
-                    student={activeStudent} 
-                    onResumeAnalyzeSuccess={handleSelectStudent} 
-                  />
+                  isAuthenticated ? (
+                    <ResumeAnalyzer 
+                      student={activeStudent} 
+                      onResumeAnalyzeSuccess={handleSelectStudent} 
+                    />
+                  ) : (
+                    <Navigate to="/login" replace />
+                  )
                 } 
               />
               
               <Route 
                 path="/interview" 
                 element={
-                  <InterviewSimulator 
-                    student={activeStudent} 
-                    onInterviewSuccess={handleSelectStudent} 
-                  />
+                  isAuthenticated ? (
+                    <InterviewSimulator 
+                      student={activeStudent} 
+                      onInterviewSuccess={handleSelectStudent} 
+                    />
+                  ) : (
+                    <Navigate to="/login" replace />
+                  )
                 } 
               />
-              <Route path="/salary-prediction" element={<SalaryPrediction student={activeStudent} />} />
-              <Route path="/roadmap" element={<LearningRoadmap student={activeStudent} />} />
-              <Route path="/ranking" element={<StudentRanking onSelectStudent={handleSelectStudent} />} />
-              <Route path="/chatbot" element={<AIChatbot student={activeStudent} />} />
-              <Route path="/admin" element={<AdminDashboard onSelectStudent={handleSelectStudent} />} />
-              <Route path="/reports" element={<Reports student={activeStudent} />} />
+              <Route path="/salary-prediction" element={isAuthenticated ? <SalaryPrediction student={activeStudent} /> : <Navigate to="/login" replace />} />
+              <Route path="/roadmap" element={isAuthenticated ? <LearningRoadmap student={activeStudent} /> : <Navigate to="/login" replace />} />
+              <Route path="/ranking" element={isAuthenticated ? <StudentRanking onSelectStudent={handleSelectStudent} /> : <Navigate to="/login" replace />} />
+              <Route path="/chatbot" element={isAuthenticated ? <AIChatbot student={activeStudent} /> : <Navigate to="/login" replace />} />
+              <Route path="/admin" element={isAuthenticated ? <AdminDashboard onSelectStudent={handleSelectStudent} /> : <Navigate to="/login" replace />} />
+              <Route path="/reports" element={isAuthenticated ? <Reports student={activeStudent} /> : <Navigate to="/login" replace />} />
+              <Route path="/profile" element={isAuthenticated ? <MyProfile user={user} token={token} onUpdateUser={handleUpdateUser} /> : <Navigate to="/login" replace />} />
               
               {/* Fallback */}
               <Route path="*" element={<Navigate to="/" replace />} />
@@ -252,3 +275,27 @@ export default function App() {
     </Router>
   );
 }
+
+// Simple loader helper inside file to avoid missing exports
+const Loader2 = ({ className }) => (
+  <svg
+    className={`animate-spin ${className}`}
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      className="opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      strokeWidth="4"
+    />
+    <path
+      className="opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+    />
+  </svg>
+);
