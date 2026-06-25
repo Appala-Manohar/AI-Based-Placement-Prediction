@@ -24,11 +24,13 @@ export default function LoginPage({ onLogin }) {
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const [loadingStep, setLoadingStep] = useState("");
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     setError("");
+    setSuccessMessage("");
 
     if (!username.trim()) {
       setError(
@@ -127,13 +129,18 @@ export default function LoginPage({ onLogin }) {
         });
 
         if (response.ok) {
-          const studentProfile = await response.json();
-          setLoadingStep("Logging in to newly created workspace...");
-          setTimeout(() => {
-            setIsLoading(false);
-            // Log in with the fully loaded student object to avoid reload query
-            onLogin(studentProfile);
-          }, 800);
+          await response.json();
+          setIsLoading(false);
+          setSuccessMessage("Account created successfully! Please sign in using your Registration Number.");
+          setUsername(payload.register_no);
+          setViewMode("login");
+          setLoginRole("student");
+          // Clear registration inputs
+          setRegName("");
+          setRegNo("");
+          setRegCgpa("");
+          setRegPassword("");
+          setRegConfirmPassword("");
         } else {
           const errorData = await response.json();
           setError(errorData.detail || "Registration failed. Registration number may already exist.");
@@ -141,24 +148,17 @@ export default function LoginPage({ onLogin }) {
         }
       } catch (err) {
         // Fallback locally if backend server is not running
-        setLoadingStep("Server unreachable. Registering local session backup...");
-        setTimeout(() => {
-          setIsLoading(false);
-          const localMockProfile = {
-            ...payload,
-            placed: 1,
-            probability: 0.72,
-            readiness_score: 68,
-            salary_low: 4.2,
-            salary_avg: 5.5,
-            salary_high: 7.2,
-            prediction_reason: "Successfully registered local profile backup session.",
-            weak_areas: [],
-            learning_roadmap: [],
-            recommended_companies: []
-          };
-          onLogin(localMockProfile);
-        }, 1200);
+        setIsLoading(false);
+        setSuccessMessage("Account created successfully (Local Offline Backup Mode)! Please sign in.");
+        setUsername(payload.register_no);
+        setViewMode("login");
+        setLoginRole("student");
+        // Clear registration inputs
+        setRegName("");
+        setRegNo("");
+        setRegCgpa("");
+        setRegPassword("");
+        setRegConfirmPassword("");
       }
     }, 800);
   };
@@ -297,13 +297,19 @@ export default function LoginPage({ onLogin }) {
                 </div>
                 <button
                   type="button"
-                  onClick={() => { setViewMode("register"); setError(""); }}
+                  onClick={() => { setViewMode("register"); setError(""); setSuccessMessage(""); }}
                   className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-xl text-[11px] font-bold cursor-pointer hover:bg-violet-500/25 transition duration-150"
                 >
                   <UserPlus size={12} />
                   Register
                 </button>
               </div>
+
+              {successMessage && (
+                <div className="p-3 bg-emerald-950/30 border border-emerald-500/20 text-emerald-400 text-xs rounded-xl font-medium">
+                  {successMessage}
+                </div>
+              )}
 
               {/* Role Toggle Switch */}
               <div className="relative p-1 bg-white/5 rounded-xl border border-white/5 flex">
@@ -422,7 +428,7 @@ export default function LoginPage({ onLogin }) {
                   New student?{" "}
                   <button
                     type="button"
-                    onClick={() => { setViewMode("register"); setError(""); }}
+                    onClick={() => { setViewMode("register"); setError(""); setSuccessMessage(""); }}
                     className="text-violet-400 hover:text-violet-300 font-semibold cursor-pointer underline hover:no-underline"
                   >
                     Create student account
@@ -442,7 +448,7 @@ export default function LoginPage({ onLogin }) {
                 </div>
                 <button
                   type="button"
-                  onClick={() => { setViewMode("login"); setError(""); }}
+                  onClick={() => { setViewMode("login"); setError(""); setSuccessMessage(""); }}
                   className="text-xs text-violet-400 hover:text-violet-300 font-semibold cursor-pointer hover:underline"
                 >
                   Sign In instead
