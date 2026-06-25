@@ -21,11 +21,6 @@ export default function Navbar({ activeStudent, onClearStudent, onToggleSidebar 
           {activeStudent ? (
             <p className="text-[11px] text-violet-300 font-medium">
               Analyzing Profile: <span className="font-semibold">{activeStudent.student_name}</span> ({activeStudent.register_no}) 
-              {activeStudent.student_name === "Aniket Sharma" && (
-                <span className="ml-1.5 px-1.5 py-0.25 bg-amber-500/20 text-amber-400 border border-amber-500/20 rounded-md text-[9px] font-bold">
-                  Demo Mode
-                </span>
-              )}
             </p>
           ) : (
             <p className="text-[11px] text-gray-400 font-medium">

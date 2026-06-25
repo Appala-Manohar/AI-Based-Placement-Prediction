@@ -70,25 +70,36 @@ const MOCK_DEMO_STUDENT = {
 };
 
 export default function App() {
-  const [activeStudent, setActiveStudent] = useState(MOCK_DEMO_STUDENT);
+  const [activeStudent, setActiveStudent] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return localStorage.getItem("is_auth") === "true";
   });
 
-  const handleLogin = async (username) => {
+  const handleLogin = async (userData) => {
     setIsAuthenticated(true);
     localStorage.setItem("is_auth", "true");
-    if (username && username.toLowerCase() !== "admin") {
-      try {
-        const res = await fetch(`http://localhost:8000/api/students/${username}`);
-        if (res.ok) {
-          const data = await res.json();
-          setActiveStudent(data);
+    if (userData) {
+      if (typeof userData === "object") {
+        setActiveStudent(userData);
+      } else if (typeof userData === "string" && userData.toLowerCase() !== "admin") {
+        try {
+          const res = await fetch(`http://localhost:8000/api/students/${userData}`);
+          if (res.ok) {
+            const data = await res.json();
+            setActiveStudent(data);
+          } else {
+            setActiveStudent(null);
+          }
+        } catch (err) {
+          console.log("Could not auto-load student profile: backend not reached.");
+          setActiveStudent(null);
         }
-      } catch (err) {
-        console.log("Could not auto-load student profile: backend not reached.");
+      } else {
+        setActiveStudent(null);
       }
+    } else {
+      setActiveStudent(null);
     }
   };
 
@@ -96,22 +107,6 @@ export default function App() {
     setIsAuthenticated(false);
     localStorage.removeItem("is_auth");
   };
-
-  // Automatically attempt to load a seeded student on mount for demonstration purposes
-  useEffect(() => {
-    const loadDemoStudent = async () => {
-      try {
-        const res = await fetch("http://localhost:8000/api/students/REG2026000");
-        if (res.ok) {
-          const data = await res.json();
-          setActiveStudent(data);
-        }
-      } catch (err) {
-        console.log("Using local mock student fallback (backend db not seeded yet).");
-      }
-    };
-    loadDemoStudent();
-  }, []);
 
   const handleSearchStudent = async (regNo) => {
     try {
@@ -166,7 +161,7 @@ export default function App() {
   };
 
   const handleClearStudent = () => {
-    setActiveStudent(MOCK_DEMO_STUDENT); // Fallback to demo student to avoid locks
+    setActiveStudent(null);
   };
 
   if (!isAuthenticated) {
