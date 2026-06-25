@@ -73,3 +73,8 @@ An end-to-end web application that leverages Machine Learning to predict student
    npm run dev
    ```
    The frontend will be running at `http://localhost:5173`.
+
+## Contributors
+
+- [Appala Manohar](https://github.com/Appala-Manohar)
+- [Sahith Sai Pasupula](https://github.com/sahith8639)
