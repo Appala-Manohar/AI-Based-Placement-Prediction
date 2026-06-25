@@ -77,4 +77,4 @@ An end-to-end web application that leverages Machine Learning to predict student
 ## Contributors
 
 - [Appala Manohar](https://github.com/Appala-Manohar)
-- [Sahith Sai Pasupula](https://github.com/<sahith8639>)
+- [Sahith Sai Pasupula](https://github.com/sahith8639)
