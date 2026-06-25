@@ -4,6 +4,7 @@ import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 // Components
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // Pages
 import LandingPage from "./pages/LandingPage";
@@ -211,6 +212,9 @@ export default function App() {
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
+
+          {/* Footer Component */}
+          <Footer />
         </div>
       </div>
     </Router>
